@@ -6,9 +6,11 @@ function showPage(pageId) {
     page.classList.remove('active-page');
   });
 
-  // Alias generic 'packages' to 'temple-packages'
+  // Page Aliases for backwards compatibility
   let actualPageId = pageId;
   if (pageId === 'packages') actualPageId = 'temple-packages';
+  if (pageId === 'airport') actualPageId = 'cab-rental';
+  if (pageId === 'car-rental') actualPageId = 'tariff';
 
   const target = document.getElementById('page-' + actualPageId);
   if (target) target.classList.add('active-page');
@@ -198,25 +200,93 @@ function handleContactSubmit(event) {
   sendToWhatsApp(message);
 }
 
-// 7c. Car Rental Form Submission
-function submitCarRentalEnquiry() {
-  const name = document.getElementById('rental-name')?.value || "Customer";
-  const phone = document.getElementById('rental-phone')?.value || "Not specified";
-  const vehicle = document.getElementById('rental-vehicle')?.value || "Vehicle Rental";
-  const triptype = document.getElementById('rental-triptype')?.value || "Outstation Trip";
-  const dest = document.getElementById('rental-destination')?.value || "Not specified";
-  const date = document.getElementById('rental-date')?.value || "Not specified";
+// 7b. Cab Rental Service Pillar Selection & Form Scroll
+function selectCabRentalServiceType(serviceName) {
+  const serviceSelect = document.getElementById('rental-service-type') || document.getElementById('airport-service-type');
+  if (serviceSelect) {
+    for (let i = 0; i < serviceSelect.options.length; i++) {
+      if (serviceSelect.options[i].value.toLowerCase().includes(serviceName.toLowerCase()) ||
+          serviceSelect.options[i].text.toLowerCase().includes(serviceName.toLowerCase())) {
+        serviceSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  const formSection = document.getElementById('cab-rental-booking-form-section') || document.getElementById('car-rental-booking-form-section');
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    formSection.style.transition = 'all 0.4s ease';
+    formSection.style.boxShadow = '0 0 0 3px rgba(217, 119, 6, 0.4), 0 20px 40px rgba(0,0,0,0.12)';
+    setTimeout(() => {
+      formSection.style.boxShadow = '';
+    }, 1800);
+  }
+}
 
-  const msg = `*CAR RENTAL INQUIRY - SHIVAPUTHRA TRAVELS*\n` +
-              `━━━━━━━━━━━━━━━━━━━━━━\n` +
-              `👤 *Name:* ${name}\n` +
-              `📞 *Phone / WhatsApp:* ${phone}\n` +
-              `🚗 *Vehicle Model:* ${vehicle}\n` +
-              `🗺️ *Trip Type:* ${triptype}\n` +
-              `📍 *Destination / Route:* ${dest}\n` +
-              `📅 *Travel Date / Duration:* ${date}\n` +
-              `━━━━━━━━━━━━━━━━━━━━━━\n` +
-              `Please share tariff details and availability for this vehicle.`;
+// Aliases for backwards compatibility
+function selectRentalServiceType(serviceName) {
+  selectCabRentalServiceType(serviceName);
+}
+function selectAirportServiceType(serviceName) {
+  selectCabRentalServiceType(serviceName);
+}
+
+// 7c. Airport Booking Legacy Handler (routed to car rental submission)
+function submitAirportBookingEnquiry() {
+  submitCarRentalEnquiry();
+}
+
+// 7d. Filter Fleet on Car Rental Page
+function filterCarRentalFleet(category) {
+  const tabBtns = document.querySelectorAll('.car-filter-btn');
+  tabBtns.forEach(btn => btn.classList.remove('active'));
+  
+  const activeBtn = document.getElementById(`car-tab-${category}`);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  const cards = document.querySelectorAll('.car-fleet-card-item');
+  cards.forEach(card => {
+    const cardCat = card.getAttribute('data-category');
+    if (category === 'all' || cardCat === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// 7e. Cab Rental Form Submission
+function submitCarRentalEnquiry() {
+  const name = document.getElementById('rental-name')?.value?.trim() || "Customer";
+  const phone = document.getElementById('rental-phone')?.value?.trim() || "Not specified";
+  const serviceType = document.getElementById('rental-service-type')?.value || "Airport Transfer";
+  const vehicle = document.getElementById('rental-vehicle')?.value || "Vehicle Rental";
+  const pickup = document.getElementById('rental-pickup')?.value?.trim() || "Not specified";
+  const drop = document.getElementById('rental-drop')?.value?.trim() || "Not specified";
+  const date = document.getElementById('rental-date')?.value || "Not specified";
+  const pickupTime = document.getElementById('rental-pickup-time')?.value || "Not specified";
+  const passengers = document.getElementById('rental-passengers')?.value || "Not specified";
+  const notes = document.getElementById('rental-notes')?.value?.trim() || "";
+
+  let msg = `*🚗 CAB RENTAL BOOKING ENQUIRY - SHIVAPUTHRA TRAVELS*\n` +
+            `━━━━━━━━━━━━━━━━━━━━━━\n` +
+            `👤 *Customer Name:* ${name}\n` +
+            `📞 *WhatsApp / Phone:* ${phone}\n` +
+            `🛎️ *Service Type:* ${serviceType}\n` +
+            `🚘 *Vehicle Model:* ${vehicle}\n` +
+            `📍 *Pickup Location:* ${pickup}\n` +
+            `🏁 *Drop / Destination:* ${drop}\n` +
+            `📅 *Travel Date:* ${date}\n` +
+            `⏰ *Pickup Time:* ${pickupTime}\n` +
+            `👥 *Travelers Count:* ${passengers}\n`;
+
+  if (notes) {
+    msg += `📝 *Notes / Flight No:* ${notes}\n`;
+  }
+
+  msg += `━━━━━━━━━━━━━━━━━━━━━━\n` +
+         `Please share confirmation, vehicle availability, and total tariff quote.`;
+
   sendToWhatsApp(msg);
 }
 
@@ -578,64 +648,6 @@ function filterCarRentalFleet(cat) {
    MANDATORY ENTRY ENQUIRY MODAL CONTROLLER
    ========================================================= */
 
-const MANDATORY_TOUR_SUBTYPES = {
-  temple: [
-    { val: "Tirupati VIP Balaji Darshan (1 Day / 2 Days)", label: "Tirupati VIP Balaji Darshan Package (1 Day / 2 Days)" },
-    { val: "Grand South Indian Temple Tour (10 Days)", label: "Grand South Indian Temple Tour (10 Days / 9 Nights)" },
-    { val: "Chennai to Aarupadai Veedu Murugan Yatra (6 Days)", label: "Chennai to Aarupadai Veedu Murugan Yatra (6 Days)" },
-    { val: "Navagraha Temples Special Tour (3 Days)", label: "Navagraha Temples Special Tour (3 Days)" },
-    { val: "Thiruvannamalai Girivalam Package (1 Day)", label: "Thiruvannamalai Girivalam Special (1 Day)" },
-    { val: "Rameshwaram & Madurai Divine Yatra (4 Days)", label: "Rameshwaram & Madurai Divine Yatra (4 Days)" },
-    { val: "Kanchipuram & Mahabalipuram Temple Tour (1 Day)", label: "Kanchipuram & Mahabalipuram Tour (1 Day)" },
-    { val: "Chidambaram & Kumbakonam Temple Tour (2 Days)", label: "Chidambaram & Kumbakonam Tour (2 Days)" },
-    { val: "Customized Temple Yatra / Pilgrimage", label: "Customized Temple Yatra / Other Pilgrimage" }
-  ],
-  holiday: [
-    { val: "Ooty & Coonoor Hill Escape (3 Days)", label: "Ooty & Coonoor Hill Escape (3 Days)" },
-    { val: "Kodaikanal Queen of Hills (3 Days)", label: "Kodaikanal Hill Getaway (3 Days)" },
-    { val: "Munnar & Alleppey Backwaters Kerala (4 Days)", label: "Munnar & Alleppey Backwaters (4 Days)" },
-    { val: "Pondicherry & ECR Beach Retreat (2 Days)", label: "Pondicherry & ECR Beach Retreat (2 Days)" },
-    { val: "Yercaud Hill Station Getaway (2 Days)", label: "Yercaud Hill Station Getaway (2 Days)" },
-    { val: "Wayanad Nature & Wildlife Tour (3 Days)", label: "Wayanad Nature & Wildlife Tour (3 Days)" },
-    { val: "Custom Family Holiday Package", label: "Custom Family Holiday / Vacation Package" }
-  ],
-  rental: [
-    { val: "Chennai Local Sightseeing (5 Hrs / 10 Hrs)", label: "Chennai Local Sightseeing (5 Hrs / 10 Hrs)" },
-    { val: "Outstation Round Trip / One-Way Drop Taxi", label: "Outstation Round Trip / One-Way Drop Taxi" },
-    { val: "Chennai Airport / Railway Station Transfer", label: "Chennai Airport / Railway Station Transfer" },
-    { val: "Innova Crysta VIP Luxury Rental", label: "Innova Crysta VIP Luxury Rental" },
-    { val: "12/17 Seater Tempo Traveller Booking", label: "12 / 17 Seater Tempo Traveller Booking" },
-    { val: "Force Urbania Luxury Van Booking", label: "Force Urbania Luxury Van Booking" }
-  ],
-  corporate: [
-    { val: "Corporate Employee Daily Transportation", label: "Corporate Employee Daily Transportation" },
-    { val: "Executive Event & VIP Delegation Fleet", label: "Executive Event & VIP Delegation Fleet" },
-    { val: "Monthly Dedicated Fleet Long-Term Contract", label: "Monthly Dedicated Fleet Contract" },
-    { val: "Outstation Corporate Retreat / Team Outing", label: "Outstation Corporate Retreat / Team Outing" }
-  ]
-};
-
-function onTourTypeChange(tourType) {
-  const subTypeElem = document.getElementById('entry-subtype');
-  if (!subTypeElem) return;
-
-  const options = MANDATORY_TOUR_SUBTYPES[tourType] || [];
-  
-  if (options.length === 0) {
-    subTypeElem.innerHTML = `<option value="" disabled selected>-- First Select Tour Type Above --</option>`;
-  } else {
-    let optionsHtml = `<option value="" disabled selected>-- Select Specific Package / Route --</option>`;
-    options.forEach(opt => {
-      optionsHtml += `<option value="${opt.val}">${opt.label}</option>`;
-    });
-    subTypeElem.innerHTML = optionsHtml;
-  }
-
-  // Clear any existing error state
-  clearFieldError(document.getElementById('entry-tour-type'));
-  clearFieldError(subTypeElem);
-}
-
 function closeEntryModal() {
   const overlay = document.getElementById('mandatory-modal-overlay');
   if (overlay) {
@@ -695,7 +707,7 @@ function clearFieldError(inputElem) {
   if (!inputElem) return;
   const wrapper = inputElem.closest('.input-icon-wrapper');
   if (wrapper) wrapper.classList.remove('has-error');
-  const errText = document.getElementById('err-' + inputElem.id);
+  const errText = document.getElementById('err-' + inputElem.id) || (inputElem.id === 'entry-drop-time' ? document.getElementById('err-entry-pickup-time') : null);
   if (errText) errText.classList.remove('visible');
 }
 
@@ -718,29 +730,44 @@ function shakeMandatoryModal() {
   }, 600);
 }
 
+function formatTime12Hr(timeStr) {
+  if (!timeStr) return '';
+  const parts = timeStr.split(':');
+  if (parts.length < 2) return timeStr;
+  let hours = parseInt(parts[0], 10);
+  const minutes = parts[1];
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  const formattedHours = hours < 10 ? '0' + hours : hours;
+  return `${formattedHours}:${minutes} ${ampm}`;
+}
+
 function handleMandatoryEnquiry(event) {
   if (event) event.preventDefault();
 
   const nameInput = document.getElementById('entry-name');
   const phoneInput = document.getElementById('entry-phone');
-  const tourTypeInput = document.getElementById('entry-tour-type');
-  const subTypeInput = document.getElementById('entry-subtype');
-  const pickupInput = document.getElementById('entry-pickup');
-  const dateInput = document.getElementById('entry-date');
+  const serviceTypeInput = document.getElementById('entry-service-type');
+  const vehicleCategoryInput = document.getElementById('entry-vehicle-category');
   const travelersInput = document.getElementById('entry-travelers');
-  const purposeInput = document.getElementById('entry-purpose');
+  const sourceInput = document.getElementById('entry-source');
+  const dateInput = document.getElementById('entry-date');
+  const pickupTimeInput = document.getElementById('entry-pickup-time');
+  const dropTimeInput = document.getElementById('entry-drop-time');
   const notesInput = document.getElementById('entry-notes');
 
   let isValid = true;
   let firstInvalid = null;
 
-  function markError(inputElem, customMsg) {
+  function markError(inputElem, customMsg, errId) {
     isValid = false;
-    if (!firstInvalid) firstInvalid = inputElem;
+    if (!firstInvalid && inputElem) firstInvalid = inputElem;
     const wrapper = inputElem ? inputElem.closest('.input-icon-wrapper') : null;
     if (wrapper) wrapper.classList.add('has-error');
-    if (inputElem) {
-      const errText = document.getElementById('err-' + inputElem.id);
+    const targetErrId = errId || (inputElem ? 'err-' + inputElem.id : null);
+    if (targetErrId) {
+      const errText = document.getElementById(targetErrId);
       if (errText) {
         if (customMsg) errText.textContent = customMsg;
         errText.classList.add('visible');
@@ -754,46 +781,52 @@ function handleMandatoryEnquiry(event) {
     markError(nameInput, 'Please enter your full name');
   }
 
-  // 2. Phone validation (10 digits)
+  // 2. WhatsApp Number validation (10 digits)
   const phoneVal = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
   if (!phoneVal || phoneVal.length < 10) {
-    markError(phoneInput, 'Please enter a valid 10-digit mobile number');
+    markError(phoneInput, 'Please enter a valid 10-digit WhatsApp number');
   }
 
-  // 3. Tour Type validation
-  const tourTypeVal = tourTypeInput ? tourTypeInput.value : '';
-  if (!tourTypeVal) {
-    markError(tourTypeInput, 'Please select a tour type');
+  // 3. Service Type validation
+  const serviceTypeVal = serviceTypeInput ? serviceTypeInput.value : '';
+  if (!serviceTypeVal) {
+    markError(serviceTypeInput, 'Please select a service type');
   }
 
-  // 4. Sub Type validation
-  const subTypeVal = subTypeInput ? subTypeInput.value : '';
-  if (!subTypeVal) {
-    markError(subTypeInput, 'Please select a specific package or route');
+  // 4. Vehicle Category validation
+  const vehicleCategoryVal = vehicleCategoryInput ? vehicleCategoryInput.value : '';
+  if (!vehicleCategoryVal) {
+    markError(vehicleCategoryInput, 'Please select a vehicle category');
   }
 
-  // 5. Pickup Location validation
-  const pickupVal = pickupInput ? pickupInput.value.trim() : '';
-  if (!pickupVal) {
-    markError(pickupInput, 'Please enter your pickup location / city');
-  }
-
-  // 6. Expected Travel Date validation
-  const dateVal = dateInput ? dateInput.value : '';
-  if (!dateVal) {
-    markError(dateInput, 'Please select your planned travel date');
-  }
-
-  // 7. No. of Travelers validation
+  // 5. Number of Travelers / Car validation
   const travelersVal = travelersInput ? travelersInput.value : '';
   if (!travelersVal) {
-    markError(travelersInput, 'Please select number of travellers');
+    markError(travelersInput, 'Please select number of travelers / car');
   }
 
-  // 8. Purpose of Visiting validation
-  const purposeVal = purposeInput ? purposeInput.value : '';
-  if (!purposeVal) {
-    markError(purposeInput, 'Please select your purpose of visiting');
+  // 6. How Did You Find Us validation
+  const sourceVal = sourceInput ? sourceInput.value : '';
+  if (!sourceVal) {
+    markError(sourceInput, 'Please select how you found our website');
+  }
+
+  // 7. Date of Travel validation
+  const dateVal = dateInput ? dateInput.value : '';
+  if (!dateVal) {
+    markError(dateInput, 'Please select date of travel');
+  }
+
+  // 8. Pickup Time validation
+  const pickupTimeVal = pickupTimeInput ? pickupTimeInput.value : '';
+  if (!pickupTimeVal) {
+    markError(pickupTimeInput, 'Please select pickup time');
+  }
+
+  // 9. Drop Time validation
+  const dropTimeVal = dropTimeInput ? dropTimeInput.value : '';
+  if (!dropTimeVal) {
+    markError(dropTimeInput, 'Please select drop time');
   }
 
   if (!isValid) {
@@ -803,13 +836,12 @@ function handleMandatoryEnquiry(event) {
   }
 
   const notesVal = notesInput ? notesInput.value.trim() : '';
-  const tourTypeLabel = tourTypeInput.options[tourTypeInput.selectedIndex]?.text || tourTypeVal;
 
   // Disable button and show progress state
   const submitBtn = document.getElementById('btn-mandatory-submit');
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span><i class="fas fa-spinner fa-spin"></i> Submitting & Opening Website...</span>`;
+    submitBtn.innerHTML = `<span><i class="fas fa-spinner fa-spin"></i> Submitting & Opening WhatsApp...</span>`;
   }
 
   // Format rich WhatsApp Enquiry Message
@@ -817,13 +849,14 @@ function handleMandatoryEnquiry(event) {
     `*✨ NEW TRIP ENQUIRY - SHIVAPUTHRA TRAVELS ✨*\n` +
     `━━━━━━━━━━━━━━━━━━━━━━\n` +
     `👤 *Customer Name:* ${nameVal}\n` +
-    `📞 *Phone / WhatsApp:* +91 ${phoneVal}\n` +
-    `🧭 *Tour Category:* ${tourTypeLabel}\n` +
-    `🛕 *Specific Package / Route:* ${subTypeVal}\n` +
-    `📍 *Pickup City / Area:* ${pickupVal}\n` +
-    `📅 *Expected Travel Date:* ${dateVal}\n` +
-    `👥 *No. of Travellers:* ${travelersVal}\n` +
-    `🎯 *Purpose of Visit:* ${purposeVal}\n` +
+    `📱 *WhatsApp Number:* +91 ${phoneVal}\n` +
+    `🚖 *Service Type:* ${serviceTypeVal}\n` +
+    `🚗 *Vehicle Category:* ${vehicleCategoryVal}\n` +
+    `👥 *Number of Travelers / Car:* ${travelersVal}\n` +
+    `🌐 *Found Website Via:* ${sourceVal}\n` +
+    `📅 *Date of Travel:* ${dateVal}\n` +
+    `⏰ *Pickup Time:* ${pickupTimeVal}\n` +
+    `⏳ *Drop Time:* ${dropTimeVal}\n` +
     (notesVal ? `💬 *Additional Notes:* ${notesVal}\n` : '') +
     `━━━━━━━━━━━━━━━━━━━━━━\n` +
     `Hello Shivaputhra Travels! Please share vehicle options, tour package itinerary, and best all-inclusive quote for this requirement.`;
@@ -834,12 +867,13 @@ function handleMandatoryEnquiry(event) {
     localStorage.setItem('shivaputhra_lead_profile', JSON.stringify({
       name: nameVal,
       phone: phoneVal,
-      tourType: tourTypeVal,
-      subType: subTypeVal,
-      pickup: pickupVal,
-      date: dateVal,
+      serviceType: serviceTypeVal,
+      vehicleCategory: vehicleCategoryVal,
       travelers: travelersVal,
-      purpose: purposeVal,
+      source: sourceVal,
+      date: dateVal,
+      pickupTime: pickupTimeVal,
+      dropTime: dropTimeVal,
       notes: notesVal,
       submittedAt: new Date().toISOString()
     }));

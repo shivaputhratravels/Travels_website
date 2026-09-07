@@ -568,14 +568,14 @@
     line-height: 1.1;
     letter-spacing: 2px;
     color: #ffffff;
-    text-shadow: 0 0 20px rgba(245, 158, 11, 0.65), 0 2px 10px rgba(0, 0, 0, 0.95), 0 6px 28px rgba(10, 25, 47, 0.9);
+    text-shadow: none;
     user-select: none;
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   .hero-top-brand:hover {
     transform: scale(1.03);
-    text-shadow: 0 0 28px rgba(245, 158, 11, 0.85), 0 2px 12px rgba(0, 0, 0, 1);
+    text-shadow: none;
   }
 
   .hero-inner-content h1 {
@@ -2912,6 +2912,136 @@
     }
   }
 
+  /* Car Rental 3 Service Pillars Grid */
+  .car-service-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 35px 0 50px;
+  }
+
+  @media (max-width: 992px) {
+    .car-service-pillars-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .car-service-pillar-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1.5px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(10, 25, 47, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .car-service-pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(10, 25, 47, 0.12);
+    border-color: var(--accent);
+  }
+
+  .car-service-pillar-header {
+    background: linear-gradient(135deg, #0a192f 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 24px 22px;
+    position: relative;
+  }
+
+  .car-service-pillar-header.accent-airport {
+    background: linear-gradient(135deg, #0a192f 0%, #0284c7 100%);
+  }
+
+  .car-service-pillar-header.accent-local {
+    background: linear-gradient(135deg, #0a192f 0%, #d97706 100%);
+  }
+
+  .car-service-pillar-header.accent-outstation {
+    background: linear-gradient(135deg, #0a192f 0%, #059669 100%);
+  }
+
+  .car-service-pillar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .car-service-pillar-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .car-service-pillar-sub {
+    font-size: 13px;
+    color: #f1f5f9;
+    line-height: 1.45;
+  }
+
+  .car-service-pillar-body {
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .car-service-route-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0 18px;
+  }
+
+  .route-pill-item {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .route-pill-item i {
+    color: var(--accent);
+    font-size: 10px;
+  }
+
+  .car-service-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #475569;
+  }
+
+  .car-service-feature-item i {
+    color: #10b981;
+    font-size: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
   /* Car Rental Fleet Tariff & Filter Styling */
   .car-filter-bar {
     display: flex;
@@ -3121,36 +3251,28 @@
   .mandatory-modal-header {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .mandatory-brand-badge {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
+    margin: 0 auto 12px auto;
+    text-align: center;
+    width: 100%;
   }
 
   .mandatory-logo-img {
-    height: 48px;
+    height: 52px;
     width: auto;
+    max-width: 240px;
     object-fit: contain;
-  }
-
-  .required-tag {
-    background: rgba(217, 119, 6, 0.12);
-    color: #b45309;
-    border: 1px solid rgba(217, 119, 6, 0.3);
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 5px 12px;
-    border-radius: 30px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: block;
+    margin: 0 auto;
   }
 
   .mandatory-title {
@@ -3159,6 +3281,7 @@
     color: var(--primary);
     margin-bottom: 6px;
     letter-spacing: -0.3px;
+    text-align: center;
   }
 
   .mandatory-subtitle {
@@ -3167,6 +3290,7 @@
     max-width: 540px;
     margin: 0 auto;
     line-height: 1.5;
+    text-align: center;
   }
 
   /* Trust Row */
@@ -3326,6 +3450,45 @@
     background-position: right 12px center;
     background-size: 14px;
     padding-right: 32px;
+  }
+
+  .time-dual-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .time-field-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .time-field-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .time-field-title i {
+    font-size: 10px;
+    color: var(--accent);
+  }
+
+  .time-sub-wrapper input {
+    font-size: 12.5px;
+    padding: 9px 8px 9px 32px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+  }
+
+  .time-sub-wrapper .field-icon {
+    left: 10px;
+    font-size: 12px;
   }
 
   .field-error-msg {
@@ -3525,6 +3688,12 @@
     .btn-mandatory-submit {
       font-size: 14px;
       padding: 12px 18px;
+    }
+
+    @media (max-width: 420px) {
+      .time-dual-wrapper {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
@@ -3780,4 +3949,239 @@
     .happy-clients-title {
       font-size: 20px;
     }
+  }
+
+  /* ================================================= */
+  /* CAR RENTAL SERVICE PILLARS & BOOKING FORM         */
+  /* ================================================= */
+  .car-service-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+
+  .car-service-pillar-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .car-service-pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+  }
+
+  .car-service-pillar-header {
+    padding: 24px 22px 20px;
+    color: #ffffff;
+    position: relative;
+  }
+
+  .car-service-pillar-header.accent-airport {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  }
+
+  .car-service-pillar-header.accent-local {
+    background: linear-gradient(135deg, #78350f 0%, #d97706 100%);
+  }
+
+  .car-service-pillar-header.accent-outstation {
+    background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+  }
+
+  .car-service-pillar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .car-service-pillar-title {
+    font-family: var(--font-brand);
+    font-size: 23px;
+    margin: 0 0 6px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .car-service-pillar-sub {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .car-service-pillar-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 12px;
+    background: #ffffff;
+  }
+
+  .car-service-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  .car-service-feature-item i {
+    color: #059669;
+    font-size: 14px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .car-service-route-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+  .route-pill-item {
+    font-size: 11.5px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .route-pill-item i {
+    color: var(--accent);
+    font-size: 10px;
+  }
+
+  /* Form Enhancement */
+  .car-rental-form-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    max-width: 950px;
+    margin: 50px auto 20px;
+  }
+
+  .form-section-title {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--primary);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 8px;
+  }
+
+  .form-section-title i {
+    color: var(--accent);
+  }
+
+  @media (max-width: 992px) {
+    .car-service-pillars-grid {
+      grid-template-columns: 1fr;
+    }
+    .car-rental-form-card {
+      padding: 24px 18px;
+    }
+  }
+
+  /* Master Tariff Tables (Clean, High-Contrast & Responsive) */
+  .table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+  }
+
+  .master-tariff-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 13.5px;
+    white-space: nowrap;
+  }
+
+  .master-tariff-table thead tr {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-weight: 700;
+    border-bottom: 2px solid #bae6fd;
+  }
+
+  .master-tariff-table th {
+    padding: 14px 16px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #0c4a6e;
+    border-right: 1px solid rgba(186, 230, 253, 0.7);
+  }
+
+  .master-tariff-table th:last-child {
+    border-right: none;
+  }
+
+  .master-tariff-table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.2s ease;
+  }
+
+  .master-tariff-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .master-tariff-table tbody tr:hover {
+    background-color: #eff6ff;
+  }
+
+  .master-tariff-table td {
+    padding: 12px 16px;
+    color: #334155;
+    border-right: 1px solid #f1f5f9;
+  }
+
+  .master-tariff-table td:last-child {
+    border-right: none;
+  }
+
+  .master-tariff-table td strong {
+    color: var(--primary);
   }
