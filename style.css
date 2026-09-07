@@ -3452,6 +3452,21 @@
     padding-right: 32px;
   }
 
+  .input-icon-wrapper select optgroup {
+    font-weight: 700;
+    color: var(--primary);
+    background: #f1f5f9;
+    font-style: normal;
+    padding: 6px 4px;
+  }
+
+  .input-icon-wrapper select option {
+    font-weight: 500;
+    color: #1e293b;
+    background: #ffffff;
+    padding: 6px 10px;
+  }
+
   .time-dual-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

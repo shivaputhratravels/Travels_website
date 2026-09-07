@@ -96,20 +96,44 @@
             <div class="input-icon-wrapper">
               <i class="fas fa-car-side field-icon"></i>
               <select id="entry-vehicle-category" name="vehicle_category" required>
-                <option value="" disabled selected>-- Select Vehicle Category --</option>
-                <option value="Sedan (Dzire / Etios / Amaze - 4 Seater)">🚗 Sedan (Dzire / Etios / Amaze - 4 Seater)
-                </option>
-                <option value="Premium Sedan (Honda City / Ciaz)">✨ Premium Sedan (Honda City / Ciaz)</option>
-                <option value="SUV (Ertiga / Carens - 6 Seater)">🚙 SUV (Ertiga / Carens - 6 Seater)</option>
-                <option value="Premium SUV (Innova Crysta - 7 Seater)">⭐ Premium SUV (Innova Crysta - 7 Seater)</option>
-                <option value="Luxury SUV (Innova Hycross - 7 Seater)">👑 Luxury SUV (Innova Hycross - 7 Seater)
-                </option>
-                <option value="Tempo Traveller (12 Seater AC)">🚐 Tempo Traveller (12 Seater AC)</option>
-                <option value="Tempo Traveller (14 Seater AC)">🚐 Tempo Traveller (14 Seater AC)</option>
-                <option value="Tempo Traveller (17 Seater AC)">🚐 Tempo Traveller (17 Seater AC)</option>
-                <option value="Force Urbania Luxury Van (10/13/17S)">🌟 Force Urbania Luxury Van (10/13/17S)</option>
-                <option value="Mini Bus / Luxury Coach (21+ Seater)">🚌 Mini Bus / Luxury Coach (21+ Seater)</option>
-                <option value="Suggest Best Vehicle Option">💡 Suggest Best Vehicle Option</option>
+                <option value="" disabled selected>-- Select Vehicle / Category --</option>
+                
+                <optgroup label="🚗 Sedans (4+1 Seater)">
+                  <option value="Swift Dzire (4+1 Seater)">Swift Dzire (4+1 Seater)</option>
+                  <option value="Honda Amaze (4+1 Seater)">Honda Amaze (4+1 Seater)</option>
+                  <option value="Honda City (4+1 Seater)">Honda City (4+1 Seater)</option>
+                  <option value="Toyota Corolla Altis (4+1 Seater)">Toyota Corolla Altis (4+1 Seater)</option>
+                </optgroup>
+
+                <optgroup label="🚙 SUVs & MPVs (6+1 / 7+1 Seater)">
+                  <option value="Maruti Ertiga / Tour M (6+1 Seater)">Maruti Ertiga / Tour M (6+1 Seater)</option>
+                  <option value="Kia Carens (7+1 Seater)">Kia Carens (7+1 Seater)</option>
+                  <option value="Toyota Innova (6+1 / 7+1 Seater)">Toyota Innova (6+1 / 7+1 Seater)</option>
+                  <option value="Toyota Innova Crysta (6+1 / 7+1 Seater)">Toyota Innova Crysta (6+1 / 7+1 Seater)</option>
+                </optgroup>
+
+                <optgroup label="⭐ Premium MPVs & Luxury SUVs">
+                  <option value="Toyota Innova Hycross (6+1 / 7+1 Seater)">Toyota Innova Hycross (6+1 / 7+1 Seater)</option>
+                  <option value="Kia Carnival (7+1 Seater)">Kia Carnival (7+1 Seater)</option>
+                  <option value="Toyota Fortuner (7+1 Seater)">Toyota Fortuner (7+1 Seater)</option>
+                </optgroup>
+
+                <optgroup label="👑 VIP Luxury Fleet">
+                  <option value="Mercedes-Benz E-Class (4+1 Seater)">Mercedes-Benz E-Class (4+1 Seater)</option>
+                  <option value="Mercedes-Benz S-Class (4+1 Seater)">Mercedes-Benz S-Class (4+1 Seater)</option>
+                  <option value="Toyota Vellfire VIP (7+1 Seater)">Toyota Vellfire VIP (7+1 Seater)</option>
+                </optgroup>
+
+                <optgroup label="🚐 Tempo Travellers & Luxury Vans">
+                  <option value="Tempo Traveller 12 Seater (12+1)">Tempo Traveller 12 Seater (12+1)</option>
+                  <option value="Tempo Traveller 18 Seater (18+1)">Tempo Traveller 18 Seater (18+1)</option>
+                  <option value="Force Urbania (12 Seater)">Force Urbania (12 Seater)</option>
+                  <option value="Mahindra Tourister (16 Seater)">Mahindra Tourister (16 Seater)</option>
+                </optgroup>
+
+                <optgroup label="💡 Recommendation">
+                  <option value="Suggest Best Vehicle for My Trip / Group">Suggest Best Vehicle for My Trip / Group</option>
+                </optgroup>
               </select>
             </div>
             <span class="field-error-msg" id="err-entry-vehicle-category">Please select vehicle category</span>
@@ -125,13 +149,12 @@
                 <option value="1 Person (1 Car)">1 Person (1 Car)</option>
                 <option value="2 - 3 Persons (1 Sedan / Car)">2 - 3 Persons (1 Sedan / Car)</option>
                 <option value="4 - 7 Persons (1 SUV / Crysta)">4 - 7 Persons (1 SUV / Crysta)</option>
-                <option value="8 - 12 Persons (1 Tempo Traveller)">8 - 12 Persons (1 Tempo Traveller)</option>
-                <option value="13 - 17 Persons (1 Urbania / 17S Tempo)">13 - 17 Persons (1 Urbania / 17S Tempo)</option>
-                <option value="18+ Persons (Mini Bus / Coach)">18+ Persons (Mini Bus / Coach)</option>
-                <option value="Multiple Cars Required (Group Booking)">Multiple Cars Required (Group Booking)</option>
+                <option value="8 - 12 Persons (1 Tempo Traveller / Urbania)">8 - 12 Persons (1 Tempo Traveller / Urbania)</option>
+                <option value="13 - 18 Persons (18S Tempo / Tourister)">13 - 18 Persons (18S Tempo / Tourister)</option>
+                <option value="18+ Persons (Multiple Fleet / Coach)">18+ Persons (Multiple Fleet / Coach)</option>
               </select>
             </div>
-            <span class="field-error-msg" id="err-entry-travelers">Please select number of travelers / car</span>
+            <span class="field-error-msg" id="err-entry-travelers">Please select number of travelers</span>
           </div>
 
           <!-- 6. How Did You Find Us -->
@@ -3536,28 +3559,6 @@
                 </tr>
                 <tr>
                   <td><strong>Tempo Traveller</strong></td>
-                  <td>13</td>
-                  <td>₹3,000/-</td>
-                  <td>₹6,000/-</td>
-                  <td>₹9,000/-</td>
-                  <td>₹22/-</td>
-                  <td>₹650/-</td>
-                  <td>₹6,600/-</td>
-                  <td>₹22/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Luxury Tempo</strong></td>
-                  <td>14</td>
-                  <td>₹3,000/-</td>
-                  <td>₹6,000/-</td>
-                  <td>₹9,000/-</td>
-                  <td>₹25/-</td>
-                  <td>₹650/-</td>
-                  <td>₹7,500/-</td>
-                  <td>₹25/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Tempo Traveller</strong></td>
                   <td>18</td>
                   <td>₹4,000/-</td>
                   <td>₹8,000/-</td>
@@ -3831,7 +3832,7 @@
               </p>
               <ul style="list-style: none; padding: 0; margin: 0 0 20px; font-size: 13.5px; color: #334155;">
                 <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><i
-                    class="fas fa-check-circle" style="color: #059669;"></i> Force Urbania (10-16 Seater Luxury
+                    class="fas fa-check-circle" style="color: #059669;"></i> Force Urbania (12 Seater Luxury
                   Recliners)</li>
                 <li style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><i
                     class="fas fa-check-circle" style="color: #059669;"></i> Volvo & Scania Luxury Air-Suspension
@@ -3916,7 +3917,7 @@
                 <h4 style="font-size: 16px; margin: 4px 0 8px; color: var(--primary);">Force Urbania Luxury Recliner
                 </h4>
                 <div style="font-size: 12.5px; color: #64748b; margin-bottom: 12px;"><i class="fas fa-user-friends"></i>
-                  10 to 16 Seater | <i class="fas fa-wifi"></i> Recliners</div>
+                  12 Seater | <i class="fas fa-wifi"></i> Recliners</div>
                 <div
                   style="font-size: 12px; background: #f8fafc; padding: 8px 10px; border-radius: 6px; color: #475569;">
                   Ideal for Leadership Delegations, Offsite Retreats & MICE Events</div>
