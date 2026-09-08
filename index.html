@@ -50,131 +50,80 @@
 
       <!-- Enquiry Form -->
       <form id="mandatory-enquiry-form" onsubmit="handleMandatoryEnquiry(event)" novalidate>
-        <div class="mandatory-form-grid">
-
-          <!-- 1. Full Name -->
-          <div class="form-field-group">
-            <label for="entry-name">Full Name <span class="req-star">*</span></label>
-            <div class="input-icon-wrapper">
-              <i class="fas fa-user field-icon"></i>
-              <input type="text" id="entry-name" name="name" placeholder="Enter your full name" required />
-            </div>
-            <span class="field-error-msg" id="err-entry-name">Please enter your full name</span>
-          </div>
-
-          <!-- 2. WhatsApp Number -->
-          <div class="form-field-group">
-            <label for="entry-phone">WhatsApp Number <span class="req-star">*</span></label>
-            <div class="input-icon-wrapper">
-              <span class="country-prefix">+91</span>
-              <input type="tel" id="entry-phone" name="phone" placeholder="10-digit mobile number" maxlength="10"
-                required />
-            </div>
-            <span class="field-error-msg" id="err-entry-phone">Please enter a valid 10-digit WhatsApp number</span>
-          </div>
-
-          <!-- 3. Service Type -->
+        <!-- 1. Service & Vehicle Selection -->
+        <div class="form-section-title" style="font-size: 13px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-car"></i> 1. Service & Vehicle Selection
+        </div>
+        <div class="mandatory-form-grid" style="margin-bottom: 18px;">
+          <!-- Service Type -->
           <div class="form-field-group">
             <label for="entry-service-type">Service Type <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
-              <i class="fas fa-route field-icon"></i>
+              <i class="fas fa-layer-group field-icon"></i>
               <select id="entry-service-type" name="service_type" required>
                 <option value="" disabled selected>-- Select Service Type --</option>
-                <option value="Airport Transfer">✈️ Airport Transfer</option>
-                <option value="Local Rental">🏙️ Local Rental</option>
-                <option value="Temple Tour Packages">🛕 Temple Tour Packages</option>
-                <option value="Holiday Tours">🌿 Holiday Tours</option>
-                <option value="Cab Rental for Outstation">🚗 Cab Rental for Outstation</option>
+                <option value="Airport Transfer">Airport Transfer</option>
+                <option value="Local Rental">Local Rental</option>
+                <option value="Outstation">Outstation</option>
               </select>
             </div>
             <span class="field-error-msg" id="err-entry-service-type">Please select a service type</span>
           </div>
 
-          <!-- 4. Vehicle Category -->
+          <!-- Preferred Vehicle Model -->
           <div class="form-field-group">
-            <label for="entry-vehicle-category">Vehicle Category <span class="req-star">*</span></label>
+            <label for="entry-vehicle-category">Preferred Vehicle Model <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
-              <i class="fas fa-car-side field-icon"></i>
+              <i class="fas fa-taxi field-icon"></i>
               <select id="entry-vehicle-category" name="vehicle_category" required>
-                <option value="" disabled selected>-- Select Vehicle / Category --</option>
-                
-                <optgroup label="🚗 Sedans (4 Seater)">
-                  <option value="Honda Amaze (4 Seater)">Honda Amaze (4 Seater)</option>
-                  <option value="Honda City (4 Seater)">Honda City (4 Seater)</option>
-                  <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater)</option>
-                </optgroup>
-
-                <optgroup label="🚙 SUVs & MPVs (6 - 8 Seater)">
-                  <option value="Toyota Innova (7-8 Seater)">Toyota Innova (7-8 Seater)</option>
-                  <option value="Innova Crysta (7 Seater)">Innova Crysta (7 Seater)</option>
-                  <option value="Toyota Fortuner (6 Seater)">Toyota Fortuner (6 Seater)</option>
-                </optgroup>
-
-                <optgroup label="⭐ Premium MPVs">
-                  <option value="Innova Hycross (7-8 Seater)">Innova Hycross (7-8 Seater)</option>
-                  <option value="Kia Carnival (7-9 Seater)">Kia Carnival (7-9 Seater)</option>
-                </optgroup>
-
-                <optgroup label="👑 VIP Luxury Fleet">
-                  <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater)</option>
-                  <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater)</option>
-                  <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP)</option>
-                </optgroup>
-
-                <optgroup label="🚐 Vans & Tempo Travellers">
-                  <option value="Force Urbania (12 Seater)">Force Urbania (12 Seater)</option>
-                  <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
-                  <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
-                </optgroup>
-
-                <optgroup label="💡 Recommendation">
-                  <option value="Suggest Best Vehicle for My Trip / Group">Suggest Best Vehicle for My Trip / Group</option>
-                </optgroup>
+                <option value="" disabled selected>-- Select Vehicle Model --</option>
+                <option value="Honda Amaze (4 Seater)">Honda Amaze (4 Seater Sedan)</option>
+                <option value="Honda City (4 Seater)">Honda City (4 Seater Sedan)</option>
+                <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater Sedan)</option>
+                <option value="Toyota Innova (7-8 Seater)">Toyota Innova (7-8 Seater SUV/MPV)</option>
+                <option value="Innova Crysta (7 Seater)">Innova Crysta (7 Seater SUV/MPV)</option>
+                <option value="Innova Hycross (7-8 Seater)">Innova Hycross (7-8 Seater Premium MPV)</option>
+                <option value="Toyota Fortuner (6 Seater)">Toyota Fortuner (6 Seater SUV)</option>
+                <option value="Kia Carnival (7-9 Seater)">Kia Carnival (7-9 Seater Premium MPV)</option>
+                <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater Luxury)</option>
+                <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater Luxury)</option>
+                <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP MPV)</option>
+                <option value="Force Urbania (12 Seater)">Force Urbania (12 Seater Luxury Van)</option>
+                <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
+                <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
               </select>
             </div>
-            <span class="field-error-msg" id="err-entry-vehicle-category">Please select vehicle category</span>
+            <span class="field-error-msg" id="err-entry-vehicle-category">Please select vehicle model</span>
           </div>
+        </div>
 
-          <!-- 5. Number of Travelers / Car -->
+        <!-- 2. Journey & Timing Details -->
+        <div class="form-section-title" style="font-size: 13px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-route"></i> 2. Journey & Timing Details
+        </div>
+        <div class="mandatory-form-grid" style="margin-bottom: 18px;">
+          <!-- Pickup Location -->
           <div class="form-field-group">
-            <label for="entry-travelers">Number of Travelers / Car <span class="req-star">*</span></label>
+            <label for="entry-pickup">Pickup Location / Terminal <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
-              <i class="fas fa-users field-icon"></i>
-              <select id="entry-travelers" name="travelers" required>
-                <option value="" disabled selected>-- Select Travelers / Car --</option>
-                <option value="1 Person (1 Car)">1 Person (1 Car)</option>
-                <option value="2 - 3 Persons (1 Sedan / Car)">2 - 3 Persons (1 Sedan / Car)</option>
-                <option value="4 - 7 Persons (1 SUV / Crysta)">4 - 7 Persons (1 SUV / Crysta)</option>
-                <option value="8 - 12 Persons (1 Tempo Traveller / Urbania)">8 - 12 Persons (1 Tempo Traveller / Urbania)</option>
-                <option value="13 - 18 Persons (18S Tempo Traveller)">13 - 18 Persons (18S Tempo Traveller)</option>
-                <option value="18+ Persons (Multiple Fleet / Coach)">18+ Persons (Multiple Fleet / Coach)</option>
-              </select>
+              <i class="fas fa-map-pin field-icon"></i>
+              <input type="text" id="entry-pickup" name="pickup" placeholder="e.g. MAA Airport Terminal 1 / T. Nagar" required />
             </div>
-            <span class="field-error-msg" id="err-entry-travelers">Please select number of travelers</span>
+            <span class="field-error-msg" id="err-entry-pickup">Please enter pickup location</span>
           </div>
 
-          <!-- 6. How Did You Find Us -->
+          <!-- Drop Destination -->
           <div class="form-field-group">
-            <label for="entry-source">How Did You Find Our Website? <span class="req-star">*</span></label>
+            <label for="entry-drop">Drop / Destination <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
-              <i class="fas fa-bullhorn field-icon"></i>
-              <select id="entry-source" name="source" required>
-                <option value="" disabled selected>-- How did you find us? --</option>
-                <option value="Google Search">🔍 Google Search</option>
-                <option value="Instagram">📸 Instagram</option>
-                <option value="Facebook">👍 Facebook</option>
-                <option value="Friend / Family Reference">👥 Friend / Family Reference</option>
-                <option value="WhatsApp / Social Media">💬 WhatsApp / Social Media</option>
-                <option value="YouTube">▶️ YouTube</option>
-                <option value="Previous Customer / Returning Client">⭐ Previous Customer / Returning Client</option>
-                <option value="Other">🌐 Other</option>
-              </select>
+              <i class="fas fa-map-marker-alt field-icon"></i>
+              <input type="text" id="entry-drop" name="drop" placeholder="e.g. Hotel ITC Grand Chola / Tirupati" required />
             </div>
-            <span class="field-error-msg" id="err-entry-source">Please select how you found our website</span>
+            <span class="field-error-msg" id="err-entry-drop">Please enter drop destination</span>
           </div>
 
-          <!-- 7. Date of Travel -->
-          <div class="form-field-group field-full-width" style="margin-bottom: 0;">
+          <!-- Date of Travel -->
+          <div class="form-field-group">
             <label for="entry-date">Date of Travel <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-calendar-alt field-icon"></i>
@@ -183,13 +132,21 @@
             <span class="field-error-msg" id="err-entry-date">Please select date of travel</span>
           </div>
 
-          <!-- 8. Pickup Time -->
+          <!-- Pickup Time -->
           <div class="form-field-group">
             <label for="entry-pickup-time">Pickup Time <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-clock field-icon"></i>
               <select id="entry-pickup-time" name="pickup_time" required>
                 <option value="" disabled selected>-- Select Pickup Time --</option>
+                <option value="12:00 AM">12:00 AM (Midnight)</option>
+                <option value="12:30 AM">12:30 AM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="01:30 AM">01:30 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="02:30 AM">02:30 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="03:30 AM">03:30 AM</option>
                 <option value="04:00 AM">04:00 AM (Early Morning)</option>
                 <option value="04:30 AM">04:30 AM</option>
                 <option value="05:00 AM">05:00 AM</option>
@@ -218,84 +175,107 @@
                 <option value="04:30 PM">04:30 PM</option>
                 <option value="05:00 PM">05:00 PM</option>
                 <option value="05:30 PM">05:30 PM</option>
-                <option value="06:00 PM">06:00 PM (Evening)</option>
+                <option value="06:00 PM">06:00 PM</option>
                 <option value="06:30 PM">06:30 PM</option>
                 <option value="07:00 PM">07:00 PM</option>
                 <option value="07:30 PM">07:30 PM</option>
                 <option value="08:00 PM">08:00 PM</option>
                 <option value="08:30 PM">08:30 PM</option>
-                <option value="09:00 PM">09:00 PM (Night)</option>
+                <option value="09:00 PM">09:00 PM</option>
                 <option value="09:30 PM">09:30 PM</option>
                 <option value="10:00 PM">10:00 PM</option>
                 <option value="10:30 PM">10:30 PM</option>
                 <option value="11:00 PM">11:00 PM</option>
                 <option value="11:30 PM">11:30 PM</option>
-                <option value="12:00 AM">12:00 AM (Midnight)</option>
-                <option value="01:00 AM">01:00 AM</option>
-                <option value="02:00 AM">02:00 AM</option>
-                <option value="03:00 AM">03:00 AM</option>
               </select>
             </div>
             <span class="field-error-msg" id="err-entry-pickup-time">Please select pickup time</span>
           </div>
 
-          <!-- 9. Drop Time -->
-          <div class="form-field-group">
-            <label for="entry-drop-time">Drop Time <span class="req-star">*</span></label>
+          <!-- Number of Travelers -->
+          <div class="form-field-group field-full-width" style="margin-bottom: 0;">
+            <label for="entry-travelers">Number of Travelers <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
-              <i class="fas fa-history field-icon"></i>
-              <select id="entry-drop-time" name="drop_time" required>
-                <option value="" disabled selected>-- Select Drop Time --</option>
-                <option value="06:00 AM">06:00 AM (Morning)</option>
-                <option value="07:00 AM">07:00 AM</option>
-                <option value="08:00 AM">08:00 AM</option>
-                <option value="09:00 AM">09:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 PM">12:00 PM (Noon)</option>
-                <option value="12:30 PM">12:30 PM</option>
-                <option value="01:00 PM">01:00 PM</option>
-                <option value="01:30 PM">01:30 PM</option>
-                <option value="02:00 PM">02:00 PM</option>
-                <option value="02:30 PM">02:30 PM</option>
-                <option value="03:00 PM">03:00 PM</option>
-                <option value="03:30 PM">03:30 PM</option>
-                <option value="04:00 PM">04:00 PM</option>
-                <option value="04:30 PM">04:30 PM</option>
-                <option value="05:00 PM">05:00 PM</option>
-                <option value="05:30 PM">05:30 PM</option>
-                <option value="06:00 PM">06:00 PM (Evening)</option>
-                <option value="06:30 PM">06:30 PM</option>
-                <option value="07:00 PM">07:00 PM</option>
-                <option value="07:30 PM">07:30 PM</option>
-                <option value="08:00 PM">08:00 PM</option>
-                <option value="08:30 PM">08:30 PM</option>
-                <option value="09:00 PM">09:00 PM (Night)</option>
-                <option value="09:30 PM">09:30 PM</option>
-                <option value="10:00 PM">10:00 PM</option>
-                <option value="10:30 PM">10:30 PM</option>
-                <option value="11:00 PM">11:00 PM</option>
-                <option value="11:30 PM">11:30 PM</option>
-                <option value="12:00 AM">12:00 AM (Midnight)</option>
-                <option value="01:00 AM">01:00 AM</option>
-                <option value="02:00 AM">02:00 AM</option>
-                <option value="03:00 AM">03:00 AM</option>
-                <option value="04:00 AM">04:00 AM</option>
-                <option value="05:00 AM">05:00 AM</option>
+              <i class="fas fa-users field-icon"></i>
+              <select id="entry-travelers" name="travelers" required>
+                <option value="" disabled selected>-- Select Number of Travelers --</option>
+                <option value="1 - 2 Passengers">1 - 2 Passengers</option>
+                <option value="3 - 4 Passengers">3 - 4 Passengers</option>
+                <option value="5 - 7 Passengers">5 - 7 Passengers</option>
+                <option value="8 - 12 Passengers">8 - 12 Passengers</option>
+                <option value="13+ Passengers (Group Booking)">13+ Passengers (Group Booking)</option>
               </select>
             </div>
-            <span class="field-error-msg" id="err-entry-drop-time">Please select drop time</span>
+            <span class="field-error-msg" id="err-entry-travelers">Please select number of travelers</span>
           </div>
-
         </div>
 
-        <!-- Optional Special Requests / Message -->
-        <div class="form-field-group field-full-width" style="margin-bottom: 8px;">
-          <label for="entry-notes">Additional Notes / Remarks <span class="opt-label">(Optional)</span></label>
-          <div class="input-icon-wrapper">
-            <i class="fas fa-comment-dots field-icon"></i>
-            <input type="text" id="entry-notes" name="notes"
-              placeholder="e.g. Flight details, specific temples, senior citizen assistance..." />
+        <!-- 3. Contact Information, Special Requests & Discovery -->
+        <div class="form-section-title" style="font-size: 13px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-user-circle"></i> 3. Contact Information & Special Requests
+        </div>
+        <div class="mandatory-form-grid" style="margin-bottom: 14px;">
+          <!-- Full Name -->
+          <div class="form-field-group">
+            <label for="entry-name">Your Full Name <span class="req-star">*</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-user field-icon"></i>
+              <input type="text" id="entry-name" name="name" placeholder="e.g. Rajesh Sharma" required />
+            </div>
+            <span class="field-error-msg" id="err-entry-name">Please enter your full name</span>
+          </div>
+
+          <!-- WhatsApp Number -->
+          <div class="form-field-group">
+            <label for="entry-phone">WhatsApp / Phone No <span class="req-star">*</span></label>
+            <div class="input-icon-wrapper">
+              <span class="country-prefix">+91</span>
+              <input type="tel" id="entry-phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required />
+            </div>
+            <span class="field-error-msg" id="err-entry-phone">Please enter a valid 10-digit WhatsApp number</span>
+          </div>
+
+          <!-- Citizenship / Category -->
+          <div class="form-field-group">
+            <label for="entry-citizenship">Citizenship / Category <span class="req-star">*</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-passport field-icon"></i>
+              <select id="entry-citizenship" name="citizenship" required>
+                <option value="Indian citizen">Indian citizen</option>
+                <option value="NRI">NRI</option>
+                <option value="Foreigner">Foreigner</option>
+              </select>
+            </div>
+            <span class="field-error-msg" id="err-entry-citizenship">Please select citizenship category</span>
+          </div>
+
+          <!-- How Did You Find Our Website -->
+          <div class="form-field-group">
+            <label for="entry-source">How Did You Find Our Website? <span class="req-star">*</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-bullhorn field-icon"></i>
+              <select id="entry-source" name="source" required>
+                <option value="" disabled selected>-- How did you find us? --</option>
+                <option value="Google Search">🔍 Google Search</option>
+                <option value="Instagram">📸 Instagram</option>
+                <option value="Facebook">👍 Facebook</option>
+                <option value="Friend / Family Reference">👥 Friend / Family Reference</option>
+                <option value="WhatsApp / Social Media">💬 WhatsApp / Social Media</option>
+                <option value="YouTube">▶️ YouTube</option>
+                <option value="Previous Customer / Returning Client">⭐ Previous Customer / Returning Client</option>
+                <option value="Other">🌐 Other</option>
+              </select>
+            </div>
+            <span class="field-error-msg" id="err-entry-source">Please select how you found our website</span>
+          </div>
+
+          <!-- Flight Number / Special Instructions (Optional) -->
+          <div class="form-field-group field-full-width" style="margin-bottom: 4px;">
+            <label for="entry-notes">Flight Number / Special Instructions <span class="opt-label">(Optional)</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fas fa-clipboard-list field-icon"></i>
+              <input type="text" id="entry-notes" name="notes" placeholder="e.g. Flight 6E-204 arriving at 10:30 AM / Need English-speaking chauffeur" />
+            </div>
           </div>
         </div>
 
@@ -825,14 +805,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹1,750</span></div>
+                  class="tariff-val">₹1,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹3,500</span></div>
+                  class="tariff-val">₹3,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹350/hr • ₹16/km</span></div>
+                  class="tariff-val">₹300/hr • ₹15/km</span></div>
               <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
                   class="tariff-val highlight">₹16 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹600 /
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -857,14 +837,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹2,400</span></div>
+                  class="tariff-val">₹2,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹4,800</span></div>
+                  class="tariff-val">₹5,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹440/hr • ₹22/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹22 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹600 /
+                  class="tariff-val">₹500/hr • ₹25/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹25 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -888,14 +868,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">-</span></div>
+                  class="tariff-val">₹2,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">-</span></div>
+                  class="tariff-val">₹4,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">- • ₹25/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
+                  class="tariff-val">₹400/hr • ₹25/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
                   class="tariff-val highlight">₹25 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹600 /
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -925,10 +905,10 @@
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
                   class="tariff-val">₹4,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹450/hr • ₹19/km</span></div>
+                  class="tariff-val">₹450/hr • ₹40/km</span></div>
               <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
-                  class="tariff-val highlight">₹19 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
+                  class="tariff-val highlight">₹21 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹800 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -953,14 +933,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹2,750</span></div>
+                  class="tariff-val">₹2,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹5,500</span></div>
+                  class="tariff-val">₹5,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹500/hr • ₹22/km</span></div>
+                  class="tariff-val">₹500/hr • ₹45/km</span></div>
               <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
                   class="tariff-val highlight">₹22 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹800 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -971,65 +951,67 @@
             </div>
           </div>
 
-          <!-- 6. Toyota Fortuner -->
+          <!-- 6. Innova Hycross -->
           <div class="vehicle-card fleet-item fleet-suv">
-            <div class="vehicle-img-wrap">
-              <img src="images/toyota_fortuner.png" alt="Toyota Fortuner" loading="lazy" />
-            </div>
-            <div class="vehicle-header">
-              <div class="vehicle-badge-row">
-                <span class="cat-pill">SUV/MPV</span>
-                <span class="seat-pill"><i class="fas fa-users"></i> 6 Seater</span>
-              </div>
-              <h3 class="vehicle-title">Toyota Fortuner</h3>
-            </div>
-            <div class="tariff-table-wrap">
-              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹4,750</span></div>
-              <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹7,000</span></div>
-              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹500/hr • ₹55/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹55 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
-                  Day</strong></div>
-            </div>
-            <div class="vehicle-card-footer">
-              <button class="btn btn-whatsapp" style="width: 100%;"
-                onclick="bookFleetVehicle('Toyota Fortuner (6 Seater)')">
-                <i class="fab fa-whatsapp"></i> Book Toyota Fortuner
-              </button>
-            </div>
-          </div>
-
-          <!-- ================= 3. PREMIUM MPV'S ================= -->
-          <!-- 7. Innova Hycross -->
-          <div class="vehicle-card fleet-item fleet-premium-mpv">
             <div class="vehicle-img-wrap">
               <img src="images/innova_hycross.png" alt="Innova Hycross" loading="lazy" />
             </div>
             <div class="vehicle-header">
               <div class="vehicle-badge-row">
-                <span class="cat-pill">Premium MPV</span>
+                <span class="cat-pill">SUV/MPV</span>
                 <span class="seat-pill"><i class="fas fa-users"></i> 7-8 Seater</span>
               </div>
               <h3 class="vehicle-title">Innova Hycross</h3>
             </div>
             <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
+                  class="tariff-val">-</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹6,875</span></div>
+                  class="tariff-val">₹5,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹600/hr • ₹28/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
+                  class="tariff-val">₹550/hr • ₹55/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
                   class="tariff-val highlight">₹28 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹600 /
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹800 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
               <button class="btn btn-whatsapp" style="width: 100%;"
                 onclick="bookFleetVehicle('Innova Hycross (7-8 Seater)')">
                 <i class="fab fa-whatsapp"></i> Book Innova Hycross
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= 3. PREMIUM MPV'S ================= -->
+          <!-- 7. Toyota Fortuner -->
+          <div class="vehicle-card fleet-item fleet-premium-mpv">
+            <div class="vehicle-img-wrap">
+              <img src="images/toyota_fortuner.png" alt="Toyota Fortuner" loading="lazy" />
+            </div>
+            <div class="vehicle-header">
+              <div class="vehicle-badge-row">
+                <span class="cat-pill">Premium MPV</span>
+                <span class="seat-pill"><i class="fas fa-users"></i> 6 Seater</span>
+              </div>
+              <h3 class="vehicle-title">Toyota Fortuner</h3>
+            </div>
+            <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
+                  class="tariff-val">-</span></div>
+              <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
+                  class="tariff-val">₹7,000</span></div>
+              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
+                  class="tariff-val">₹500/hr • ₹55/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹55 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
+                  Day</strong></div>
+            </div>
+            <div class="vehicle-card-footer">
+              <button class="btn btn-whatsapp" style="width: 100%;"
+                onclick="bookFleetVehicle('Toyota Fortuner (6 Seater)')">
+                <i class="fab fa-whatsapp"></i> Book Toyota Fortuner
               </button>
             </div>
           </div>
@@ -1050,12 +1032,12 @@
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
                   class="tariff-val">-</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹7,000</span></div>
+                  class="tariff-val">₹6,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹500/hr • ₹50/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹50 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹750 /
+                  class="tariff-val">₹650/hr • ₹65/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹65 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -1081,14 +1063,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹7,000</span></div>
+                  class="tariff-val">-</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹14,000</span></div>
+                  class="tariff-val">₹15,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹1,500/hr • ₹175/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹100 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
+                  class="tariff-val">₹1,500/hr • ₹85/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹90 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -1113,14 +1095,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹12,500</span></div>
+                  class="tariff-val">-</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹25,000</span></div>
+                  class="tariff-val">₹22,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹2,000/hr • ₹150/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹125 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
+                  class="tariff-val">₹2,200/hr • ₹210/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹210 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -1145,15 +1127,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (4 Hrs / 40 Kms)</span><span
-                  class="tariff-val">₹22,000</span></div>
+                  class="tariff-val">-</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (8 Hrs / 80 Kms)</span><span
                   class="tariff-val">₹22,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
                   class="tariff-val">₹2,200/hr • ₹220/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
                   class="tariff-val highlight">₹220 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000
-                  /
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -1178,13 +1159,15 @@
               <h3 class="vehicle-title">Force Urbania</h3>
             </div>
             <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
+                  class="tariff-val">₹4,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹11,500</span></div>
+                  class="tariff-val">₹10,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹500/hr • ₹40/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹40 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹800 /
+                  class="tariff-val">₹1,000/hr • ₹38/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹38 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -1213,10 +1196,10 @@
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
                   class="tariff-val">₹6,000</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹650/hr • ₹22/km</span></div>
+                  class="tariff-val">₹500/hr • ₹24/km</span></div>
               <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
-                  class="tariff-val highlight">₹22 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹800 /
+                  class="tariff-val highlight">₹24 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -1241,14 +1224,14 @@
             </div>
             <div class="tariff-table-wrap">
               <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹4,000</span></div>
+                  class="tariff-val">₹3,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹8,000</span></div>
+                  class="tariff-val">₹6,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹750/hr • ₹30/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
+                  class="tariff-val">₹700/hr • ₹30/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
                   class="tariff-val highlight">₹30 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹800 /
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹1,000 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
@@ -3395,95 +3378,125 @@
               <thead>
                 <tr>
                   <th>Car Type</th>
-                  <th>Seaters</th>
-                  <th>5 Hrs/<br>50 Kms</th>
-                  <th>10 Hrs/<br>100 Kms</th>
-                  <th>Additional<br>Kms</th>
-                  <th>Additional<br>Hrs</th>
-                  <th>Outstation<br>Min. 250KM</th>
-                  <th>Outstation<br>Add Per KM</th>
+                  <th>Seats</th>
+                  <th>50 KM</th>
+                  <th>100 KM</th>
+                  <th>150 KM</th>
+                  <th>Add KM</th>
+                  <th>Add Hrs</th>
+                  <th>Outstation KM</th>
+                  <th>Bata</th>
+                  <th>Per Day</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>Honda Amaze</strong></td>
                   <td>4+1</td>
-                  <td>₹1,750/-</td>
-                  <td>₹3,500/-</td>
-                  <td>₹16/-</td>
-                  <td>₹350/-</td>
-                  <td>₹4,800/-</td>
-                  <td>₹16/-</td>
+                  <td>1500</td>
+                  <td>3000</td>
+                  <td>4500</td>
+                  <td>15</td>
+                  <td>300</td>
+                  <td>16</td>
+                  <td>700</td>
+                  <td>300km</td>
                 </tr>
                 <tr>
                   <td><strong>Honda City</strong></td>
                   <td>4+1</td>
-                  <td>₹2,400/-</td>
-                  <td>₹4,800/-</td>
-                  <td>₹22/-</td>
-                  <td>₹440/-</td>
-                  <td>₹5,500/-</td>
-                  <td>₹22/-</td>
+                  <td>2500</td>
+                  <td>5000</td>
+                  <td>7500</td>
+                  <td>25</td>
+                  <td>500</td>
+                  <td>25</td>
+                  <td>700</td>
+                  <td>300km</td>
                 </tr>
                 <tr>
-                  <td><strong>Toyota Innova</strong></td>
+                  <td><strong>Innova</strong></td>
                   <td>7+1</td>
-                  <td>₹2,250/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
-                  <td>₹450/-</td>
-                  <td>₹5,700/-</td>
-                  <td>₹19/-</td>
+                  <td>2250</td>
+                  <td>4500</td>
+                  <td>6750</td>
+                  <td>40</td>
+                  <td>450</td>
+                  <td>21</td>
+                  <td>800</td>
+                  <td>300km</td>
                 </tr>
                 <tr>
                   <td><strong>Innova Crysta</strong></td>
                   <td>7+1</td>
-                  <td>₹2,750/-</td>
-                  <td>₹5,500/-</td>
-                  <td>₹22/-</td>
-                  <td>₹500/-</td>
-                  <td>₹6,600/-</td>
-                  <td>₹22/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Corolla Altis</strong></td>
-                  <td>4+1</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>₹25/-</td>
-                  <td>-</td>
-                  <td>₹6,250/-</td>
-                  <td>₹25/-</td>
+                  <td>2500</td>
+                  <td>5000</td>
+                  <td>7500</td>
+                  <td>45</td>
+                  <td>500</td>
+                  <td>22</td>
+                  <td>800</td>
+                  <td>300km</td>
                 </tr>
                 <tr>
                   <td><strong>Innova Hycross</strong></td>
-                  <td>7+1</td>
+                  <td>4+1</td>
                   <td>-</td>
-                  <td>₹6,875/-</td>
-                  <td>₹28/-</td>
-                  <td>₹600/-</td>
-                  <td>₹7,000/-</td>
-                  <td>₹28/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Toyota Fortuner</strong></td>
-                  <td>6+1</td>
-                  <td>₹4,750/-</td>
-                  <td>₹7,000/-</td>
-                  <td>₹55/-</td>
-                  <td>₹500/-</td>
-                  <td>₹13,750/-</td>
-                  <td>₹55/-</td>
+                  <td>5500</td>
+                  <td>8300</td>
+                  <td>55</td>
+                  <td>550</td>
+                  <td>28</td>
+                  <td>800</td>
+                  <td>300km</td>
                 </tr>
                 <tr>
                   <td><strong>Kia Carnival</strong></td>
                   <td>7+1</td>
                   <td>-</td>
-                  <td>₹7,000/-</td>
-                  <td>₹50/-</td>
-                  <td>₹500/-</td>
-                  <td>₹12,500/-</td>
-                  <td>₹50/-</td>
+                  <td>6500</td>
+                  <td>-</td>
+                  <td>65</td>
+                  <td>650</td>
+                  <td>65</td>
+                  <td>1000</td>
+                  <td>300km</td>
+                </tr>
+                <tr>
+                  <td><strong>Mercedes E Class</strong></td>
+                  <td>4+1</td>
+                  <td>-</td>
+                  <td>15000</td>
+                  <td>-</td>
+                  <td>85</td>
+                  <td>1500</td>
+                  <td>90</td>
+                  <td>1000</td>
+                  <td>300km</td>
+                </tr>
+                <tr>
+                  <td><strong>Mercedes S Class</strong></td>
+                  <td>4+1</td>
+                  <td>-</td>
+                  <td>22000</td>
+                  <td>-</td>
+                  <td>210</td>
+                  <td>2200</td>
+                  <td>210</td>
+                  <td>1000</td>
+                  <td>300km</td>
+                </tr>
+                <tr>
+                  <td><strong>Toyota Vellfire</strong></td>
+                  <td>7+1</td>
+                  <td>-</td>
+                  <td>22000</td>
+                  <td>-</td>
+                  <td>220</td>
+                  <td>2200</td>
+                  <td>220</td>
+                  <td>1000</td>
+                  <td>300km</td>
                 </tr>
               </tbody>
             </table>
@@ -3505,50 +3518,54 @@
             <table class="master-tariff-table">
               <thead>
                 <tr>
-                  <th>Van Type</th>
-                  <th>Seaters</th>
-                  <th>5 Hrs/<br>50 Kms</th>
-                  <th>10 Hrs/<br>100 Kms</th>
-                  <th>15 Hrs/<br>150 Kms</th>
-                  <th>Additional<br>Kms</th>
-                  <th>Additional<br>Hrs</th>
-                  <th>Outstation<br>Min. 250-300KM</th>
-                  <th>Outstation<br>Add Per KM</th>
+                  <th>Vehicle</th>
+                  <th>Seats</th>
+                  <th>50 KM</th>
+                  <th>100 KM</th>
+                  <th>150 KM</th>
+                  <th>Add KM</th>
+                  <th>Add Hrs</th>
+                  <th>Outstation KM</th>
+                  <th>Bata</th>
+                  <th>Per Day</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Force Urbania</strong></td>
-                  <td>12</td>
-                  <td>-</td>
-                  <td>₹11,500/-</td>
-                  <td>-</td>
-                  <td>₹40/-</td>
-                  <td>₹500/-</td>
-                  <td>₹10,000/-</td>
-                  <td>₹40/-</td>
-                </tr>
-                <tr>
                   <td><strong>Tempo Traveller</strong></td>
                   <td>12+1</td>
-                  <td>₹3,000/-</td>
-                  <td>₹6,000/-</td>
-                  <td>₹9,000/-</td>
-                  <td>₹22/-</td>
-                  <td>₹650/-</td>
-                  <td>₹6,600/-</td>
-                  <td>₹22/-</td>
+                  <td>3000</td>
+                  <td>6000</td>
+                  <td>-</td>
+                  <td>24</td>
+                  <td>500</td>
+                  <td>24</td>
+                  <td>1000</td>
+                  <td>300km</td>
                 </tr>
                 <tr>
                   <td><strong>Tempo Traveller</strong></td>
                   <td>18+1</td>
-                  <td>₹4,000/-</td>
-                  <td>₹8,000/-</td>
-                  <td>₹12,000/-</td>
-                  <td>₹30/-</td>
-                  <td>₹750/-</td>
-                  <td>₹7,500/-</td>
-                  <td>₹30/-</td>
+                  <td>3500</td>
+                  <td>6500</td>
+                  <td>-</td>
+                  <td>30</td>
+                  <td>700</td>
+                  <td>30</td>
+                  <td>1000</td>
+                  <td>300km</td>
+                </tr>
+                <tr>
+                  <td><strong>Urbania</strong></td>
+                  <td>12+1</td>
+                  <td>4000</td>
+                  <td>10000</td>
+                  <td>-</td>
+                  <td>38</td>
+                  <td>1000</td>
+                  <td>38</td>
+                  <td>1000</td>
+                  <td>300km</td>
                 </tr>
               </tbody>
             </table>

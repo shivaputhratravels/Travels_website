@@ -748,15 +748,17 @@ function formatTime12Hr(timeStr) {
 function handleMandatoryEnquiry(event) {
   if (event) event.preventDefault();
 
-  const nameInput = document.getElementById('entry-name');
-  const phoneInput = document.getElementById('entry-phone');
   const serviceTypeInput = document.getElementById('entry-service-type');
   const vehicleCategoryInput = document.getElementById('entry-vehicle-category');
-  const travelersInput = document.getElementById('entry-travelers');
-  const sourceInput = document.getElementById('entry-source');
+  const pickupInput = document.getElementById('entry-pickup');
+  const dropInput = document.getElementById('entry-drop');
   const dateInput = document.getElementById('entry-date');
   const pickupTimeInput = document.getElementById('entry-pickup-time');
-  const dropTimeInput = document.getElementById('entry-drop-time');
+  const travelersInput = document.getElementById('entry-travelers');
+  const nameInput = document.getElementById('entry-name');
+  const phoneInput = document.getElementById('entry-phone');
+  const citizenshipInput = document.getElementById('entry-citizenship');
+  const sourceInput = document.getElementById('entry-source');
   const notesInput = document.getElementById('entry-notes');
 
   let isValid = true;
@@ -777,58 +779,67 @@ function handleMandatoryEnquiry(event) {
     }
   }
 
-  // 1. Full Name validation
-  const nameVal = nameInput ? nameInput.value.trim() : '';
-  if (!nameVal || nameVal.length < 2) {
-    markError(nameInput, 'Please enter your full name');
-  }
-
-  // 2. WhatsApp Number validation (10 digits)
-  const phoneVal = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
-  if (!phoneVal || phoneVal.length < 10) {
-    markError(phoneInput, 'Please enter a valid 10-digit WhatsApp number');
-  }
-
-  // 3. Service Type validation
+  // 1. Service Type validation
   const serviceTypeVal = serviceTypeInput ? serviceTypeInput.value : '';
   if (!serviceTypeVal) {
     markError(serviceTypeInput, 'Please select a service type');
   }
 
-  // 4. Vehicle Category validation
+  // 2. Vehicle Category validation
   const vehicleCategoryVal = vehicleCategoryInput ? vehicleCategoryInput.value : '';
   if (!vehicleCategoryVal) {
-    markError(vehicleCategoryInput, 'Please select a vehicle category');
+    markError(vehicleCategoryInput, 'Please select a vehicle model');
   }
 
-  // 5. Number of Travelers / Car validation
-  const travelersVal = travelersInput ? travelersInput.value : '';
-  if (!travelersVal) {
-    markError(travelersInput, 'Please select number of travelers / car');
+  // 3. Pickup Location validation
+  const pickupVal = pickupInput ? pickupInput.value.trim() : '';
+  if (!pickupVal) {
+    markError(pickupInput, 'Please enter pickup location');
   }
 
-  // 6. How Did You Find Us validation
-  const sourceVal = sourceInput ? sourceInput.value : '';
-  if (!sourceVal) {
-    markError(sourceInput, 'Please select how you found our website');
+  // 4. Drop Destination validation
+  const dropVal = dropInput ? dropInput.value.trim() : '';
+  if (!dropVal) {
+    markError(dropInput, 'Please enter drop destination');
   }
 
-  // 7. Date of Travel validation
+  // 5. Date of Travel validation
   const dateVal = dateInput ? dateInput.value : '';
   if (!dateVal) {
     markError(dateInput, 'Please select date of travel');
   }
 
-  // 8. Pickup Time validation
+  // 6. Pickup Time validation
   const pickupTimeVal = pickupTimeInput ? pickupTimeInput.value : '';
   if (!pickupTimeVal) {
     markError(pickupTimeInput, 'Please select pickup time');
   }
 
-  // 9. Drop Time validation
-  const dropTimeVal = dropTimeInput ? dropTimeInput.value : '';
-  if (!dropTimeVal) {
-    markError(dropTimeInput, 'Please select drop time');
+  // 7. Number of Travelers validation
+  const travelersVal = travelersInput ? travelersInput.value : '';
+  if (!travelersVal) {
+    markError(travelersInput, 'Please select number of travelers');
+  }
+
+  // 8. Full Name validation
+  const nameVal = nameInput ? nameInput.value.trim() : '';
+  if (!nameVal || nameVal.length < 2) {
+    markError(nameInput, 'Please enter your full name');
+  }
+
+  // 9. WhatsApp Number validation (10 digits)
+  const phoneVal = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
+  if (!phoneVal || phoneVal.length < 10) {
+    markError(phoneInput, 'Please enter a valid 10-digit WhatsApp number');
+  }
+
+  // 10. Citizenship validation
+  const citizenshipVal = citizenshipInput ? citizenshipInput.value : 'Indian citizen';
+
+  // 11. How Did You Find Us validation
+  const sourceVal = sourceInput ? sourceInput.value : '';
+  if (!sourceVal) {
+    markError(sourceInput, 'Please select how you found our website');
   }
 
   if (!isValid) {
@@ -852,16 +863,18 @@ function handleMandatoryEnquiry(event) {
     `━━━━━━━━━━━━━━━━━━━━━━\n` +
     `👤 *Customer Name:* ${nameVal}\n` +
     `📱 *WhatsApp Number:* +91 ${phoneVal}\n` +
+    `🌐 *Citizenship / Category:* ${citizenshipVal}\n` +
     `🚖 *Service Type:* ${serviceTypeVal}\n` +
-    `🚗 *Vehicle Category:* ${vehicleCategoryVal}\n` +
-    `👥 *Number of Travelers / Car:* ${travelersVal}\n` +
-    `🌐 *Found Website Via:* ${sourceVal}\n` +
+    `🚗 *Vehicle Model:* ${vehicleCategoryVal}\n` +
+    `📍 *Pickup Location:* ${pickupVal}\n` +
+    `🏁 *Drop / Destination:* ${dropVal}\n` +
     `📅 *Date of Travel:* ${dateVal}\n` +
     `⏰ *Pickup Time:* ${pickupTimeVal}\n` +
-    `⏳ *Drop Time:* ${dropTimeVal}\n` +
-    (notesVal ? `💬 *Additional Notes:* ${notesVal}\n` : '') +
+    `👥 *Number of Travelers:* ${travelersVal}\n` +
+    `📢 *Found Website Via:* ${sourceVal}\n` +
+    (notesVal ? `💬 *Notes / Flight No:* ${notesVal}\n` : '') +
     `━━━━━━━━━━━━━━━━━━━━━━\n` +
-    `Hello Shivaputhra Travels! Please share vehicle options, tour package itinerary, and best all-inclusive quote for this requirement.`;
+    `Hello Shivaputhra Travels! Please share vehicle availability, tour package details, and best all-inclusive quote for this trip.`;
 
   // Save session & lead storage so user is registered
   sessionStorage.setItem('shivaputhra_initial_enquiry_done', 'true');
@@ -869,13 +882,15 @@ function handleMandatoryEnquiry(event) {
     localStorage.setItem('shivaputhra_lead_profile', JSON.stringify({
       name: nameVal,
       phone: phoneVal,
+      citizenship: citizenshipVal,
       serviceType: serviceTypeVal,
-      vehicleCategory: vehicleCategoryVal,
-      travelers: travelersVal,
-      source: sourceVal,
+      vehicle: vehicleCategoryVal,
+      pickup: pickupVal,
+      drop: dropVal,
       date: dateVal,
       pickupTime: pickupTimeVal,
-      dropTime: dropTimeVal,
+      travelers: travelersVal,
+      source: sourceVal,
       notes: notesVal,
       submittedAt: new Date().toISOString()
     }));
