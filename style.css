@@ -562,20 +562,19 @@
   }
 
   .hero-top-brand {
-    font-family: 'Oregano', cursive;
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: 2px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
     color: #ffffff;
-    text-shadow: none;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     user-select: none;
     transition: transform 0.3s ease;
   }
 
   .hero-top-brand:hover {
-    transform: scale(1.03);
-    text-shadow: none;
+    transform: scale(1.02);
   }
 
   .hero-inner-content h1 {
@@ -2234,8 +2233,9 @@
     }
 
     .hero-top-brand {
-      font-size: 42px !important;
-      letter-spacing: 1px !important;
+      font-size: 36px !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.5px !important;
       line-height: 1.15 !important;
     }
 

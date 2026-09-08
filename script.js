@@ -266,12 +266,14 @@ function submitCarRentalEnquiry() {
   const date = document.getElementById('rental-date')?.value || "Not specified";
   const pickupTime = document.getElementById('rental-pickup-time')?.value || "Not specified";
   const passengers = document.getElementById('rental-passengers')?.value || "Not specified";
+  const citizenship = document.getElementById('rental-citizenship')?.value || "Indian citizen";
   const notes = document.getElementById('rental-notes')?.value?.trim() || "";
 
   let msg = `*🚗 CAB RENTAL BOOKING ENQUIRY - SHIVAPUTHRA TRAVELS*\n` +
             `━━━━━━━━━━━━━━━━━━━━━━\n` +
             `👤 *Customer Name:* ${name}\n` +
             `📞 *WhatsApp / Phone:* ${phone}\n` +
+            `🌐 *Citizenship / Category:* ${citizenship}\n` +
             `🛎️ *Service Type:* ${serviceType}\n` +
             `🚘 *Vehicle Model:* ${vehicle}\n` +
             `📍 *Pickup Location:* ${pickup}\n` +

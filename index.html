@@ -98,37 +98,33 @@
               <select id="entry-vehicle-category" name="vehicle_category" required>
                 <option value="" disabled selected>-- Select Vehicle / Category --</option>
                 
-                <optgroup label="🚗 Sedans (4+1 Seater)">
-                  <option value="Swift Dzire (4+1 Seater)">Swift Dzire (4+1 Seater)</option>
-                  <option value="Honda Amaze (4+1 Seater)">Honda Amaze (4+1 Seater)</option>
-                  <option value="Honda City (4+1 Seater)">Honda City (4+1 Seater)</option>
-                  <option value="Toyota Corolla Altis (4+1 Seater)">Toyota Corolla Altis (4+1 Seater)</option>
+                <optgroup label="🚗 Sedans (4 Seater)">
+                  <option value="Honda Amaze (4 Seater)">Honda Amaze (4 Seater)</option>
+                  <option value="Honda City (4 Seater)">Honda City (4 Seater)</option>
+                  <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater)</option>
                 </optgroup>
 
-                <optgroup label="🚙 SUVs & MPVs (6+1 / 7+1 Seater)">
-                  <option value="Maruti Ertiga / Tour M (6+1 Seater)">Maruti Ertiga / Tour M (6+1 Seater)</option>
-                  <option value="Kia Carens (7+1 Seater)">Kia Carens (7+1 Seater)</option>
-                  <option value="Toyota Innova (6+1 / 7+1 Seater)">Toyota Innova (6+1 / 7+1 Seater)</option>
-                  <option value="Toyota Innova Crysta (6+1 / 7+1 Seater)">Toyota Innova Crysta (6+1 / 7+1 Seater)</option>
+                <optgroup label="🚙 SUVs & MPVs (6 - 8 Seater)">
+                  <option value="Toyota Innova (7-8 Seater)">Toyota Innova (7-8 Seater)</option>
+                  <option value="Innova Crysta (7 Seater)">Innova Crysta (7 Seater)</option>
+                  <option value="Toyota Fortuner (6 Seater)">Toyota Fortuner (6 Seater)</option>
                 </optgroup>
 
-                <optgroup label="⭐ Premium MPVs & Luxury SUVs">
-                  <option value="Toyota Innova Hycross (6+1 / 7+1 Seater)">Toyota Innova Hycross (6+1 / 7+1 Seater)</option>
-                  <option value="Kia Carnival (7+1 Seater)">Kia Carnival (7+1 Seater)</option>
-                  <option value="Toyota Fortuner (7+1 Seater)">Toyota Fortuner (7+1 Seater)</option>
+                <optgroup label="⭐ Premium MPVs">
+                  <option value="Innova Hycross (7-8 Seater)">Innova Hycross (7-8 Seater)</option>
+                  <option value="Kia Carnival (7-9 Seater)">Kia Carnival (7-9 Seater)</option>
                 </optgroup>
 
                 <optgroup label="👑 VIP Luxury Fleet">
-                  <option value="Mercedes-Benz E-Class (4+1 Seater)">Mercedes-Benz E-Class (4+1 Seater)</option>
-                  <option value="Mercedes-Benz S-Class (4+1 Seater)">Mercedes-Benz S-Class (4+1 Seater)</option>
-                  <option value="Toyota Vellfire VIP (7+1 Seater)">Toyota Vellfire VIP (7+1 Seater)</option>
+                  <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater)</option>
+                  <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater)</option>
+                  <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP)</option>
                 </optgroup>
 
-                <optgroup label="🚐 Tempo Travellers & Luxury Vans">
-                  <option value="Tempo Traveller 12 Seater (12+1)">Tempo Traveller 12 Seater (12+1)</option>
-                  <option value="Tempo Traveller 18 Seater (18+1)">Tempo Traveller 18 Seater (18+1)</option>
+                <optgroup label="🚐 Vans & Tempo Travellers">
                   <option value="Force Urbania (12 Seater)">Force Urbania (12 Seater)</option>
-                  <option value="Mahindra Tourister (16 Seater)">Mahindra Tourister (16 Seater)</option>
+                  <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
+                  <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
                 </optgroup>
 
                 <optgroup label="💡 Recommendation">
@@ -150,7 +146,7 @@
                 <option value="2 - 3 Persons (1 Sedan / Car)">2 - 3 Persons (1 Sedan / Car)</option>
                 <option value="4 - 7 Persons (1 SUV / Crysta)">4 - 7 Persons (1 SUV / Crysta)</option>
                 <option value="8 - 12 Persons (1 Tempo Traveller / Urbania)">8 - 12 Persons (1 Tempo Traveller / Urbania)</option>
-                <option value="13 - 18 Persons (18S Tempo / Tourister)">13 - 18 Persons (18S Tempo / Tourister)</option>
+                <option value="13 - 18 Persons (18S Tempo Traveller)">13 - 18 Persons (18S Tempo Traveller)</option>
                 <option value="18+ Persons (Multiple Fleet / Coach)">18+ Persons (Multiple Fleet / Coach)</option>
               </select>
             </div>
@@ -687,18 +683,20 @@
             </label>
             <select class="field-input" id="home-vehicle">
               <option value="" disabled selected>-- Select Vehicle Type --</option>
+              <option value="Honda Amaze (4 Seater)">Honda Amaze (4 Seater Sedan)</option>
+              <option value="Honda City (4 Seater)">Honda City (4 Seater Sedan)</option>
+              <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater Sedan)</option>
+              <option value="Toyota Innova (7-8 Seater)">Toyota Innova (7-8 Seater MPV)</option>
               <option value="Innova Crysta (7 Seater)">Innova Crysta (7 Seater MPV)</option>
-              <option value="Swift Dzire (4 Seater)">Swift Dzire (4 Seater Sedan)</option>
-              <option value="Toyota Etios (4 Seater)">Toyota Etios (4 Seater Sedan)</option>
-              <option value="Honda City / Corolla Altis (4 Seater)">Honda City / Altis (Executive Sedan)</option>
-              <option value="Innova Hycross (7-8 Seater)">Innova Hycross (Hybrid MPV)</option>
-              <option value="Toyota Fortuner (6-7 Seater)">Toyota Fortuner (Full-Size SUV)</option>
+              <option value="Innova Hycross (7-8 Seater)">Innova Hycross (7-8 Seater MPV)</option>
+              <option value="Toyota Fortuner (6 Seater)">Toyota Fortuner (6 Seater SUV)</option>
+              <option value="Kia Carnival (7-9 Seater)">Kia Carnival (7-9 Seater MPV)</option>
+              <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater Luxury)</option>
+              <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater Luxury)</option>
+              <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP MPV)</option>
               <option value="Force Urbania (12 Seater)">Force Urbania (12 Seater Luxury Van)</option>
-              <option value="Tempo Traveller 12S (12 Seater)">Tempo Traveller 12S (12 Seater AC)</option>
-              <option value="Tempo Traveller 14S (14 Seater)">Tempo Traveller 14S (14 Seater AC)</option>
-              <option value="Tempo Traveller 18S (18 Seater)">Tempo Traveller 18S (18 Seater AC)</option>
-              <option value="Luxury Mini Bus (21 - 25 Seater)">Luxury Mini Bus (21 - 25 Seater)</option>
-              <option value="Executive Coach Bus (32 - 45 Seater)">Executive Coach Bus (32 - 45 Seater)</option>
+              <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
+              <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
             </select>
           </div>
 
@@ -708,11 +706,11 @@
             </label>
             <select class="field-input" id="home-pax">
               <option value="" disabled selected>-- Select Passengers --</option>
-              <option value="1 - 4 Passengers">1 - 4 Passengers (Sedan)</option>
-              <option value="5 - 7 Passengers">5 - 7 Passengers (SUV / Crysta)</option>
-              <option value="8 - 12 Passengers">8 - 12 Passengers (Urbania / 12S TT)</option>
+              <option value="1 - 4 Passengers">1 - 4 Passengers (Sedan / Luxury)</option>
+              <option value="5 - 7 Passengers">5 - 7 Passengers (Innova / Crysta / Fortuner)</option>
+              <option value="7 - 9 Passengers">7 - 9 Passengers (Carnival / Hycross / Vellfire)</option>
+              <option value="10 - 12 Passengers">10 - 12 Passengers (Urbania / 12S TT)</option>
               <option value="13 - 18 Passengers">13 - 18 Passengers (18S TT)</option>
-              <option value="19+ Passengers">19+ Passengers (Mini Bus)</option>
             </select>
           </div>
 
@@ -812,6 +810,7 @@
         </div>
 
         <div class="fleet-grid-updated">
+          <!-- ================= 1. SEDAN CARS ================= -->
           <!-- 1. Honda Amaze -->
           <div class="vehicle-card fleet-item fleet-sedan">
             <div class="vehicle-img-wrap">
@@ -875,71 +874,7 @@
             </div>
           </div>
 
-          <!-- 3. Toyota Innova -->
-          <div class="vehicle-card fleet-item fleet-suv">
-            <div class="vehicle-img-wrap">
-              <img src="images/toyota_innova.png" alt="Toyota Innova" loading="lazy" />
-            </div>
-            <div class="vehicle-header">
-              <div class="vehicle-badge-row">
-                <span class="cat-pill">SUV/MPV</span>
-                <span class="seat-pill"><i class="fas fa-users"></i> 7-8 Seater</span>
-              </div>
-              <h3 class="vehicle-title">Toyota Innova</h3>
-            </div>
-            <div class="tariff-table-wrap">
-              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹2,250</span></div>
-              <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹4,500</span></div>
-              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹450/hr • ₹19/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
-                  class="tariff-val highlight">₹19 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
-                  Day</strong></div>
-            </div>
-            <div class="vehicle-card-footer">
-              <button class="btn btn-whatsapp" style="width: 100%;"
-                onclick="bookFleetVehicle('Toyota Innova (7-8 Seater)')">
-                <i class="fab fa-whatsapp"></i> Book Toyota Innova
-              </button>
-            </div>
-          </div>
-
-          <!-- 4. Innova Crysta -->
-          <div class="vehicle-card fleet-item fleet-suv">
-            <div class="vehicle-img-wrap">
-              <img src="images/innova_crysta.png" alt="Innova Crysta" loading="lazy" />
-            </div>
-            <div class="vehicle-header">
-              <div class="vehicle-badge-row">
-                <span class="cat-pill">SUV/MPV</span>
-                <span class="seat-pill"><i class="fas fa-users"></i> 7 Seater</span>
-              </div>
-              <h3 class="vehicle-title">Innova Crysta</h3>
-            </div>
-            <div class="tariff-table-wrap">
-              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
-                  class="tariff-val">₹2,750</span></div>
-              <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹5,500</span></div>
-              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹500/hr • ₹22/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
-                  class="tariff-val highlight">₹22 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
-                  Day</strong></div>
-            </div>
-            <div class="vehicle-card-footer">
-              <button class="btn btn-whatsapp" style="width: 100%;"
-                onclick="bookFleetVehicle('Innova Crysta (7 Seater)')">
-                <i class="fab fa-whatsapp"></i> Book Innova Crysta
-              </button>
-            </div>
-          </div>
-
-          <!-- 5. Corolla Altis -->
+          <!-- 3. Corolla Altis -->
           <div class="vehicle-card fleet-item fleet-sedan">
             <div class="vehicle-img-wrap">
               <img src="images/corolla_altis.png" alt="Corolla Altis" loading="lazy" />
@@ -971,37 +906,72 @@
             </div>
           </div>
 
-          <!-- 6. Innova Hycross -->
-          <div class="vehicle-card fleet-item fleet-premium-mpv">
+          <!-- ================= 2. SUV / MPV ================= -->
+          <!-- 4. Toyota Innova -->
+          <div class="vehicle-card fleet-item fleet-suv">
             <div class="vehicle-img-wrap">
-              <img src="images/innova_hycross.png" alt="Innova Hycross" loading="lazy" />
+              <img src="images/toyota_innova.png" alt="Toyota Innova" loading="lazy" />
             </div>
             <div class="vehicle-header">
               <div class="vehicle-badge-row">
-                <span class="cat-pill">Premium MPV</span>
+                <span class="cat-pill">SUV/MPV</span>
                 <span class="seat-pill"><i class="fas fa-users"></i> 7-8 Seater</span>
               </div>
-              <h3 class="vehicle-title">Innova Hycross</h3>
+              <h3 class="vehicle-title">Toyota Innova</h3>
             </div>
             <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
+                  class="tariff-val">₹2,250</span></div>
               <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
-                  class="tariff-val">₹6,875</span></div>
+                  class="tariff-val">₹4,500</span></div>
               <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
-                  class="tariff-val">₹600/hr • ₹28/km</span></div>
-              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
-                  class="tariff-val highlight">₹28 / Km</span></div>
-              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹600 /
+                  class="tariff-val">₹450/hr • ₹19/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹19 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
                   Day</strong></div>
             </div>
             <div class="vehicle-card-footer">
               <button class="btn btn-whatsapp" style="width: 100%;"
-                onclick="bookFleetVehicle('Innova Hycross (7-8 Seater)')">
-                <i class="fab fa-whatsapp"></i> Book Innova Hycross
+                onclick="bookFleetVehicle('Toyota Innova (7-8 Seater)')">
+                <i class="fab fa-whatsapp"></i> Book Toyota Innova
               </button>
             </div>
           </div>
 
-          <!-- 7. Toyota Fortuner -->
+          <!-- 5. Innova Crysta -->
+          <div class="vehicle-card fleet-item fleet-suv">
+            <div class="vehicle-img-wrap">
+              <img src="images/innova_crysta.png" alt="Innova Crysta" loading="lazy" />
+            </div>
+            <div class="vehicle-header">
+              <div class="vehicle-badge-row">
+                <span class="cat-pill">SUV/MPV</span>
+                <span class="seat-pill"><i class="fas fa-users"></i> 7 Seater</span>
+              </div>
+              <h3 class="vehicle-title">Innova Crysta</h3>
+            </div>
+            <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (5 Hrs / 50 Kms)</span><span
+                  class="tariff-val">₹2,750</span></div>
+              <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
+                  class="tariff-val">₹5,500</span></div>
+              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
+                  class="tariff-val">₹500/hr • ₹22/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 300 Km/Day)</span><span
+                  class="tariff-val highlight">₹22 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹700 /
+                  Day</strong></div>
+            </div>
+            <div class="vehicle-card-footer">
+              <button class="btn btn-whatsapp" style="width: 100%;"
+                onclick="bookFleetVehicle('Innova Crysta (7 Seater)')">
+                <i class="fab fa-whatsapp"></i> Book Innova Crysta
+              </button>
+            </div>
+          </div>
+
+          <!-- 6. Toyota Fortuner -->
           <div class="vehicle-card fleet-item fleet-suv">
             <div class="vehicle-img-wrap">
               <img src="images/toyota_fortuner.png" alt="Toyota Fortuner" loading="lazy" />
@@ -1029,6 +999,37 @@
               <button class="btn btn-whatsapp" style="width: 100%;"
                 onclick="bookFleetVehicle('Toyota Fortuner (6 Seater)')">
                 <i class="fab fa-whatsapp"></i> Book Toyota Fortuner
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= 3. PREMIUM MPV'S ================= -->
+          <!-- 7. Innova Hycross -->
+          <div class="vehicle-card fleet-item fleet-premium-mpv">
+            <div class="vehicle-img-wrap">
+              <img src="images/innova_hycross.png" alt="Innova Hycross" loading="lazy" />
+            </div>
+            <div class="vehicle-header">
+              <div class="vehicle-badge-row">
+                <span class="cat-pill">Premium MPV</span>
+                <span class="seat-pill"><i class="fas fa-users"></i> 7-8 Seater</span>
+              </div>
+              <h3 class="vehicle-title">Innova Hycross</h3>
+            </div>
+            <div class="tariff-table-wrap">
+              <div class="tariff-row"><span class="tariff-label">Local (10 Hrs / 100 Kms)</span><span
+                  class="tariff-val">₹6,875</span></div>
+              <div class="tariff-row"><span class="tariff-label">Extra Hr / Extra Km</span><span
+                  class="tariff-val">₹600/hr • ₹28/km</span></div>
+              <div class="tariff-row"><span class="tariff-label">Outstation (Min 250 Km/Day)</span><span
+                  class="tariff-val highlight">₹28 / Km</span></div>
+              <div class="driver-batta-box"><span><i class="fas fa-id-card"></i> Driver Allowance:</span><strong>₹600 /
+                  Day</strong></div>
+            </div>
+            <div class="vehicle-card-footer">
+              <button class="btn btn-whatsapp" style="width: 100%;"
+                onclick="bookFleetVehicle('Innova Hycross (7-8 Seater)')">
+                <i class="fab fa-whatsapp"></i> Book Innova Hycross
               </button>
             </div>
           </div>
@@ -1065,6 +1066,7 @@
             </div>
           </div>
 
+          <!-- ================= 4. LUXURY CARS ================= -->
           <!-- 9. Mercedes E Class -->
           <div class="vehicle-card fleet-item fleet-luxury">
             <div class="vehicle-img-wrap">
@@ -1162,6 +1164,7 @@
             </div>
           </div>
 
+          <!-- ================= 5. VANS ================= -->
           <!-- 12. Force Urbania -->
           <div class="vehicle-card fleet-item fleet-vans">
             <div class="vehicle-img-wrap">
@@ -1192,7 +1195,7 @@
             </div>
           </div>
 
-          <!-- 12. Tempo Traveller 12+1 -->
+          <!-- 13. Tempo Traveller 12+1 -->
           <div class="vehicle-card fleet-item fleet-vans">
             <div class="vehicle-img-wrap">
               <img src="images/tempo_traveller_12s.png" alt="Tempo Traveller 12+1" loading="lazy" />
@@ -1224,7 +1227,7 @@
             </div>
           </div>
 
-          <!-- 13. Tempo Traveller 18+1 -->
+          <!-- 14. Tempo Traveller 18+1 -->
           <div class="vehicle-card fleet-item fleet-vans">
             <div class="vehicle-img-wrap">
               <img src="images/tempo_traveller_18s.png" alt="Tempo Traveller 18+1" loading="lazy" />
@@ -1325,8 +1328,7 @@
                     style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 10px rgba(10,25,47,0.15);">
                     R</div>
                   <div>
-                    <h4 style="font-size: 16px; margin: 0; font-weight: 700; color: var(--primary);">Ravi kumar
-                      ரவிக்குமார்</h4>
+                    <h4 style="font-size: 16px; margin: 0; font-weight: 700; color: var(--primary);">Ravi kumar</h4>
                     <small style="color: var(--text-muted); font-size: 12px;">Arupadai Veedu Yatra</small>
                   </div>
                 </div>
@@ -3152,21 +3154,20 @@
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-taxi"
                     style="color: var(--accent); margin-right: 6px;"></i> Preferred Vehicle Model *</label>
                 <select class="form-control" id="rental-vehicle" required>
-                  <option value="Swift Dzire / Sedan (4 Seater)">Swift Dzire / Sedan (4 Seater)</option>
-                  <option value="Honda Amaze Sedan (4 Seater)">Honda Amaze Sedan (4 Seater)</option>
-                  <option value="Toyota Etios Sedan (4 Seater)">Toyota Etios Sedan (4 Seater)</option>
-                  <option value="Toyota Innova Crysta (6 / 7 Seater)">Toyota Innova Crysta (6 / 7 Seater)</option>
-                  <option value="Toyota Innova Hycross Hybrid (6 / 7 Seater)">Toyota Innova Hycross Hybrid (6 / 7
-                    Seater)</option>
-                  <option value="Toyota Fortuner SUV (6 Seater)">Toyota Fortuner SUV (6 Seater)</option>
-                  <option value="Kia Carnival Luxury MPV (6 Seater)">Kia Carnival Luxury MPV (6 Seater)</option>
-                  <option value="Toyota Vellfire VIP MPV (6 Seater)">Toyota Vellfire VIP MPV (6 Seater)</option>
-                  <option value="Force Urbania Luxury Van (10-16 Seater)">Force Urbania Luxury Van (10-16 Seater)
-                  </option>
-                  <option value="Tempo Traveller 12+1 Seater">Tempo Traveller 12+1 Seater</option>
-                  <option value="Tempo Traveller 18+1 Seater">Tempo Traveller 18+1 Seater</option>
-                  <option value="Mercedes-Benz E-Class / S-Class (4 Seater)">Mercedes-Benz E-Class / S-Class Luxury (4
-                    Seater)</option>
+                  <option value="Honda Amaze (4 Seater)">Honda Amaze (4 Seater Sedan)</option>
+                  <option value="Honda City (4 Seater)">Honda City (4 Seater Sedan)</option>
+                  <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater Sedan)</option>
+                  <option value="Toyota Innova (7-8 Seater)">Toyota Innova (7-8 Seater SUV/MPV)</option>
+                  <option value="Innova Crysta (7 Seater)">Innova Crysta (7 Seater SUV/MPV)</option>
+                  <option value="Innova Hycross (7-8 Seater)">Innova Hycross (7-8 Seater Premium MPV)</option>
+                  <option value="Toyota Fortuner (6 Seater)">Toyota Fortuner (6 Seater SUV)</option>
+                  <option value="Kia Carnival (7-9 Seater)">Kia Carnival (7-9 Seater Premium MPV)</option>
+                  <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater Luxury)</option>
+                  <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater Luxury)</option>
+                  <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP MPV)</option>
+                  <option value="Force Urbania (12 Seater)">Force Urbania (12 Seater Luxury Van)</option>
+                  <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
+                  <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
                 </select>
               </div>
             </div>
@@ -3285,6 +3286,16 @@
                 <input type="tel" class="form-control" id="rental-phone" placeholder="e.g. +91 98765 43210" required />
               </div>
 
+              <div class="form-group">
+                <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-passport"
+                    style="color: var(--accent); margin-right: 6px;"></i> Citizenship / Category *</label>
+                <select class="form-control" id="rental-citizenship" required>
+                  <option value="Indian citizen">Indian citizen</option>
+                  <option value="NRI">NRI</option>
+                  <option value="Foreigner">Foreigner</option>
+                </select>
+              </div>
+
               <div class="form-group" style="grid-column: 1 / -1;">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i
                     class="fas fa-clipboard-list" style="color: var(--accent); margin-right: 6px;"></i> Flight Number /
@@ -3395,54 +3406,24 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Swift Dzire</strong></td>
-                  <td>4+1</td>
-                  <td>₹1,500/-</td>
-                  <td>₹3,000/-</td>
-                  <td>₹15/-</td>
-                  <td>₹220/-</td>
-                  <td>₹3,250/-</td>
-                  <td>₹15/-</td>
-                </tr>
-                <tr>
                   <td><strong>Honda Amaze</strong></td>
                   <td>4+1</td>
                   <td>₹1,750/-</td>
                   <td>₹3,500/-</td>
                   <td>₹16/-</td>
                   <td>₹350/-</td>
-                  <td>₹3,500/-</td>
+                  <td>₹4,800/-</td>
                   <td>₹16/-</td>
                 </tr>
                 <tr>
-                  <td><strong>Maruti Ertiga/Tour M</strong></td>
-                  <td>6+1</td>
-                  <td>₹2,250/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
-                  <td>₹450/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Kia Carens</strong></td>
-                  <td>7+1</td>
-                  <td>₹2,250/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
-                  <td>₹450/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Toyota Innova</strong></td>
-                  <td>6+1</td>
-                  <td>₹2,250/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
-                  <td>₹450/-</td>
-                  <td>₹4,500/-</td>
-                  <td>₹19/-</td>
+                  <td><strong>Honda City</strong></td>
+                  <td>4+1</td>
+                  <td>₹2,400/-</td>
+                  <td>₹4,800/-</td>
+                  <td>₹22/-</td>
+                  <td>₹440/-</td>
+                  <td>₹5,500/-</td>
+                  <td>₹22/-</td>
                 </tr>
                 <tr>
                   <td><strong>Toyota Innova</strong></td>
@@ -3451,18 +3432,8 @@
                   <td>₹4,500/-</td>
                   <td>₹19/-</td>
                   <td>₹450/-</td>
-                  <td>₹4,500/-</td>
+                  <td>₹5,700/-</td>
                   <td>₹19/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Innova Crysta</strong></td>
-                  <td>6+1</td>
-                  <td>₹2,750/-</td>
-                  <td>₹5,500/-</td>
-                  <td>₹22/-</td>
-                  <td>₹500/-</td>
-                  <td>₹5,000/-</td>
-                  <td>₹22/-</td>
                 </tr>
                 <tr>
                   <td><strong>Innova Crysta</strong></td>
@@ -3471,21 +3442,11 @@
                   <td>₹5,500/-</td>
                   <td>₹22/-</td>
                   <td>₹500/-</td>
-                  <td>₹5,000/-</td>
+                  <td>₹6,600/-</td>
                   <td>₹22/-</td>
                 </tr>
                 <tr>
-                  <td><strong>Toyota Innova Hycross</strong></td>
-                  <td>6+1</td>
-                  <td>-</td>
-                  <td>₹6,875/-</td>
-                  <td>₹28/-</td>
-                  <td>₹600/-</td>
-                  <td>₹6,250/-</td>
-                  <td>₹28/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Toyota Corolla Altis</strong></td>
+                  <td><strong>Corolla Altis</strong></td>
                   <td>4+1</td>
                   <td>-</td>
                   <td>-</td>
@@ -3495,8 +3456,18 @@
                   <td>₹25/-</td>
                 </tr>
                 <tr>
-                  <td><strong>Toyota Fortuner</strong></td>
+                  <td><strong>Innova Hycross</strong></td>
                   <td>7+1</td>
+                  <td>-</td>
+                  <td>₹6,875/-</td>
+                  <td>₹28/-</td>
+                  <td>₹600/-</td>
+                  <td>₹7,000/-</td>
+                  <td>₹28/-</td>
+                </tr>
+                <tr>
+                  <td><strong>Toyota Fortuner</strong></td>
+                  <td>6+1</td>
                   <td>₹4,750/-</td>
                   <td>₹7,000/-</td>
                   <td>₹55/-</td>
@@ -3541,14 +3512,25 @@
                   <th>15 Hrs/<br>150 Kms</th>
                   <th>Additional<br>Kms</th>
                   <th>Additional<br>Hrs</th>
-                  <th>Outstation<br>Min. 300KM</th>
+                  <th>Outstation<br>Min. 250-300KM</th>
                   <th>Outstation<br>Add Per KM</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Tempo Traveller</strong></td>
+                  <td><strong>Force Urbania</strong></td>
                   <td>12</td>
+                  <td>-</td>
+                  <td>₹11,500/-</td>
+                  <td>-</td>
+                  <td>₹40/-</td>
+                  <td>₹500/-</td>
+                  <td>₹10,000/-</td>
+                  <td>₹40/-</td>
+                </tr>
+                <tr>
+                  <td><strong>Tempo Traveller</strong></td>
+                  <td>12+1</td>
                   <td>₹3,000/-</td>
                   <td>₹6,000/-</td>
                   <td>₹9,000/-</td>
@@ -3559,25 +3541,14 @@
                 </tr>
                 <tr>
                   <td><strong>Tempo Traveller</strong></td>
-                  <td>18</td>
+                  <td>18+1</td>
                   <td>₹4,000/-</td>
                   <td>₹8,000/-</td>
                   <td>₹12,000/-</td>
                   <td>₹30/-</td>
                   <td>₹750/-</td>
-                  <td>₹7,800/-</td>
+                  <td>₹7,500/-</td>
                   <td>₹30/-</td>
-                </tr>
-                <tr>
-                  <td><strong>Mahindra Tourister</strong></td>
-                  <td>16</td>
-                  <td>₹3,000/-</td>
-                  <td>₹6,000/-</td>
-                  <td>₹9,000/-</td>
-                  <td>₹22/-</td>
-                  <td>₹650/-</td>
-                  <td>₹6,600/-</td>
-                  <td>₹22/-</td>
                 </tr>
               </tbody>
             </table>
@@ -3593,13 +3564,13 @@
             <li><strong>Distance Calculation:</strong> We calculate starting and closing kilometers per hour from our garage to your destination.</li>
             <li><strong>Hourly Rates:</strong> We treat more than 7 hours as 10 hours and more than 12 hours as 15 hours.</li>
             <li><strong>Included Costs:</strong> Our rates include only fuel and the driver's service.</li>
-            <li><strong>Additional Fees:</strong> Besides the tariff mentioned, you will pay tolls, parking fees, and entry fees. and a standing AC</li>
+            <li><strong>Additional Fees:</strong> Besides the tariff mentioned, you will pay tolls, parking fees, and entry fees.</li>
             <li><strong>Drive Batta:</strong> We calculate drive batta on a calendar day basis.</li>
             <li><strong>Rate Changes:</strong> We may adjust rates in response to fluctuations in diesel or petrol prices. It is your responsibility to confirm the updated price before booking.</li>
             <li><strong>Cancellation Policy:</strong> We will charge a cancellation fee if you cancel after the vehicle has left our garage or if you do not show up.</li>
             <li><strong>Availability:</strong> The vehicle models and facilities listed are subject to availability.</li>
             <li><strong>Advance Payment:</strong> You must pay 50% of the advance when booking the vehicle.</li>
-            <li><strong>Standing AC:</strong> Standing AC (idle vehicle with AC ON) is limited to 10 minutes; additional usage, upon request, will be charged at ₹500 for Sedans, ₹1,000 for Premium Sedans/Vans, and ₹2,000 for Buses per 30 minutes.</li>
+            <li><strong>Standing AC:</strong> Standing AC (idle vehicle with AC ON) is limited to 10 minutes; additional usage, upon request, will be charged at ₹500 for Sedans, ₹1,000 for SUV/MPV, and ₹2,000 for Premium Cars / Vans per 30 minutes.</li>
             <li><strong>Vehicle Cleanliness & Damage Charges:</strong> Customers are responsible for any stains, odour, spillage, vomiting, urination, alcohol spills, food spills, or damage caused inside the vehicle during the trip. If deep cleaning, water wash, seat cleaning, mat replacement, seat cover replacement, or any material replacement is required, the full cleaning or replacement cost must be paid by the customer.</li>
           </ul>
         </div>
@@ -3892,7 +3863,7 @@
           <div class="corp-fleet-grid">
 
             <div class="corp-fleet-card">
-              <img src="images/innova_hycross.png" alt="Innova Hycross Executive SUV"
+              <img src="images/innova_crysta.png" alt="Toyota Innova Crysta Executive SUV"
                 style="width: 100%; height: 180px; object-fit: cover;" />
               <div style="padding: 18px;">
                 <span
@@ -4005,13 +3976,11 @@
                 <label><i class="fas fa-car" style="color: var(--accent); margin-right: 6px;"></i> Fleet Category
                   Required</label>
                 <select class="form-control" id="corp-fleet">
-                  <option value="Executive SUVs (Innova Hycross / Crysta)">Executive SUVs (Innova Hycross / Crysta)
-                  </option>
-                  <option value="Luxury Vans (Force Urbania)">Luxury Vans (Force Urbania Recliner)</option>
-                  <option value="VIP Luxury (Toyota Vellfire / Mercedes E & S-Class)">VIP Luxury (Toyota Vellfire /
-                    Mercedes E & S-Class)</option>
-                  <option value="Mini Coaches (21-32 Seater)">Mini Coaches (21 - 32 Seater)</option>
-                  <option value="Luxury Volvo Buses (40+ Seater)">Luxury Volvo Buses (40+ Seater)</option>
+                  <option value="Executive Sedans (Honda Amaze / City / Corolla Altis)">Executive Sedans (Honda Amaze / City / Corolla Altis)</option>
+                  <option value="Executive SUVs & MPVs (Toyota Innova / Crysta / Fortuner)">Executive SUVs & MPVs (Toyota Innova / Crysta / Fortuner)</option>
+                  <option value="Premium MPVs (Innova Hycross / Kia Carnival)">Premium MPVs (Innova Hycross / Kia Carnival)</option>
+                  <option value="VIP Luxury Fleet (Mercedes E & S-Class / Toyota Vellfire)">VIP Luxury Fleet (Mercedes E & S-Class / Toyota Vellfire)</option>
+                  <option value="Luxury Vans & Tempo (Force Urbania / 12S & 18S TT)">Luxury Vans & Tempo (Force Urbania / 12S & 18S TT)</option>
                 </select>
               </div>
               <div class="form-group">
@@ -4498,7 +4467,7 @@
                   <div>
                     <h4
                       style="margin: 0; font-size: 16px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px;">
-                      Ravi kumar பேச்சாளர்
+                      Ravi kumar
                       <span
                         style="font-size: 11px; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">New</span>
                     </h4>
@@ -4886,7 +4855,7 @@
               <li><strong>Cancellation Policy:</strong> We will charge a cancellation fee if you cancel after the vehicle has left our garage or if you do not show up.</li>
               <li><strong>Availability:</strong> The vehicle models and facilities listed are subject to availability.</li>
               <li><strong>Advance Payment:</strong> You must pay 50% of the advance when booking the vehicle.</li>
-              <li><strong>Standing AC:</strong> Standing AC (idle vehicle with AC ON) is limited to 10 minutes; additional usage, upon request, will be charged at ₹500 for Sedans, ₹1,000 for Premium Sedans/Vans, and ₹2,000 for Buses per 30 minutes.</li>
+              <li><strong>Standing AC:</strong> Standing AC (idle vehicle with AC ON) is limited to 10 minutes; additional usage, upon request, will be charged at ₹500 for Sedans, ₹1,000 for SUV/MPV, and ₹2,000 for Premium Cars / Vans per 30 minutes.</li>
               <li><strong>Vehicle Cleanliness & Damage Charges:</strong> Customers are responsible for any stains, odour, spillage, vomiting, urination, alcohol spills, food spills, or damage caused inside the vehicle during the trip. If deep cleaning, water wash, seat cleaning, mat replacement, seat cover replacement, or any material replacement is required, the full cleaning or replacement cost must be paid by the customer.</li>
             </ul>
           </div>
@@ -4963,24 +4932,33 @@
         <div class="footer-col">
           <h4>Office</h4>
           <div class="footer-contact-card">
+            <!-- 1. Travels name -->
+            <div class="footer-contact-item" style="margin-bottom: 12px;">
+              <i class="fas fa-building" style="color: var(--accent);"></i>
+              <strong style="color: #ffffff; font-size: 14.5px; letter-spacing: 0.3px;">Shivaputhra Travels</strong>
+            </div>
+
+            <!-- 2. Mobile No -->
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:07338939339">+91 73389 39339</a>
+            </div>
+
+            <!-- 3. Mail -->
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:booking.shivaputhratravels@gmail.com">booking.shivaputhratravels@gmail.com</a>
+            </div>
+
+            <!-- 4. Address -->
             <div class="footer-contact-item">
               <i class="fas fa-map-marker-alt"></i>
               <a href="https://maps.app.goo.gl/c4McCCwhZsK2hHNw7" target="_blank"
                 style="color: inherit; text-decoration: underline;">No.19, Jawahar nagar, 1st street, Lakshmi Nagar,
                 Porur, Chennai - 600122</a>
             </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-phone-alt"></i>
-              <a href="tel:07338939339">+91 73389 39339</a>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:booking.shivaputhratravels@gmail.com">booking.shivaputhratravels@gmail.com</a>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-globe"></i>
-              <a href="https://shivaputhra-travels.vercel.app/" target="_blank">www.shivaputhratravels.com</a>
-            </div>
+
+            <!-- 5. CTA -->
             <button class="btn btn-whatsapp"
               style="width: 100%; margin-top: 10px; border-radius: 10px; font-weight: 700;"
               onclick="openDirectWhatsApp('Website enquiry via Footer')">
