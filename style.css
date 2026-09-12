@@ -898,6 +898,54 @@
   .tariff-table-wrap {
     padding: 16px 20px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .vehicle-highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .vehicle-highlights-list li {
+    font-size: 13px;
+    color: var(--text-dark, #334155);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .vehicle-highlights-list li i {
+    color: var(--accent, #d97706);
+    font-size: 13px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .tariff-info-note {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: var(--text-muted, #64748b);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  .tariff-info-note i {
+    color: var(--accent, #d97706);
+    font-size: 14px;
+    flex-shrink: 0;
   }
 
   .tariff-row {
@@ -4204,4 +4252,226 @@
   .master-tariff-table th:nth-child(8),
   .master-tariff-table td:nth-child(8) {
     text-align: center;
+  }
+
+  /* Dedicated Force Urbania Spotlight Section Styling */
+  .urbania-spotlight-section {
+    padding: 50px 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+
+  .urbania-card-wrap {
+    position: relative;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    overflow: hidden;
+    border: 1px solid rgba(217, 119, 6, 0.3);
+  }
+
+  .urbania-glow-effect {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(217, 119, 6, 0.25) 0%, rgba(217, 119, 6, 0) 70%);
+    pointer-events: none;
+  }
+
+  .urbania-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .urbania-media-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .urbania-vip-badge {
+    background: rgba(217, 119, 6, 0.18);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .urbania-img-container {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .urbania-card-wrap:hover .urbania-img-container {
+    transform: scale(1.02);
+  }
+
+  .urbania-hero-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+  }
+
+  .urbania-specs-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .urbania-specs-row .spec-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 11px;
+    font-weight: 600;
+    color: #cbd5e1;
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .urbania-specs-row .spec-pill i {
+    color: var(--accent);
+  }
+
+  .urbania-sub-tag {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .urbania-main-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    font-family: var(--font-brand);
+  }
+
+  .urbania-main-title span {
+    color: var(--accent);
+  }
+
+  .urbania-lead-desc {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .urbania-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .urbania-feat-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .urbania-feat-item .feat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(217, 119, 6, 0.18);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .urbania-feat-item h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+  }
+
+  .urbania-feat-item p {
+    font-size: 11px;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .urbania-action-group {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .urbania-btn-wa {
+    flex: 1;
+    min-width: 200px;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .urbania-btn-tariff {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .urbania-btn-tariff:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  @media (max-width: 992px) {
+    .urbania-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .urbania-card-wrap {
+      padding: 24px;
+    }
+    .urbania-main-title {
+      font-size: 26px;
+    }
+    .urbania-features-grid {
+      grid-template-columns: 1fr;
+    }
   }
