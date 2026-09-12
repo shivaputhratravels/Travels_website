@@ -4200,3 +4200,8 @@
   .master-tariff-table td strong {
     color: var(--primary);
   }
+
+  .master-tariff-table th:nth-child(8),
+  .master-tariff-table td:nth-child(8) {
+    text-align: center;
+  }
