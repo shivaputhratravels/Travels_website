@@ -6,4 +6,4 @@ Allow: /script.js
 Allow: /images/
 
 # Sitemap Location
-Sitemap: https://shivaputhratravels.com/sitemap.xml
+Sitemap: https://www.shivaputhratravels.com/sitemap.xml
