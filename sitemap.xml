@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage / Main Portal -->
+  <url>
+    <loc>https://shivaputhratravels.com/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shivaputhratravels.com/images/about_us.png</image:loc>
+      <image:title>Shivaputhra Travels Office and Fleet Operations</image:title>
+      <image:caption>Shivaputhra Travels - Chennai to Tirupati car package and luxury cabs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://shivaputhratravels.com/images/logo.png</image:loc>
+      <image:title>Shivaputhra Travels Official Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- index.html direct alias -->
+  <url>
+    <loc>https://shivaputhratravels.com/index.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
