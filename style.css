@@ -4249,8 +4249,8 @@
     color: var(--primary);
   }
 
-  .master-tariff-table th:nth-child(8),
-  .master-tariff-table td:nth-child(8) {
+  .master-tariff-table th:not(:first-child),
+  .master-tariff-table td:not(:first-child) {
     text-align: center;
   }
 
