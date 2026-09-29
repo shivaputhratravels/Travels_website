@@ -5,29 +5,65 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage / Main Portal -->
+  <!-- Homepage / Main Canonical Portal -->
   <url>
     <loc>https://www.shivaputhratravels.com/</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.png</image:loc>
+      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.webp</image:loc>
       <image:title>Shivaputhra Travels Luxury Force Urbania Fleet</image:title>
       <image:caption>Shivaputhra Travels - Luxury Force Urbania and Tempo Traveller rentals in Chennai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/logo_dark.png</image:loc>
+      <image:loc>https://www.shivaputhratravels.com/images/logo_dark.webp</image:loc>
       <image:title>Shivaputhra Travels Official Logo</image:title>
     </image:image>
   </url>
 
-  <!-- index.html direct alias -->
+  <!-- 1. Chennai to Tirupati Car Packages -->
   <url>
-    <loc>https://www.shivaputhratravels.com/index.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://www.shivaputhratravels.com/chennai-to-tirupati-car-packages.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.webp</image:loc>
+      <image:title>Chennai to Tirupati Car Packages</image:title>
+    </image:image>
+  </url>
+
+  <!-- 2. Temple Tour Packages from Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/temple-tour-packages-chennai.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 3. Force Urbania Rental in Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/force-urbania-rental-chennai.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.webp</image:loc>
+      <image:title>Force Urbania Rental in Chennai</image:title>
+    </image:image>
+  </url>
+
+  <!-- 4. Tempo Traveller Rental in Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/tempo-traveller-rental-chennai.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shivaputhratravels.com/images/tempo_traveller_18s.webp</image:loc>
+      <image:title>Tempo Traveller Rental in Chennai</image:title>
+    </image:image>
   </url>
 
 </urlset>

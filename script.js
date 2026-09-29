@@ -6,14 +6,26 @@ function showPage(pageId) {
     page.classList.remove('active-page');
   });
 
-  // Page Aliases for backwards compatibility
+  // Page Aliases for backwards compatibility & hash support
   let actualPageId = pageId;
-  if (pageId === 'packages') actualPageId = 'temple-packages';
-  if (pageId === 'airport') actualPageId = 'cab-rental';
-  if (pageId === 'car-rental') actualPageId = 'tariff';
+  if (typeof actualPageId === 'string') {
+    if (actualPageId.startsWith('#page-')) actualPageId = actualPageId.replace('#page-', '');
+    else if (actualPageId.startsWith('page-')) actualPageId = actualPageId.replace('page-', '');
+    else if (actualPageId.startsWith('#')) actualPageId = actualPageId.replace('#', '');
+  }
+  if (actualPageId === 'packages') actualPageId = 'temple-packages';
+  if (actualPageId === 'airport') actualPageId = 'cab-rental';
+  if (actualPageId === 'car-rental') actualPageId = 'tariff';
 
   const target = document.getElementById('page-' + actualPageId);
-  if (target) target.classList.add('active-page');
+  if (target) {
+    target.classList.add('active-page');
+  } else {
+    // Fallback to home if page ID not found
+    const homeTarget = document.getElementById('page-home');
+    if (homeTarget) homeTarget.classList.add('active-page');
+    actualPageId = 'home';
+  }
 
   // Update Desktop Nav active indicator
   document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
@@ -1042,3 +1054,48 @@ function startCorpClientAutoSlide() {
     }
   }, 2500);
 }
+
+// FAQ Accordion Toggle Function
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  if (!item) return;
+  const isCurrentlyActive = item.classList.contains('active');
+  
+  document.querySelectorAll('.faq-item').forEach(el => {
+    if (el !== item) {
+      el.classList.remove('active');
+      const qBtn = el.querySelector('.faq-question-btn');
+      if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  if (isCurrentlyActive) {
+    item.classList.remove('active');
+    btn.setAttribute('aria-expanded', 'false');
+  } else {
+    item.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// Initial route handler based on URL hash
+function handleInitialHashRoute() {
+  const hash = window.location.hash;
+  if (hash) {
+    let cleanId = hash.replace('#page-', '').replace('#', '');
+    if (cleanId === 'packages') cleanId = 'temple-packages';
+    if (cleanId === 'airport') cleanId = 'cab-rental';
+    if (cleanId === 'car-rental') cleanId = 'tariff';
+    if (document.getElementById('page-' + cleanId)) {
+      showPage(cleanId);
+    }
+  }
+}
+
+window.addEventListener('hashchange', handleInitialHashRoute);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', handleInitialHashRoute);
+} else {
+  handleInitialHashRoute();
+}
+
