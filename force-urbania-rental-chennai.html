@@ -90,7 +90,7 @@
 </head>
 <body>
 
-  <header>
+          <header>
     <div class="container nav-container">
       <div class="logo-wrapper" style="cursor: pointer;" title="Shivaputhra Travels">
         <a href="index.html#page-home" style="display: block; text-decoration: none;">
@@ -100,54 +100,51 @@
 
       <!-- Desktop Links -->
       <ul class="nav-links">
-        <li><a href="index.html#page-home" id="nav-home"><i class="fas fa-home" style="font-size: 13px;"></i> Home</a></li>
-        <li><a href="index.html#page-cab-rental" id="nav-cab-rental"><i class="fas fa-taxi" style="font-size: 13px;"></i> Cab Rental</a></li>
+        <li><a href="index.html#page-home" id="nav-home" ><i class="fas fa-home" style="font-size: 13px;"></i> Home</a></li>
+        
         <li class="nav-item-dropdown">
-          <a href="temple-tour-packages-chennai.html" id="nav-packages" class="">
+          <a href="index.html#page-cab-rental" id="nav-cab-rental" class="active">
+            <i class="fas fa-taxi" style="font-size: 13px;"></i> Cab Rental <i class="fas fa-chevron-down dropdown-arrow" style="font-size: 10px; margin-left: 2px;"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="index.html#page-outstation-packages">
+                <i class="fas fa-route" style="color: var(--accent); width: 18px;"></i> Outstation Cabs
+              </a>
+            </li>
+            <li>
+              <a href="force-urbania-rental-chennai.html">
+                <i class="fas fa-crown" style="color: var(--accent); width: 18px;"></i> Force Urbania Rental
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item-dropdown">
+          <a href="tour-packages-chennai.html" id="nav-packages" >
             <i class="fas fa-map-marked-alt" style="font-size: 13px;"></i> Tour Packages <i class="fas fa-chevron-down dropdown-arrow" style="font-size: 10px; margin-left: 2px;"></i>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="chennai-to-tirupati-car-packages.html" class="">
+              <a href="chennai-to-tirupati-car-packages.html">
                 <i class="fas fa-om" style="color: var(--accent); width: 18px;"></i> Tirupati Packages
               </a>
             </li>
             <li>
-              <a href="temple-tour-packages-chennai.html" class="">
+              <a href="temple-tour-packages-chennai.html">
                 <i class="fas fa-gopuram" style="color: var(--accent); width: 18px;"></i> Temple Tour Packages
               </a>
             </li>
             <li>
               <a href="index.html#page-holiday-packages">
-                <i class="fas fa-umbrella-beach" style="color: var(--accent); width: 18px;"></i> Holiday Tours
-              </a>
-            </li>
-            <li>
-              <a href="index.html#page-outstation-packages">
-                <i class="fas fa-route" style="color: var(--accent); width: 18px;"></i> Outstation
+                <i class="fas fa-umbrella-beach" style="color: var(--accent); width: 18px;"></i> Holiday Tour Packages
               </a>
             </li>
           </ul>
         </li>
-        <li class="nav-item-dropdown">
-          <a href="force-urbania-rental-chennai.html" id="nav-fleet" class="active">
-            <i class="fas fa-bus-alt" style="font-size: 13px;"></i> Luxury Fleet <i class="fas fa-chevron-down dropdown-arrow" style="font-size: 10px; margin-left: 2px;"></i>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="force-urbania-rental-chennai.html" class="active">
-                <i class="fas fa-crown" style="color: var(--accent); width: 18px;"></i> Force Urbania Rental
-              </a>
-            </li>
-            <li>
-              <a href="tempo-traveller-rental-chennai.html" class="">
-                <i class="fas fa-shuttle-van" style="color: var(--accent); width: 18px;"></i> Tempo Traveller Rental
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="index.html#page-corporate" id="nav-corporate"><i class="fas fa-briefcase" style="font-size: 13px;"></i> Corporate</a></li>
-        <li><a href="index.html#page-tariff" id="nav-tariff" class=""><i class="fas fa-tags" style="font-size: 13px;"></i> Tariff</a></li>
+
+        <li><a href="index.html#page-corporate" id="nav-corporate"><i class="fas fa-briefcase" style="font-size: 13px;"></i> Corporate Bookings</a></li>
+        <li><a href="index.html#page-tariff" id="nav-tariff"><i class="fas fa-tags" style="font-size: 13px;"></i> Tariff</a></li>
         <li><a href="index.html#page-about" id="nav-about"><i class="fas fa-info-circle" style="font-size: 13px;"></i> About Us</a></li>
         <li><a href="index.html#page-contact" id="nav-contact"><i class="fas fa-envelope" style="font-size: 13px;"></i> Contact Us</a></li>
       </ul>
@@ -157,7 +154,7 @@
         <a href="tel:09444320367" class="btn-nav-call">
           <i class="fas fa-phone-alt" style="color: var(--accent);"></i> Call Now
         </a>
-        <button class="btn-nav-whatsapp" onclick="openDirectWhatsApp('Website Inquiry')">
+        <button class="btn-nav-whatsapp" onclick="openDirectWhatsApp('Tour Booking Inquiry')">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </button>
       </div>
@@ -170,6 +167,7 @@
   </header>
 
   <!-- Mobile Side Drawer & Backdrop Overlay -->
+          <!-- Mobile Side Drawer & Backdrop Overlay -->
   <div class="side-drawer-overlay" id="drawer-overlay" onclick="toggleMobileMenu(false)"></div>
   <aside class="side-drawer" id="side-drawer">
     <div class="drawer-header">
@@ -184,15 +182,35 @@
     </div>
 
     <ul class="drawer-links">
-      <li><a href="index.html#page-home" id="drawer-home"><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
-      <li><a href="index.html#page-cab-rental" id="drawer-cab-rental"><i class="fas fa-taxi" style="color: var(--accent);"></i> Cab Rental</a></li>
-      <li class="drawer-item-dropdown" id="drawer-dropdown-item">
-        <a onclick="toggleMobileSubmenu(event)" id="drawer-packages" style="cursor: pointer;">
+      <li><a href="index.html#page-home" id="drawer-home" ><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
+      
+      <li class="drawer-item-dropdown" id="drawer-dropdown-cab">
+        <a onclick="toggleMobileSubmenu(event)" id="drawer-cab-rental" class="active" style="cursor: pointer;">
+          <i class="fas fa-taxi" style="color: var(--accent);"></i>
+          <span>Cab Rental</span>
+          <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
+        </a>
+        <ul class="drawer-submenu" id="drawer-submenu-cab">
+          <li>
+            <a href="index.html#page-outstation-packages">
+              <i class="fas fa-route" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Outstation Cabs
+            </a>
+          </li>
+          <li>
+            <a href="force-urbania-rental-chennai.html">
+              <i class="fas fa-crown" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Force Urbania Rental
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="drawer-item-dropdown" id="drawer-dropdown-packages">
+        <a onclick="toggleMobileSubmenu(event)" id="drawer-packages"  style="cursor: pointer;">
           <i class="fas fa-map-marked-alt" style="color: var(--accent);"></i>
           <span>Tour Packages</span>
           <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
         </a>
-        <ul class="drawer-submenu" id="drawer-submenu">
+        <ul class="drawer-submenu" id="drawer-submenu-packages">
           <li>
             <a href="chennai-to-tirupati-car-packages.html">
               <i class="fas fa-om" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Tirupati Packages
@@ -205,33 +223,24 @@
           </li>
           <li>
             <a href="index.html#page-holiday-packages">
-              <i class="fas fa-umbrella-beach" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Holiday Tours
-            </a>
-          </li>
-          <li>
-            <a href="index.html#page-outstation-packages">
-              <i class="fas fa-route" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Outstation
+              <i class="fas fa-umbrella-beach" style="color: var(--accent); font-size: 12px; width: 16px;"></i> Holiday Tour Packages
             </a>
           </li>
         </ul>
       </li>
-      <li><a href="force-urbania-rental-chennai.html" id="drawer-urbania"><i class="fas fa-crown" style="color: var(--accent);"></i> Force Urbania Rental</a></li>
-      <li><a href="tempo-traveller-rental-chennai.html" id="drawer-tempo"><i class="fas fa-shuttle-van" style="color: var(--accent);"></i> Tempo Traveller Rental</a></li>
+
       <li><a href="index.html#page-corporate" id="drawer-corporate"><i class="fas fa-briefcase" style="color: var(--accent);"></i> Corporate Bookings</a></li>
       <li><a href="index.html#page-tariff" id="drawer-tariff"><i class="fas fa-tags" style="color: var(--accent);"></i> Tariff</a></li>
       <li><a href="index.html#page-about" id="drawer-about"><i class="fas fa-info-circle" style="color: var(--accent);"></i> About Us</a></li>
       <li><a href="index.html#page-contact" id="drawer-contact"><i class="fas fa-envelope" style="color: var(--accent);"></i> Contact Us</a></li>
     </ul>
 
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
-      <a href="tel:09444320367" class="btn btn-outline" style="width: 100%;">
-        <i class="fas fa-phone-alt" style="color: var(--accent);"></i> Call +91 94443 20367
+    <div class="drawer-footer">
+      <a href="tel:09444320367" class="drawer-btn drawer-btn-call">
+        <i class="fas fa-phone-alt"></i> Call Now (+91 94443 20367)
       </a>
-      <a href="tel:07338939339" class="btn btn-outline" style="width: 100%;">
-        <i class="fas fa-phone-alt" style="color: var(--accent);"></i> Call +91 73389 39339
-      </a>
-      <button class="btn btn-whatsapp" style="width: 100%;" onclick="openDirectWhatsApp('Side Drawer Quick Inquiry')">
-        <i class="fab fa-whatsapp"></i> WhatsApp Chat
+      <button class="drawer-btn drawer-btn-whatsapp" onclick="openDirectWhatsApp('Mobile Drawer Inquiry')">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
       </button>
     </div>
   </aside>
@@ -276,21 +285,72 @@
         <!-- Reused Spotlight Section -->
         <div class="urbania-spotlight-section" style="padding: 0; background: none;">
           <div class="urbania-card-wrap">
-            <div class="urbania-glow-effect"></div>
             <div class="urbania-grid">
-              <!-- Left Column: Image -->
+              <!-- Left Column: Interactive Image Slideshow & Specs -->
               <div class="urbania-media-col">
-                <div class="urbania-vip-badge">
-                  <i class="fas fa-crown"></i> VIP Luxury Class
+                <!-- Slideshow Carousel Container -->
+                <div class="urbania-slider-wrapper" id="urbania-gallery-slider">
+                  <div class="urbania-slider-viewport">
+                    <!-- Slide 1: VIP Exterior -->
+                    <div class="urbania-slide active">
+                      <img src="images/force_urbania.webp" alt="Force Urbania Luxury Van Exterior - Shivaputhra Travels" width="700" height="420" />
+                      <div class="urbania-slide-caption">
+                        <i class="fas fa-crown"></i> VIP Executive Exterior
+                      </div>
+                    </div>
+
+                    <!-- Slide 2: Reclining Captain Seats -->
+                    <div class="urbania-slide">
+                      <img src="images/urbania_interior_seats.webp" alt="Force Urbania Luxury Reclining Captain Seats Interior - Shivaputhra Travels" width="700" height="420" loading="lazy" />
+                      <div class="urbania-slide-caption">
+                        <i class="fas fa-chair"></i> Plush Reclining Captain Seats
+                      </div>
+                    </div>
+
+                    <!-- Slide 3: High Roof Stand-Up Cabin -->
+                    <div class="urbania-slide">
+                      <img src="images/urbania_interior_cabin.webp" alt="Force Urbania High Roof Cabin & Ambient LED Lighting - Shivaputhra Travels" width="700" height="420" loading="lazy" />
+                      <div class="urbania-slide-caption">
+                        <i class="fas fa-lightbulb"></i> 6-Foot Stand-Up Cabin & Ambient LEDs
+                      </div>
+                    </div>
+
+                    <!-- Slide 4: Highway Cruise -->
+                    <div class="urbania-slide">
+                      <img src="images/urbania_exterior_travel.webp" alt="Force Urbania Highway Travel - Shivaputhra Travels" width="700" height="420" loading="lazy" />
+                      <div class="urbania-slide-caption">
+                        <i class="fas fa-route"></i> Smooth Highway Travel & Air Suspension
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Navigation Arrows -->
+                  <button type="button" class="urbania-slider-arrow prev" onclick="moveUrbaniaSlide(-1)" aria-label="Previous Photo">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button type="button" class="urbania-slider-arrow next" onclick="moveUrbaniaSlide(1)" aria-label="Next Photo">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
                 </div>
-                <div class="urbania-img-container">
-                  <img src="images/force_urbania.webp" alt="Force Urbania luxury van rental Chennai - Shivaputhra Travels" class="urbania-vehicle-photo" width="700" height="420" />
-                </div>
-                <div class="urbania-specs-row">
-                  <div class="urbania-spec-pill"><i class="fas fa-users"></i> 10 / 13 / 17 Seats</div>
-                  <div class="urbania-spec-pill"><i class="fas fa-wind"></i> Dual Blower AC</div>
-                  <div class="urbania-spec-pill"><i class="fas fa-couch"></i> Recliner Seats</div>
-                  <div class="urbania-spec-pill"><i class="fas fa-shield-alt"></i> Air Suspension</div>
+
+                <!-- Interactive Thumbnails -->
+                <div class="urbania-thumbnails-strip" id="urbania-thumbnails">
+                  <button type="button" class="urbania-thumb-btn active" onclick="setUrbaniaSlide(0)">
+                    <img src="images/force_urbania.webp" alt="Urbania Exterior" />
+                    <span>Exterior</span>
+                  </button>
+                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(1)">
+                    <img src="images/urbania_interior_seats.webp" alt="Urbania Captain Seats" />
+                    <span>Captain Seats</span>
+                  </button>
+                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(2)">
+                    <img src="images/urbania_interior_cabin.webp" alt="Urbania Cabin" />
+                    <span>High Cabin</span>
+                  </button>
+                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(3)">
+                    <img src="images/urbania_exterior_travel.webp" alt="Urbania Highway Travel" />
+                    <span>Highway Ride</span>
+                  </button>
                 </div>
               </div>
 
@@ -448,17 +508,6 @@
             <span style="font-size: 12.5px; font-weight: 700; color: var(--accent); margin-top: auto; display: inline-flex; align-items: center; gap: 4px;">Explore Details <i class="fas fa-arrow-right" style="font-size: 10px;"></i></span>
           </a>
         
-          <a href="tempo-traveller-rental-chennai.html" style="display: flex; flex-direction: column; gap: 8px; padding: 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.03)'">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(217, 119, 6, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 16px;">
-                <i class="fas fa-shuttle-van"></i>
-              </div>
-              <h3 style="font-size: 16px; font-weight: 700; color: var(--primary); margin: 0;">Tempo Traveller Rental</h3>
-            </div>
-            <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5;">12+1, 14+1 & 18+1 seater AC pushback rentals at direct operator rates</p>
-            <span style="font-size: 12.5px; font-weight: 700; color: var(--accent); margin-top: auto; display: inline-flex; align-items: center; gap: 4px;">Explore Details <i class="fas fa-arrow-right" style="font-size: 10px;"></i></span>
-          </a>
-        
           <a href="index.html#page-tariff" style="display: flex; flex-direction: column; gap: 8px; padding: 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.03)'">
             <div style="display: flex; align-items: center; gap: 10px;">
               <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(217, 119, 6, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 16px;">
@@ -502,16 +551,17 @@
           <ul class="footer-links">
             <li><a href="index.html#page-home"><i class="fas fa-chevron-right"></i> Home</a></li>
             <li><a href="index.html#page-cab-rental"><i class="fas fa-chevron-right"></i> Cab Rental</a></li>
+            <li><a href="tour-packages-chennai.html"><i class="fas fa-chevron-right"></i> Tour Packages</a></li>
             <li><a href="chennai-to-tirupati-car-packages.html"><i class="fas fa-chevron-right"></i> Tirupati Packages</a></li>
             <li><a href="temple-tour-packages-chennai.html"><i class="fas fa-chevron-right"></i> Temple Tour Packages</a></li>
             <li><a href="force-urbania-rental-chennai.html"><i class="fas fa-chevron-right"></i> Force Urbania Rental</a></li>
-            <li><a href="tempo-traveller-rental-chennai.html"><i class="fas fa-chevron-right"></i> Tempo Traveller Rental</a></li>
             <li><a href="index.html#page-holiday-packages"><i class="fas fa-chevron-right"></i> Holiday Tours</a></li>
             <li><a href="index.html#page-outstation-packages"><i class="fas fa-chevron-right"></i> Outstation</a></li>
             <li><a href="index.html#page-corporate"><i class="fas fa-chevron-right"></i> Corporate Bookings</a></li>
             <li><a href="index.html#page-tariff"><i class="fas fa-chevron-right"></i> Tariff</a></li>
             <li><a href="index.html#page-about"><i class="fas fa-chevron-right"></i> About Us</a></li>
             <li><a href="index.html#page-contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="index.html#terms-section"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
           </ul>
         </div>
 

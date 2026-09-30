@@ -577,7 +577,8 @@
     transform: scale(1.02);
   }
 
-  .hero-inner-content h1 {
+  .hero-inner-content h1,
+  .hero-inner-content h2 {
     font-size: 38px;
     line-height: 1.25;
     letter-spacing: 0.5px;
@@ -829,17 +830,22 @@
     border-color: rgba(217, 119, 6, 0.4);
   }
 
-  .vehicle-img-wrap img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    background: transparent;
-  }
-
   .vehicle-img-wrap {
     position: relative;
-    background: #f8fafc;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #0f172a;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .vehicle-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+    display: block;
   }
 
   .vehicle-img-wrap img[alt]:after {
@@ -856,7 +862,7 @@
   }
 
   .vehicle-card:hover .vehicle-img-wrap img {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 
   .vehicle-header {
@@ -2287,7 +2293,8 @@
       line-height: 1.15 !important;
     }
 
-    .hero-inner-content h1 {
+    .hero-inner-content h1,
+    .hero-inner-content h2 {
       font-size: 26px !important;
       line-height: 1.3 !important;
       letter-spacing: 0.3px !important;
@@ -2387,7 +2394,8 @@
         padding: 35px 14px 40px !important;
       }
 
-      .hero-inner-content h1 {
+      .hero-inner-content h1,
+      .hero-inner-content h2 {
         font-size: 23px !important;
       }
 
@@ -3167,26 +3175,26 @@
 
   .car-fleet-card-item .vehicle-img-wrap {
     position: relative;
-    background: #f8fafc;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #0f172a;
+    height: 220px;
+    width: 100%;
+    display: block;
     overflow: hidden;
-    border-bottom: 1px solid #f1f5f9;
-    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    padding: 0;
   }
 
   .car-fleet-card-item .vehicle-img-wrap img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-    background: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+    display: block;
   }
 
   .car-fleet-card-item:hover .vehicle-img-wrap img {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 
   /* =========================================================
@@ -4254,31 +4262,48 @@
     text-align: center;
   }
 
-  /* Dedicated Force Urbania Spotlight Section Styling */
+  /* Dedicated Force Urbania Spotlight Section Styling (Light Clean Theme) */
   .urbania-spotlight-section {
     padding: 50px 0;
-    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    background: #f8fafc;
   }
 
   .urbania-card-wrap {
     position: relative;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border-radius: 20px;
-    padding: 40px;
-    color: #ffffff;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-    overflow: hidden;
-    border: 1px solid rgba(217, 119, 6, 0.3);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 36px 40px;
+    color: var(--text-main);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
   }
 
   .urbania-glow-effect {
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(217, 119, 6, 0.25) 0%, rgba(217, 119, 6, 0) 70%);
-    pointer-events: none;
+    display: none;
+  }
+
+  .urbania-badge-center-wrap {
+    text-align: center;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .urbania-vip-badge {
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 18px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0 auto;
   }
 
   .urbania-grid {
@@ -4292,71 +4317,186 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  /* Urbania Interactive Gallery Slideshow */
+  .urbania-slider-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #0f172a;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    aspect-ratio: 4 / 3;
+    min-height: 360px;
+  }
+
+  .urbania-slider-viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .urbania-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  }
+
+  .urbania-slide.active {
+    opacity: 1;
+    visibility: visible;
     position: relative;
   }
 
-  .urbania-vip-badge {
-    background: rgba(217, 119, 6, 0.18);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .urbania-img-container {
+  .urbania-slide img {
     width: 100%;
-    padding: 14px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: center;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .urbania-slide-caption {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: rgba(10, 25, 47, 0.88);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    display: inline-flex;
     align-items: center;
-    transition: transform 0.3s ease;
+    gap: 7px;
   }
 
-  .urbania-card-wrap:hover .urbania-img-container {
-    transform: scale(1.02);
+  .urbania-slide-caption i {
+    color: var(--accent);
   }
 
-  .urbania-hero-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+  .urbania-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--primary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transition: all 0.2s ease;
+    z-index: 5;
+  }
+
+  .urbania-slider-arrow:hover {
+    background: var(--accent);
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .urbania-slider-arrow.prev {
+    left: 12px;
+  }
+
+  .urbania-slider-arrow.next {
+    right: 12px;
+  }
+
+  /* Thumbnails */
+  .urbania-thumbnails-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .urbania-thumb-btn {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+  }
+
+  .urbania-thumb-btn img {
+    width: 100%;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .urbania-thumb-btn span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+    padding-bottom: 2px;
+  }
+
+  .urbania-thumb-btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .urbania-thumb-btn.active {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25);
+  }
+
+  .urbania-thumb-btn.active span {
+    color: var(--accent);
   }
 
   .urbania-specs-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
-  }
-
-  .urbania-specs-row .spec-pill {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    font-size: 11px;
-    font-weight: 600;
-    color: #cbd5e1;
-    padding: 5px 10px;
-    border-radius: 8px;
-    display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    margin-top: 18px;
+    width: 100%;
+    text-align: center;
   }
 
-  .urbania-specs-row .spec-pill i {
+  .urbania-specs-row .spec-pill,
+  .urbania-specs-row .urbania-spec-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    padding: 7px 14px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .urbania-specs-row .spec-pill i,
+  .urbania-specs-row .urbania-spec-pill i {
     color: var(--accent);
   }
 
@@ -4373,9 +4513,10 @@
   .urbania-main-title {
     font-size: 32px;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--primary);
     margin: 0 0 12px 0;
     font-family: var(--font-brand);
+    line-height: 1.2;
   }
 
   .urbania-main-title span {
@@ -4383,8 +4524,8 @@
   }
 
   .urbania-lead-desc {
-    font-size: 14px;
-    color: #94a3b8;
+    font-size: 14.5px;
+    color: #475569;
     line-height: 1.6;
     margin-bottom: 24px;
   }
@@ -4400,37 +4541,43 @@
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    background: rgba(255, 255, 255, 0.04);
-    padding: 12px 14px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #f8fafc;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .urbania-feat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   }
 
   .urbania-feat-item .feat-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: rgba(217, 119, 6, 0.18);
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(245, 158, 11, 0.14);
     color: var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 16px;
     flex-shrink: 0;
   }
 
   .urbania-feat-item h4 {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 2px 0;
+    color: var(--primary);
+    margin: 0 0 3px 0;
   }
 
   .urbania-feat-item p {
-    font-size: 11px;
-    color: #94a3b8;
+    font-size: 12px;
+    color: #64748b;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
   .urbania-action-group {
@@ -4447,17 +4594,25 @@
   }
 
   .urbania-btn-tariff {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
     font-size: 14px;
     padding: 12px 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
   }
 
   .urbania-btn-tariff:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #ffffff;
+    background: var(--primary);
     color: #ffffff;
+    border-color: var(--primary);
   }
 
   @media (max-width: 992px) {

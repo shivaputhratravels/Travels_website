@@ -30,8 +30,10 @@ function showPage(pageId) {
   // Update Desktop Nav active indicator
   document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
   let activeNavId = 'nav-' + actualPageId;
-  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages' || actualPageId === 'tirupati-packages' || actualPageId === 'outstation-packages') {
+  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages' || actualPageId === 'tirupati-packages') {
     activeNavId = 'nav-packages';
+  } else if (actualPageId === 'outstation-packages' || actualPageId === 'cab-rental') {
+    activeNavId = 'nav-cab-rental';
   }
   const activeNav = document.getElementById(activeNavId);
   if (activeNav) activeNav.classList.add('active');
@@ -39,8 +41,10 @@ function showPage(pageId) {
   // Update Mobile Drawer Nav active indicator
   document.querySelectorAll('.drawer-links a').forEach(link => link.classList.remove('active'));
   let activeDrawerId = 'drawer-' + actualPageId;
-  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages' || actualPageId === 'tirupati-packages' || actualPageId === 'outstation-packages') {
+  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages' || actualPageId === 'tirupati-packages') {
     activeDrawerId = 'drawer-packages';
+  } else if (actualPageId === 'outstation-packages' || actualPageId === 'cab-rental') {
+    activeDrawerId = 'drawer-cab-rental';
   }
   const activeDrawerNav = document.getElementById(activeDrawerId);
   if (activeDrawerNav) activeDrawerNav.classList.add('active');
@@ -57,11 +61,13 @@ function switchTourTab(category) {
   if (category === 'holiday') {
     showPage('holiday-packages');
   } else if (category === 'tirupati') {
-    showPage('tirupati-packages');
+    window.location.href = 'chennai-to-tirupati-car-packages.html';
   } else if (category === 'outstation') {
     showPage('outstation-packages');
+  } else if (category === 'temple') {
+    window.location.href = 'temple-tour-packages-chennai.html';
   } else {
-    showPage('temple-packages');
+    showPage(category);
   }
 }
 
@@ -386,6 +392,12 @@ function toggleMobileSubmenu(e) {
   if (e) {
     e.preventDefault();
     e.stopPropagation();
+    const target = e.currentTarget || e.target;
+    const parentDropdown = target.closest ? target.closest('.drawer-item-dropdown') : null;
+    if (parentDropdown) {
+      parentDropdown.classList.toggle('open');
+      return;
+    }
   }
   const dropdown = document.getElementById('drawer-dropdown-item');
   if (dropdown) {
@@ -1099,3 +1111,54 @@ if (document.readyState === 'loading') {
   handleInitialHashRoute();
 }
 
+
+
+// 12. Force Urbania Gallery Slideshow Controller
+let currentUrbaniaSlide = 0;
+let urbaniaAutoTimer = null;
+
+function setUrbaniaSlide(index) {
+  const sliders = document.querySelectorAll('.urbania-slider-wrapper');
+  if (!sliders.length) return;
+
+  sliders.forEach(slider => {
+    const slides = slider.querySelectorAll('.urbania-slide');
+    if (!slides.length) return;
+
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    currentUrbaniaSlide = index;
+
+    slides.forEach((s, idx) => {
+      s.classList.toggle('active', idx === currentUrbaniaSlide);
+    });
+  });
+
+  const allThumbStrips = document.querySelectorAll('.urbania-thumbnails-strip');
+  allThumbStrips.forEach(strip => {
+    const thumbs = strip.querySelectorAll('.urbania-thumb-btn');
+    thumbs.forEach((t, idx) => {
+      t.classList.toggle('active', idx === currentUrbaniaSlide);
+    });
+  });
+}
+
+function moveUrbaniaSlide(dir) {
+  setUrbaniaSlide(currentUrbaniaSlide + dir);
+  startUrbaniaAutoTimer();
+}
+
+function startUrbaniaAutoTimer() {
+  if (urbaniaAutoTimer) clearInterval(urbaniaAutoTimer);
+  urbaniaAutoTimer = setInterval(() => {
+    setUrbaniaSlide(currentUrbaniaSlide + 1);
+  }, 4000);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    startUrbaniaAutoTimer();
+  });
+} else {
+  startUrbaniaAutoTimer();
+}
