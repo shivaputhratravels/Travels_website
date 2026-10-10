@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary Meta Tags -->
-  <title>Shivaputhra Travels | Luxury Cabs & Tour Packages Chennai</title>
+  <title>Shivaputhra Travels | Force Urbania Rental, Cabs & Tour Packages Chennai</title>
   <meta name="title" content="Shivaputhra Travels | Luxury Cabs & Tour Packages Chennai" />
-  <meta name="description" content="Shivaputhra Travels | Force Urbania rental Chennai, temple tour packages, holiday packages, and 24/7 airport transfers. 24/7 Booking: +91 94443 20367 | +91 73389 39339." />
+  <meta name="description" content="Shivaputhra Travels | Tamil Nadu tour packages from Chennai, Force Urbania rental, Tamil Nadu temple tour packages, holiday packages, and 24/7 airport transfers. Direct operator tariffs: +91 94443 20367." />
   <meta name="keywords" content="Shivaputhra Travels, Force Urbania rental Chennai, temple tour package Chennai, holidays package Chennai, airport transfer Chennai, Chennai to Tirupati car package, tempo traveller rental Chennai, Innova Crysta rent Chennai, luxury cab rental Chennai" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="thumbnail" content="https://www.shivaputhratravels.com/images/force_urbania.webp" />
+  <link rel="image_src" href="https://www.shivaputhratravels.com/images/force_urbania.webp" />
   <meta name="author" content="Shivaputhra Travels" />
   <link rel="canonical" href="https://www.shivaputhratravels.com/" />
 
@@ -48,17 +50,25 @@
   <meta name="theme-color" content="#0a192f" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="icon" type="image/webp" sizes="32x32" href="images/logo_dark.webp" />
-  <link rel="icon" type="image/webp" sizes="192x192" href="images/logo_dark.webp" />
-  <link rel="shortcut icon" href="images/logo_dark.webp" />
-  <link rel="apple-touch-icon" href="images/logo_dark.webp" />
+  <!-- Favicons for Google Search & Devices -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Oregano:ital@0;1&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+  </noscript>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1200&q=75" fetchpriority="high">
 
   <link rel="stylesheet" href="style.css">
 
@@ -71,7 +81,7 @@
     "name": "Shivaputhra Travels",
     "alternateName": "Shivaputra Travels",
     "url": "https://www.shivaputhratravels.com/",
-    "logo": "https://www.shivaputhratravels.com/images/logo_dark.webp",
+    "logo": "https://www.shivaputhratravels.com/images/logo.png",
     "image": "https://www.shivaputhratravels.com/images/force_urbania.webp",
     "description": "Premier Chennai travel agency & cab rental specializing in Chennai to Tirupati car packages with VIP darshan, South India sacred temple yatras, holiday tours, and luxury fleet rentals.",
     "telephone": "+919444320367",
@@ -215,7 +225,7 @@
       <!-- Modal Header -->
       <div class="mandatory-modal-header">
         <div class="mandatory-brand-badge">
-          <img src="images/logo.webp" alt="Shivaputhra Travels" class="mandatory-logo-img" width="180" height="134" />
+          <img src="images/logo.png" alt="Shivaputhra Travels" class="mandatory-logo-img" width="240" height="100" />
         </div>
         <h2 class="mandatory-title">Plan Your Divine & Leisure Journey</h2>
         <p class="mandatory-subtitle">Share your travel details below to get instant VIP Darshan slot confirmation, best
@@ -242,7 +252,7 @@
             <label for="entry-service-type">Service Type <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-layer-group field-icon"></i>
-              <select id="entry-service-type" name="service_type" required>
+              <select id="entry-service-type" name="service_type" aria-label="Select Travel Service" required>
                 <option value="" disabled selected>-- Select Service Type --</option>
                 <option value="Airport Transfer">Airport Transfer</option>
                 <option value="Local Rental">Local Rental</option>
@@ -257,7 +267,7 @@
             <label for="entry-vehicle-category">Preferred Vehicle Model <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-taxi field-icon"></i>
-              <select id="entry-vehicle-category" name="vehicle_category" required>
+              <select id="entry-vehicle-category" name="vehicle_category" aria-label="Select Vehicle Category" required>
                 <option value="" disabled selected>-- Select Vehicle Model --</option>
                 <option value="Honda City (4 Seater)">Honda City (4 Seater Sedan)</option>
                 <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater Sedan)</option>
@@ -269,7 +279,7 @@
                 <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater Luxury)</option>
                 <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater Luxury)</option>
                 <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP MPV)</option>
-                <option value="Force Urbania (12-18 Seater)">Force Urbania (12 to 18 Seater Luxury Van)</option>
+                <option value="Force Urbania (12 & 16 Seater)">Force Urbania (12 & 16 Seater Luxury Van)</option>
                 <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
                 <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
               </select>
@@ -288,7 +298,7 @@
             <label for="entry-pickup">Pickup Location / Terminal <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-map-pin field-icon"></i>
-              <input type="text" id="entry-pickup" name="pickup" placeholder="e.g. MAA Airport Terminal 1 / T. Nagar" required />
+              <input type="text" id="entry-pickup" name="pickup" aria-label="Pickup Location" placeholder="e.g. MAA Airport Terminal 1 / T. Nagar" required />
             </div>
             <span class="field-error-msg" id="err-entry-pickup">Please enter pickup location</span>
           </div>
@@ -298,7 +308,7 @@
             <label for="entry-drop">Drop / Destination <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-map-marker-alt field-icon"></i>
-              <input type="text" id="entry-drop" name="drop" placeholder="e.g. Hotel ITC Grand Chola / Tirupati" required />
+              <input type="text" id="entry-drop" name="drop" aria-label="Drop Location" placeholder="e.g. Hotel ITC Grand Chola / Tirupati" required />
             </div>
             <span class="field-error-msg" id="err-entry-drop">Please enter drop destination</span>
           </div>
@@ -308,7 +318,7 @@
             <label for="entry-date">Date of Travel <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-calendar-alt field-icon"></i>
-              <input type="date" id="entry-date" name="travel_date" required />
+              <input type="date" id="entry-date" name="travel_date" aria-label="Travel Date" required />
             </div>
             <span class="field-error-msg" id="err-entry-date">Please select date of travel</span>
           </div>
@@ -318,7 +328,7 @@
             <label for="entry-pickup-time">Pickup Time <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-clock field-icon"></i>
-              <select id="entry-pickup-time" name="pickup_time" required>
+              <select id="entry-pickup-time" name="pickup_time" aria-label="Select Pickup Time" required>
                 <option value="" disabled selected>-- Select Pickup Time --</option>
                 <option value="12:00 AM">12:00 AM (Midnight)</option>
                 <option value="12:30 AM">12:30 AM</option>
@@ -378,7 +388,7 @@
             <label for="entry-travelers">Number of Travelers <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-users field-icon"></i>
-              <select id="entry-travelers" name="travelers" required>
+              <select id="entry-travelers" name="travelers" aria-label="Number of Travelers" required>
                 <option value="" disabled selected>-- Select Number of Travelers --</option>
                 <option value="1 - 2 Passengers">1 - 2 Passengers</option>
                 <option value="3 - 4 Passengers">3 - 4 Passengers</option>
@@ -401,7 +411,7 @@
             <label for="entry-name">Your Full Name <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-user field-icon"></i>
-              <input type="text" id="entry-name" name="name" placeholder="e.g. Rajesh Sharma" required />
+              <input type="text" id="entry-name" name="name" aria-label="Your Full Name" placeholder="e.g. Rajesh Sharma" required />
             </div>
             <span class="field-error-msg" id="err-entry-name">Please enter your full name</span>
           </div>
@@ -411,7 +421,7 @@
             <label for="entry-phone">WhatsApp / Phone No <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <span class="country-prefix">+91</span>
-              <input type="tel" id="entry-phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required />
+              <input type="tel" id="entry-phone" name="phone" aria-label="10-Digit Mobile Number" placeholder="10-digit mobile number" maxlength="10" required />
             </div>
             <span class="field-error-msg" id="err-entry-phone">Please enter a valid 10-digit WhatsApp number</span>
           </div>
@@ -421,7 +431,7 @@
             <label for="entry-citizenship">Citizenship / Category <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-passport field-icon"></i>
-              <select id="entry-citizenship" name="citizenship" required>
+              <select id="entry-citizenship" name="citizenship" aria-label="Traveler Citizenship" required>
                 <option value="Indian citizen">Indian citizen</option>
                 <option value="NRI">NRI</option>
                 <option value="Foreigner">Foreigner</option>
@@ -435,7 +445,7 @@
             <label for="entry-source">How Did You Find Our Website? <span class="req-star">*</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-bullhorn field-icon"></i>
-              <select id="entry-source" name="source" required>
+              <select id="entry-source" name="source" aria-label="How did you hear about us?" required>
                 <option value="" disabled selected>-- How did you find us? --</option>
                 <option value="Google Search">🔍 Google Search</option>
                 <option value="Instagram">📸 Instagram</option>
@@ -455,7 +465,7 @@
             <label for="entry-notes">Flight Number / Special Instructions <span class="opt-label">(Optional)</span></label>
             <div class="input-icon-wrapper">
               <i class="fas fa-clipboard-list field-icon"></i>
-              <input type="text" id="entry-notes" name="notes" placeholder="e.g. Flight 6E-204 arriving at 10:30 AM / Need English-speaking chauffeur" />
+              <input type="text" id="entry-notes" name="notes" aria-label="Special Requests or Travel Notes" placeholder="e.g. Flight 6E-204 arriving at 10:30 AM / Need English-speaking chauffeur" />
             </div>
           </div>
         </div>
@@ -498,7 +508,7 @@
     <div class="container nav-container">
       <div class="logo-wrapper" style="cursor: pointer;" title="Shivaputhra Travels">
         <a href="index.html#page-home" style="display: block; text-decoration: none;">
-          <img src="images/logo.webp" alt="Shivaputhra Travels" class="nav-logo-img" width="180" height="134" />
+          <img src="images/logo.png" alt="Shivaputhra Travels" class="nav-logo-img" width="240" height="100" />
         </a>
       </div>
 
@@ -558,9 +568,6 @@
         <a href="tel:09444320367" class="btn-nav-call">
           <i class="fas fa-phone-alt" style="color: var(--accent);"></i> Call Now
         </a>
-        <button class="btn-nav-whatsapp" onclick="openDirectWhatsApp('Tour Booking Inquiry')">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </button>
       </div>
 
       <!-- Mobile Hamburger Button -->
@@ -569,6 +576,7 @@
       </button>
     </div>
   </header>
+  <main id="main-content">
 
   <!-- Mobile Side Drawer & Backdrop Overlay -->
           <!-- Mobile Side Drawer & Backdrop Overlay -->
@@ -577,7 +585,7 @@
     <div class="drawer-header">
       <div style="cursor: pointer;" title="Shivaputhra Travels">
         <a href="index.html#page-home" style="display: block; text-decoration: none;">
-          <img src="images/logo.webp" alt="Shivaputhra Travels" class="drawer-logo-img" width="180" height="134" />
+          <img src="images/logo.png" alt="Shivaputhra Travels" class="drawer-logo-img" width="190" height="79" />
         </a>
       </div>
       <button class="drawer-close-btn" onclick="toggleMobileMenu(false)" aria-label="Close Navigation Drawer">
@@ -589,7 +597,7 @@
       <li><a href="index.html#page-home" id="drawer-home" class="active"><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
       
       <li class="drawer-item-dropdown" id="drawer-dropdown-cab">
-        <a onclick="toggleMobileSubmenu(event)" id="drawer-cab-rental"  style="cursor: pointer;">
+        <a href="javascript:void(0)" onclick="toggleMobileSubmenu(event)" id="drawer-cab-rental" role="button" aria-expanded="false" aria-label="Toggle Cab Rental Submenu"  style="cursor: pointer;">
           <i class="fas fa-taxi" style="color: var(--accent);"></i>
           <span>Cab Rental</span>
           <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
@@ -609,7 +617,7 @@
       </li>
 
       <li class="drawer-item-dropdown" id="drawer-dropdown-packages">
-        <a onclick="toggleMobileSubmenu(event)" id="drawer-packages"  style="cursor: pointer;">
+        <a href="javascript:void(0)" onclick="toggleMobileSubmenu(event)" id="drawer-packages" role="button" aria-expanded="false" aria-label="Toggle Tour Packages Submenu"  style="cursor: pointer;">
           <i class="fas fa-map-marked-alt" style="color: var(--accent);"></i>
           <span>Tour Packages</span>
           <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
@@ -656,7 +664,7 @@
       <!-- 4 Synced Background Images -->
       <!-- 1. Airport Transfers: Modern Airport Runway & Terminal -->
       <div class="hero-slide active-slide"
-        style="background-image: url('https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1600&q=80');">
+        style="background-image: url('https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1200&q=75');">
       </div>
       <!-- 2. Temple Tour: South Indian Temple Gopuram -->
       <div class="hero-slide"
@@ -664,7 +672,7 @@
       </div>
       <!-- 3. Holiday Package: Munnar / Western Ghats Hills -->
       <div class="hero-slide"
-        style="background-image: url('https://images.unsplash.com/photo-1593692716621-1e228b0a9224?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a29kYWlrYW5hbHxlbnwwfHwwfHx8MA%3D%3D');">
+        style="background-image: url('https://images.unsplash.com/photo-1593692716621-1e228b0a9224?fm=jpg&q=75&w=1200&auto=format&fit=crop');">
       </div>
       <!-- 4. Local Chennai City: Chennai City Landmark -->
       <div class="hero-slide"
@@ -844,7 +852,7 @@
             <label class="field-label">
               <i class="fas fa-map-marked-alt"></i> Tour Package / Route
             </label>
-            <select class="field-input" id="home-tour-type">
+            <select class="field-input" id="home-tour-type" aria-label="Select Tour Package">
               <option value="" disabled selected>-- Select Tour Package --</option>
               <option value="Chennai to Aarupadai Veedu (6 Days)">Chennai to Aarupadai Veedu (6 Days)</option>
               <option value="Navagraha Temple Tour (3 Days)">Navagraha Temple Tour (3 Days)</option>
@@ -861,7 +869,7 @@
             <label class="field-label">
               <i class="fas fa-car-side"></i> Vehicle Type
             </label>
-            <select class="field-input" id="home-vehicle">
+            <select class="field-input" id="home-vehicle" aria-label="Select Vehicle Type">
               <option value="" disabled selected>-- Select Vehicle Type --</option>
               <option value="Honda City (4 Seater)">Honda City (4 Seater Sedan)</option>
               <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater Sedan)</option>
@@ -873,7 +881,7 @@
               <option value="Mercedes E Class (4 Seater)">Mercedes E Class (4 Seater Luxury)</option>
               <option value="Mercedes S Class (4 Seater)">Mercedes S Class (4 Seater Luxury)</option>
               <option value="Toyota Vellfire (7 Seater VIP)">Toyota Vellfire (7 Seater VIP MPV)</option>
-              <option value="Force Urbania (12-18 Seater)">Force Urbania (12 to 18 Seater Luxury Van)</option>
+              <option value="Force Urbania (12 & 16 Seater)">Force Urbania (12 & 16 Seater Luxury Van)</option>
               <option value="Tempo Traveller 12+1 (12 Seater)">Tempo Traveller 12+1 (12 Seater)</option>
               <option value="Tempo Traveller 18+1 (18 Seater)">Tempo Traveller 18+1 (18 Seater)</option>
             </select>
@@ -883,7 +891,7 @@
             <label class="field-label">
               <i class="fas fa-users"></i> No. of Passengers
             </label>
-            <select class="field-input" id="home-pax">
+            <select class="field-input" id="home-pax" aria-label="Select Passenger Count">
               <option value="" disabled selected>-- Select Passengers --</option>
               <option value="1 - 4 Passengers">1 - 4 Passengers (Sedan / Luxury)</option>
               <option value="5 - 7 Passengers">5 - 7 Passengers (Innova / Crysta / Fortuner)</option>
@@ -902,7 +910,7 @@
             <label class="field-label">
               <i class="fas fa-location-arrow"></i> Pickup Location
             </label>
-            <input type="text" class="field-input" id="home-pickup"
+            <input type="text" class="field-input" id="home-pickup" aria-label="Pickup Location in Chennai"
               placeholder="e.g. Porur, Chennai Airport, Tambaram" />
           </div>
 
@@ -910,7 +918,7 @@
             <label class="field-label">
               <i class="fas fa-calendar-alt"></i> Date of Travel
             </label>
-            <input type="date" class="field-input" id="home-date" />
+            <input type="date" class="field-input" id="home-date" aria-label="Journey Date" />
           </div>
 
           <div class="field-box">
@@ -986,20 +994,20 @@
 
                 <!-- Interactive Thumbnails -->
                 <div class="urbania-thumbnails-strip" id="urbania-thumbnails">
-                  <button type="button" class="urbania-thumb-btn active" onclick="setUrbaniaSlide(0)">
-                    <img src="images/force_urbania.webp" alt="Urbania Exterior" />
+                  <button type="button" class="urbania-thumb-btn active" onclick="setUrbaniaSlide(0)" aria-label="View Urbania Exterior">
+                    <img src="images/force_urbania_thumb.webp" alt="12 and 16 Seater Force Urbania luxury van exterior Chennai" width="104" height="58" loading="lazy" decoding="async" />
                     <span>Exterior</span>
                   </button>
-                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(1)">
-                    <img src="images/urbania_interior_seats.webp" alt="Urbania Captain Seats" />
+                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(1)" aria-label="View Urbania Captain Seats">
+                    <img src="images/urbania_interior_seats_thumb.webp" alt="Force Urbania reclining captain seats luxury interior" width="104" height="58" loading="lazy" decoding="async" />
                     <span>Captain Seats</span>
                   </button>
-                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(2)">
-                    <img src="images/urbania_interior_cabin.webp" alt="Urbania Cabin" />
+                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(2)" aria-label="View Urbania High Cabin">
+                    <img src="images/urbania_interior_cabin_thumb.webp" alt="Force Urbania high roof walk-in cabin with ambient lighting" width="104" height="58" loading="lazy" decoding="async" />
                     <span>High Cabin</span>
                   </button>
-                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(3)">
-                    <img src="images/urbania_exterior_travel.webp" alt="Urbania Highway Travel" />
+                  <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(3)" aria-label="View Urbania Highway Ride">
+                    <img src="images/urbania_exterior_travel_thumb.webp" alt="Force Urbania outstation travel rental in Chennai" width="104" height="58" loading="lazy" decoding="async" />
                     <span>Highway Ride</span>
                   </button>
                 </div>
@@ -1008,16 +1016,16 @@
               <!-- Right Column: Details, Features & Quick CTAs -->
             <div class="urbania-info-col">
               <span class="urbania-sub-tag"><i class="fas fa-star" style="color: var(--accent);"></i> Ultimate Group Travel Experience</span>
-              <h2 class="urbania-main-title">Force Urbania <span>Luxury Van</span></h2>
+              <h2 class="urbania-main-title">12 & 16 Seater Force Urbania <span>Luxury Van</span></h2>
               <p class="urbania-lead-desc">
-                Elevate your family temple yatras, VIP outstation trips, and corporate journeys with South India's premier 12 to 18 seater luxury van. Experience unmatched headroom, ultra-smooth air suspension, and executive comfort.
+                Elevate your family temple yatras, Aarupadai Veedu, Sabarimala group tours, and outstation holiday packages with Chennai's premier 16 seater luxury tour vehicle. Experience unmatched headroom, ultra-smooth air suspension, and executive comfort.
               </p>
 
               <div class="urbania-features-grid">
                 <div class="urbania-feat-item">
                   <div class="feat-icon"><i class="fas fa-chair"></i></div>
                   <div>
-                    <h4>Ergonomic Pushback Recliners</h4>
+                    <h3 style="font-size: 16px; margin: 0 0 6px;">Ergonomic Pushback Recliners</h3>
                     <p>Wide executive seating with plush armrests & extra legroom.</p>
                   </div>
                 </div>
@@ -1025,7 +1033,7 @@
                 <div class="urbania-feat-item">
                   <div class="feat-icon"><i class="fas fa-wind"></i></div>
                   <div>
-                    <h4>Individual AC Vents</h4>
+                    <h3 style="font-size: 16px; margin: 0 0 6px;">Individual AC Vents</h3>
                     <p>Dedicated air conditioning controls for every row passenger.</p>
                   </div>
                 </div>
@@ -1033,7 +1041,7 @@
                 <div class="urbania-feat-item">
                   <div class="feat-icon"><i class="fas fa-tv"></i></div>
                   <div>
-                    <h4>Smart Infotainment</h4>
+                    <h3 style="font-size: 16px; margin: 0 0 6px;">Smart Infotainment</h3>
                     <p>High-definition screens & audio for devotional yatra songs.</p>
                   </div>
                 </div>
@@ -1041,7 +1049,7 @@
                 <div class="urbania-feat-item">
                   <div class="feat-icon"><i class="fas fa-suitcase"></i></div>
                   <div>
-                    <h4>Massive Luggage Boot</h4>
+                    <h3 style="font-size: 16px; margin: 0 0 6px;">Massive Luggage Boot</h3>
                     <p>Ample space for large family luggage & temple prasad offerings.</p>
                   </div>
                 </div>
@@ -1071,8 +1079,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
           <div
             style="position: relative; border-radius: var(--radius); overflow: hidden; height: 320px; box-shadow: var(--shadow-md);">
-            <img src="https://media.easemytrip.com/media/Blog/India/638670152606689132/638670152606689132v6vYZH.png"
-              style="width: 100%; height: 100%; object-fit: cover;" alt="South Indian temple tour packages and divine yatras" />
+            <img src="images/temple_tour_card.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="South Indian temple tour packages and divine yatras" width="420" height="280" loading="lazy" decoding="async" />
             <div
               style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,47,0.95), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; color: #fff;">
               <span class="badge-gold" style="width: fit-content; margin-bottom: 10px;">Devotional</span>
@@ -1086,8 +1093,7 @@
 
           <div
             style="position: relative; border-radius: var(--radius); overflow: hidden; height: 320px; box-shadow: var(--shadow-md);">
-            <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=800&q=80"
-              style="width: 100%; height: 100%; object-fit: cover;" alt="South India hill stations and holiday tour packages" />
+            <img src="images/holiday_tour_card.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="South India hill stations and holiday tour packages" width="420" height="280" loading="lazy" decoding="async" />
             <div
               style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,47,0.95), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; color: #fff;">
               <span class="badge-gold" style="width: fit-content; margin-bottom: 10px;">Holiday</span>
@@ -1210,7 +1216,7 @@
             <div class="vehicle-header">
               <div class="vehicle-badge-row" style="margin-bottom: 0;">
                 <span class="cat-pill">Vans</span>
-                <span class="seat-pill"><i class="fas fa-shuttle-van"></i> 12 to 18 Seater Available</span>
+                <span class="seat-pill"><i class="fas fa-shuttle-van"></i> 12 & 16 Seater Available</span>
               </div>
             </div>
             <div class="tariff-table-wrap">
@@ -1224,7 +1230,7 @@
               <button class="btn btn-outline" style="width: 100%; font-size: 13px;" onclick="showPage('tariff')">
                 <i class="fas fa-external-link-alt"></i> View Full Tariff & Pricing
               </button>
-              <button class="btn btn-whatsapp" style="width: 100%; font-size: 13px;" onclick="bookFleetVehicle('Luxury Vans (12 to 18 Seater)')">
+              <button class="btn btn-whatsapp" style="width: 100%; font-size: 13px;" onclick="bookFleetVehicle('Force Urbania (12 & 16 Seater)')">
                 <i class="fab fa-whatsapp"></i> Book Van
               </button>
             </div>
@@ -1242,25 +1248,25 @@
         <div class="why-grid">
           <div class="why-card">
             <div class="icon-box"><i class="fas fa-door-open"></i></div>
-            <h4>Guaranteed Doorstep Pickup</h4>
+            <h3 style="font-size: 16px; margin: 0 0 6px;">Guaranteed Doorstep Pickup</h3>
             <p>From your residence or airport terminal straight to temple steps and hotel lobbies without transit
               hiccups.</p>
           </div>
           <div class="why-card">
             <div class="icon-box"><i class="fas fa-hand-holding-heart"></i></div>
-            <h4>Senior Devotee Care</h4>
+            <h3 style="font-size: 16px; margin: 0 0 6px;">Senior Devotee Care</h3>
             <p>Drivers trained with extreme patience for elderly pilgrims, wheel-chair handling assistance, and regular
               tea/rest halts.</p>
           </div>
           <div class="why-card">
             <div class="icon-box"><i class="fas fa-receipt"></i></div>
-            <h4>100% Upfront Transparency</h4>
+            <h3 style="font-size: 16px; margin: 0 0 6px;">100% Upfront Transparency</h3>
             <p>All parking, driver batta, and toll fees are clearly communicated. Zero surprise costs at the end of your
               trip.</p>
           </div>
           <div class="why-card">
             <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-            <h4>Safety & Punctuality</h4>
+            <h3 style="font-size: 16px; margin: 0 0 6px;">Safety & Punctuality</h3>
             <p>Speed-governed, clean vehicles operated by non-smoking, drug-screened, and background-verified
               chauffeurs.</p>
           </div>
@@ -1299,7 +1305,7 @@
                     style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 10px rgba(10,25,47,0.15);">
                     R</div>
                   <div>
-                    <h4 style="font-size: 16px; margin: 0; font-weight: 700; color: var(--primary);">Ravi kumar</h4>
+                    <h3 style="font-size: 16px; margin: 0; font-weight: 700; color: var(--primary);">Ravi kumar</h3>
                     <small style="color: var(--text-muted); font-size: 12px;">Arupadai Veedu Yatra</small>
                   </div>
                 </div>
@@ -1323,7 +1329,7 @@
                     style="width: 44px; height: 44px; border-radius: 50%; background: #059669; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; box-shadow: 0 4px 10px rgba(5,150,105,0.15);">
                     K</div>
                   <div>
-                    <h4 style="font-size: 16px; margin: 0; font-weight: 700; color: var(--primary);">Kandha kumar</h4>
+                    <h3 style="font-size: 16px; margin: 0; font-weight: 700; color: var(--primary);">Kandha kumar</h3>
                     <small style="color: var(--text-muted); font-size: 12px;">Family Pilgrimage</small>
                   </div>
                 </div>
@@ -1891,6 +1897,20 @@
                   <td style="padding: 14px 18px; font-weight: 800; color: var(--accent);">₹24 / Km</td>
                   <td style="padding: 14px 18px; font-weight: 700; color: var(--primary);">₹1000 / Day</td>
                 </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                  <td style="padding: 14px 18px; font-weight: 700; color: var(--primary);">Force Urbania Luxury (12+1)</td>
+                  <td style="padding: 14px 18px; color: var(--text-dark);">12+1</td>
+                  <td style="padding: 14px 18px; color: var(--text-dark);">300 Kms</td>
+                  <td style="padding: 14px 18px; font-weight: 800; color: var(--accent);">₹38 / Km</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: var(--primary);">₹1000 / Day</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0; background: #ffffff;">
+                  <td style="padding: 14px 18px; font-weight: 700; color: var(--primary);">Force Urbania VIP Recliner (16+1)</td>
+                  <td style="padding: 14px 18px; color: var(--text-dark);">16+1</td>
+                  <td style="padding: 14px 18px; color: var(--text-dark);">300 Kms</td>
+                  <td style="padding: 14px 18px; font-weight: 800; color: var(--accent);">₹40 / Km</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: var(--primary);">₹1000 / Day</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -1947,6 +1967,22 @@
                   <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
                   <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
                   <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+                  <td style="padding: 14px 18px; text-align: left; font-weight: 700; color: var(--primary);">Force Urbania Luxury (12+1)</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹3,500</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0; background: #ffffff;">
+                  <td style="padding: 14px 18px; text-align: left; font-weight: 700; color: var(--primary);">Force Urbania VIP Recliner (16+1)</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹4,000</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹4,000</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹4,000</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹4,000</td>
+                  <td style="padding: 14px 18px; font-weight: 700; color: #1e293b;">₹4,000</td>
                 </tr>
               </tbody>
             </table>
@@ -2334,7 +2370,7 @@
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-layer-group"
                     style="color: var(--accent); margin-right: 6px;"></i> Service Type *</label>
-                <select class="form-control" id="rental-service-type" required>
+                <select class="form-control" id="rental-service-type" aria-label="Rental Service Type" required>
                   <option value="Airport Transfer">Airport Transfer</option>
                   <option value="Local Rental">Local Rental</option>
                   <option value="Outstation">Outstation</option>
@@ -2344,7 +2380,7 @@
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-taxi"
                     style="color: var(--accent); margin-right: 6px;"></i> Preferred Vehicle Model *</label>
-                <select class="form-control" id="rental-vehicle" required>
+                <select class="form-control" id="rental-vehicle" aria-label="Select Rental Vehicle" required>
                   <option value="Honda City (4 Seater)">Honda City (4 Seater Sedan)</option>
                   <option value="Corolla Altis (4 Seater)">Corolla Altis (4 Seater Sedan)</option>
                   <option value="Toyota Innova (7-8 Seater)">Toyota Innova (7-8 Seater SUV/MPV)</option>
@@ -2371,7 +2407,7 @@
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-map-pin"
                     style="color: var(--accent); margin-right: 6px;"></i> Pickup Location / Terminal *</label>
-                <input type="text" class="form-control" id="rental-pickup"
+                <input type="text" class="form-control" id="rental-pickup" aria-label="Rental Pickup Location"
                   placeholder="e.g. MAA Airport Terminal 1 / T. Nagar / Hotel" required />
               </div>
 
@@ -2379,20 +2415,20 @@
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i
                     class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 6px;"></i> Drop /
                   Destination *</label>
-                <input type="text" class="form-control" id="rental-drop"
+                <input type="text" class="form-control" id="rental-drop" aria-label="Rental Drop Location"
                   placeholder="e.g. Hotel ITC Grand Chola / Tirupati / Pondicherry" required />
               </div>
 
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-calendar-alt"
                     style="color: var(--accent); margin-right: 6px;"></i> Date of Travel *</label>
-                <input type="date" class="form-control" id="rental-date" required />
+                <input type="date" class="form-control" id="rental-date" aria-label="Rental Travel Date" required />
               </div>
 
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-clock"
                     style="color: var(--accent); margin-right: 6px;"></i> Pickup Time *</label>
-                <select class="form-control" id="rental-pickup-time" required>
+                <select class="form-control" id="rental-pickup-time" aria-label="Rental Pickup Time" required>
                   <option value="" disabled selected>Select Pickup Time</option>
                   <option value="12:00 AM">12:00 AM (Midnight)</option>
                   <option value="12:30 AM">12:30 AM</option>
@@ -2448,7 +2484,7 @@
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-users"
                     style="color: var(--accent); margin-right: 6px;"></i> Number of Travelers</label>
-                <select class="form-control" id="rental-passengers">
+                <select class="form-control" id="rental-passengers" aria-label="Rental Passenger Count">
                   <option value="1 - 2 Passengers">1 - 2 Passengers</option>
                   <option value="3 - 4 Passengers">3 - 4 Passengers</option>
                   <option value="5 - 7 Passengers">5 - 7 Passengers</option>
@@ -2467,19 +2503,19 @@
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-user"
                     style="color: var(--accent); margin-right: 6px;"></i> Your Full Name *</label>
-                <input type="text" class="form-control" id="rental-name" placeholder="e.g. Rajesh Sharma" required />
+                <input type="text" class="form-control" id="rental-name" aria-label="Your Name" placeholder="e.g. Rajesh Sharma" required />
               </div>
 
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fab fa-whatsapp"
                     style="color: #25d366; margin-right: 6px;"></i> WhatsApp / Phone No *</label>
-                <input type="tel" class="form-control" id="rental-phone" placeholder="e.g. +91 98765 43210" required />
+                <input type="tel" class="form-control" id="rental-phone" aria-label="Your Contact Number" placeholder="e.g. +91 98765 43210" required />
               </div>
 
               <div class="form-group">
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i class="fas fa-passport"
                     style="color: var(--accent); margin-right: 6px;"></i> Citizenship / Category *</label>
-                <select class="form-control" id="rental-citizenship" required>
+                <select class="form-control" id="rental-citizenship" aria-label="Citizenship Status" required>
                   <option value="Indian citizen">Indian citizen</option>
                   <option value="NRI">NRI</option>
                   <option value="Foreigner">Foreigner</option>
@@ -2490,7 +2526,7 @@
                 <label style="font-weight: 700; font-size: 13px; color: var(--primary);"><i
                     class="fas fa-clipboard-list" style="color: var(--accent); margin-right: 6px;"></i> Flight Number /
                   Special Instructions (Optional)</label>
-                <input type="text" class="form-control" id="rental-notes"
+                <input type="text" class="form-control" id="rental-notes" aria-label="Rental Notes or Requests"
                   placeholder="e.g. Flight 6E-204 arriving at 10:30 AM / Need English-speaking chauffeur & meet-and-greet board" />
               </div>
             </div>
@@ -3260,13 +3296,13 @@
               <div class="form-group">
                 <label><i class="fas fa-building" style="color: var(--accent); margin-right: 6px;"></i> Company Name
                   *</label>
-                <input type="text" class="form-control" id="corp-company" placeholder="e.g. TCS / Cognizant / L&T"
+                <input type="text" class="form-control" id="corp-company" aria-label="Corporate Company Name" placeholder="e.g. TCS / Cognizant / L&T"
                   required />
               </div>
               <div class="form-group">
                 <label><i class="fas fa-user-tie" style="color: var(--accent); margin-right: 6px;"></i> Contact Person &
                   Designation *</label>
-                <input type="text" class="form-control" id="corp-name"
+                <input type="text" class="form-control" id="corp-name" aria-label="Corporate Contact Person"
                   placeholder="e.g. Ramesh Babu - Transport Manager" required />
               </div>
             </div>
@@ -3275,13 +3311,13 @@
               <div class="form-group">
                 <label><i class="fas fa-envelope" style="color: var(--accent); margin-right: 6px;"></i> Work Email
                   Address *</label>
-                <input type="email" class="form-control" id="corp-email" placeholder="e.g. ramesh.babu@company.com"
+                <input type="email" class="form-control" id="corp-email" aria-label="Official Email Address" placeholder="e.g. ramesh.babu@company.com"
                   required />
               </div>
               <div class="form-group">
                 <label><i class="fas fa-phone-alt" style="color: var(--accent); margin-right: 6px;"></i> Phone /
                   WhatsApp Number *</label>
-                <input type="tel" class="form-control" id="corp-phone" placeholder="e.g. +91 98765 43210" required />
+                <input type="tel" class="form-control" id="corp-phone" aria-label="Corporate Phone Number" placeholder="e.g. +91 98765 43210" required />
               </div>
             </div>
 
@@ -3289,7 +3325,7 @@
               <div class="form-group">
                 <label><i class="fas fa-car" style="color: var(--accent); margin-right: 6px;"></i> Fleet Category
                   Required</label>
-                <select class="form-control" id="corp-fleet">
+                <select class="form-control" id="corp-fleet" aria-label="Corporate Fleet Type Preference">
                   <option value="Executive Sedans (Honda City / Corolla Altis)">Executive Sedans (Honda City / Corolla Altis)</option>
                   <option value="Executive SUVs & MPVs (Toyota Innova / Crysta / Fortuner)">Executive SUVs & MPVs (Toyota Innova / Crysta / Fortuner)</option>
                   <option value="Premium MPVs (Innova Hycross / Kia Carnival)">Premium MPVs (Innova Hycross / Kia Carnival)</option>
@@ -3300,7 +3336,7 @@
               <div class="form-group">
                 <label><i class="fas fa-tasks" style="color: var(--accent); margin-right: 6px;"></i> Scope / Estimated
                   Volume</label>
-                <input type="text" class="form-control" id="corp-req"
+                <input type="text" class="form-control" id="corp-req" aria-label="Corporate Monthly Fleet Requirement"
                   placeholder="e.g. 15 Airport Pickups/Month or Daily ETS" />
               </div>
             </div>
@@ -3678,7 +3714,7 @@
                 <label
                   style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--primary);">Your
                   Name *</label>
-                <input type="text" id="contact-name" class="form-control" placeholder="Enter your full name" required
+                <input type="text" id="contact-name" class="form-control" aria-label="Contact Full Name" placeholder="Enter your full name" required
                   style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;" />
               </div>
 
@@ -3686,7 +3722,7 @@
                 <label
                   style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--primary);">Phone
                   Number *</label>
-                <input type="tel" id="contact-phone" class="form-control" placeholder="10-digit mobile number" required
+                <input type="tel" id="contact-phone" class="form-control" aria-label="Contact Phone Number" placeholder="10-digit mobile number" required
                   style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;" />
               </div>
 
@@ -3694,7 +3730,7 @@
                 <label
                   style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--primary);">Select
                   Package / Service</label>
-                <select id="contact-service" class="form-control"
+                <select id="contact-service" class="form-control" aria-label="Select Inquiry Service"
                   style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;">
                   <option value="Airport Transfer">Airport Transfer</option>
                   <option value="Local Rental">Local Rental</option>
@@ -3709,7 +3745,7 @@
                 <label
                   style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--primary);">Message
                   / Travel Requirements</label>
-                <textarea id="contact-msg" rows="3" class="form-control"
+                <textarea aria-label="Your Message / Travel Requirement" id="contact-msg" rows="3" class="form-control"
                   placeholder="Mention travel dates, pickup location & passenger count..."
                   style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;"></textarea>
               </div>
@@ -4195,7 +4231,7 @@
           <div class="footer-logo-wrap" onclick="showPage('home')" style="cursor: pointer; margin-bottom: 16px;"
             title="Shivaputhra Travels">
             <a href="#page-home" style="display: block; text-decoration: none;">
-              <img src="images/logo_dark.webp" alt="Shivaputhra Travels" class="footer-logo-img" width="180" height="134" />
+              <img src="images/logo_dark.png" alt="Shivaputhra Travels" class="footer-logo-img" width="240" height="100" />
             </a>
           </div>
           <p class="footer-brand-desc">
@@ -4214,7 +4250,7 @@
 
         <!-- Navigation Links Column -->
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h3>Navigation</h3>
           <ul class="footer-links">
             <li><a href="index.html#page-home"><i class="fas fa-chevron-right"></i> Home</a></li>
             <li><a href="index.html#page-cab-rental"><i class="fas fa-chevron-right"></i> Cab Rental</a></li>
@@ -4242,12 +4278,10 @@
                   class="fas fa-gopuram"></i> Tirupati Balaji Darshan (1D)</a></li>
             <li><a href="temple-tour-packages-chennai.html"><i class="fas fa-om"></i> Aarupadai Veedu
                 (6 Days)</a></li>
-            <li><a onclick="enquirePackage('Chennai to Sabarimala Pilgrimage (4 Days)')"><i class="fas fa-mountain"></i>
-                Sabarimala Yatra (4 Days)</a></li>
+            <li><a href="temple-tour-packages-chennai.html" onclick="enquirePackage('Chennai to Sabarimala Pilgrimage (4 Days)')"><i class="fas fa-mountain"></i> Sabarimala Yatra (4 Days)</a></li>
             <li><a href="temple-tour-packages-chennai.html"><i
                   class="fas fa-star-and-crescent"></i> Navagraha Temples (3D)</a></li>
-            <li><a onclick="enquirePackage('Rameswaram - Kanyakumari - Madurai Circuit')"><i
-                  class="fas fa-map-marked-alt"></i> Rameswaram & Madurai</a></li>
+            <li><a href="temple-tour-packages-chennai.html" onclick="enquirePackage('Rameswaram - Kanyakumari - Madurai Circuit')"><i class="fas fa-map-marked-alt"></i> Rameswaram & Madurai</a></li>
           </ul>
         </div>
 
@@ -4317,3 +4351,8 @@
 </body>
 
 </html>
+
+
+
+
+

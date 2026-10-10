@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,8 +8,10 @@
   <!-- Primary Meta Tags -->
   <title>Force Urbania Rental in Chennai | Luxury 12 & 16 Seater Van Hire | Shivaputhra Travels</title>
   <meta name="title" content="Force Urbania Rental in Chennai | Luxury 12 & 16 Seater Van Hire | Shivaputhra Travels" />
-  <meta name="description" content="Rent luxury Force Urbania in Chennai with Shivaputhra Travels. Premium captain seats, individual AC, air suspension & experienced chauffeurs for outstation & local hire." />
+  <meta name="description" content="Rent luxury 12 & 16 seater Force Urbania in Chennai with Shivaputhra Travels. Premier 16 seater luxury tour vehicle for group tours, Tamil Nadu temple yatras, Sabarimala, Thiruchendur, outstation holidays & weddings." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="thumbnail" content="https://www.shivaputhratravels.com/images/force_urbania.webp" />
+  <link rel="image_src" href="https://www.shivaputhratravels.com/images/force_urbania.webp" />
   <meta name="author" content="Shivaputhra Travels" />
   <link rel="canonical" href="https://www.shivaputhratravels.com/force-urbania-rental-chennai.html" />
 
@@ -44,10 +46,13 @@
   <meta name="theme-color" content="#0a192f" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="icon" type="image/webp" sizes="32x32" href="images/logo_dark.webp" />
-  <link rel="icon" type="image/webp" sizes="192x192" href="images/logo_dark.webp" />
-  <link rel="shortcut icon" href="images/logo_dark.webp" />
-  <link rel="apple-touch-icon" href="images/logo_dark.webp" />
+  <!-- Favicons for Google Search & Devices -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- Stylesheets & Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -94,7 +99,7 @@
     <div class="container nav-container">
       <div class="logo-wrapper" style="cursor: pointer;" title="Shivaputhra Travels">
         <a href="index.html#page-home" style="display: block; text-decoration: none;">
-          <img src="images/logo.webp" alt="Shivaputhra Travels" class="nav-logo-img" width="180" height="134" />
+          <img src="images/logo.png" alt="Shivaputhra Travels" class="nav-logo-img" width="240" height="100" />
         </a>
       </div>
 
@@ -154,9 +159,6 @@
         <a href="tel:09444320367" class="btn-nav-call">
           <i class="fas fa-phone-alt" style="color: var(--accent);"></i> Call Now
         </a>
-        <button class="btn-nav-whatsapp" onclick="openDirectWhatsApp('Tour Booking Inquiry')">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </button>
       </div>
 
       <!-- Mobile Hamburger Button -->
@@ -173,7 +175,7 @@
     <div class="drawer-header">
       <div style="cursor: pointer;" title="Shivaputhra Travels">
         <a href="index.html#page-home" style="display: block; text-decoration: none;">
-          <img src="images/logo.webp" alt="Shivaputhra Travels" class="drawer-logo-img" width="180" height="134" />
+          <img src="images/logo.png" alt="Shivaputhra Travels" class="drawer-logo-img" width="190" height="79" />
         </a>
       </div>
       <button class="drawer-close-btn" onclick="toggleMobileMenu(false)" aria-label="Close Navigation Drawer">
@@ -185,7 +187,7 @@
       <li><a href="index.html#page-home" id="drawer-home" ><i class="fas fa-home" style="color: var(--accent);"></i> Home</a></li>
       
       <li class="drawer-item-dropdown" id="drawer-dropdown-cab">
-        <a onclick="toggleMobileSubmenu(event)" id="drawer-cab-rental" class="active" style="cursor: pointer;">
+        <a href="javascript:void(0)" onclick="toggleMobileSubmenu(event)" id="drawer-cab-rental" role="button" aria-expanded="false" aria-label="Toggle Cab Rental Submenu" class="active" style="cursor: pointer;">
           <i class="fas fa-taxi" style="color: var(--accent);"></i>
           <span>Cab Rental</span>
           <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
@@ -205,7 +207,7 @@
       </li>
 
       <li class="drawer-item-dropdown" id="drawer-dropdown-packages">
-        <a onclick="toggleMobileSubmenu(event)" id="drawer-packages"  style="cursor: pointer;">
+        <a href="javascript:void(0)" onclick="toggleMobileSubmenu(event)" id="drawer-packages" role="button" aria-expanded="false" aria-label="Toggle Tour Packages Submenu"  style="cursor: pointer;">
           <i class="fas fa-map-marked-alt" style="color: var(--accent);"></i>
           <span>Tour Packages</span>
           <i class="fas fa-chevron-down drawer-chevron" style="margin-left: auto; font-size: 11px; transition: transform 0.3s ease;"></i>
@@ -336,19 +338,19 @@
                 <!-- Interactive Thumbnails -->
                 <div class="urbania-thumbnails-strip" id="urbania-thumbnails">
                   <button type="button" class="urbania-thumb-btn active" onclick="setUrbaniaSlide(0)">
-                    <img src="images/force_urbania.webp" alt="Urbania Exterior" />
+                    <img src="images/force_urbania.webp" alt="12 and 16 Seater Force Urbania luxury van exterior Chennai" />
                     <span>Exterior</span>
                   </button>
                   <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(1)">
-                    <img src="images/urbania_interior_seats.webp" alt="Urbania Captain Seats" />
+                    <img src="images/urbania_interior_seats.webp" alt="Force Urbania reclining captain seats luxury interior" />
                     <span>Captain Seats</span>
                   </button>
                   <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(2)">
-                    <img src="images/urbania_interior_cabin.webp" alt="Urbania Cabin" />
+                    <img src="images/urbania_interior_cabin.webp" alt="Force Urbania high roof walk-in cabin with ambient lighting" />
                     <span>High Cabin</span>
                   </button>
                   <button type="button" class="urbania-thumb-btn" onclick="setUrbaniaSlide(3)">
-                    <img src="images/urbania_exterior_travel.webp" alt="Urbania Highway Travel" />
+                    <img src="images/urbania_exterior_travel.webp" alt="Force Urbania outstation travel rental in Chennai" />
                     <span>Highway Ride</span>
                   </button>
                 </div>
@@ -357,9 +359,9 @@
               <!-- Right Column: Specs & Highlights -->
               <div class="urbania-info-col">
                 <span class="urbania-sub-tag"><i class="fas fa-star" style="color: var(--accent);"></i> Ultimate Group Travel Experience</span>
-                <h2 class="urbania-main-title">Force Urbania <span>Luxury Van</span></h2>
+                <h2 class="urbania-main-title">12 & 16 Seater Force Urbania for Outstation, Temple Yatras & VIP Travel</h2>
                 <p class="urbania-lead-desc">
-                  Experience first-class road travel with Chennai's most advanced luxury passenger van. Designed with world-class Mercedes-derived styling, ultra-quiet cabin aerodynamics, and individual comfort zones for every passenger.
+                  Experience first-class road travel with Chennai's most advanced 16 seater luxury tour vehicle. Ideal for group tours, Chennai to Sabarimala, Thiruchendur, Aarupadai Veedu, and Rameswaram temple yatras with ultra-quiet cabin aerodynamics and executive comfort.
                 </p>
                 <div class="urbania-features-grid">
                   <div class="urbania-feat-item">
@@ -392,7 +394,7 @@
                   </div>
                 </div>
                 <div class="urbania-action-group" style="margin-top: 24px;">
-                  <button class="btn btn-whatsapp urbania-btn-wa" onclick="openDirectWhatsApp('Force Urbania 12-18 Seater Booking')">
+                  <button class="btn btn-whatsapp urbania-btn-wa" onclick="openDirectWhatsApp('Force Urbania 12 & 16 Seater Booking')">
                     <i class="fab fa-whatsapp"></i> Book Force Urbania
                   </button>
                   <a href="tel:09444320367" class="btn btn-outline urbania-btn-tariff">
@@ -531,7 +533,7 @@
         <div class="footer-col">
           <div class="footer-logo-wrap" style="margin-bottom: 16px;" title="Shivaputhra Travels">
             <a href="index.html#page-home" style="display: block; text-decoration: none;">
-              <img src="images/logo_dark.webp" alt="Shivaputhra Travels" class="footer-logo-img" width="180" height="134" />
+              <img src="images/logo_dark.png" alt="Shivaputhra Travels" class="footer-logo-img" width="240" height="100" />
             </a>
           </div>
           <p class="footer-brand-desc">
@@ -629,3 +631,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
