@@ -8,62 +8,122 @@
   <!-- Homepage / Main Canonical Portal -->
   <url>
     <loc>https://www.shivaputhratravels.com/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.webp</image:loc>
+      <image:loc>https://www.shivaputhratravels.com/images/urbania/force_urbania.webp</image:loc>
       <image:title>Shivaputhra Travels Luxury Force Urbania Fleet</image:title>
       <image:caption>Shivaputhra Travels - Luxury Force Urbania, Innova Crysta, and car rentals in Chennai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/logo_dark.webp</image:loc>
+      <image:loc>https://www.shivaputhratravels.com/images/brand/logo.png</image:loc>
       <image:title>Shivaputhra Travels Official Logo</image:title>
     </image:image>
   </url>
 
   <!-- 1. All Tour Packages Overview -->
   <url>
-    <loc>https://www.shivaputhratravels.com/tour-packages-chennai.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <loc>https://www.shivaputhratravels.com/pages/tour-packages-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/temple_tour_1.webp</image:loc>
+      <image:loc>https://www.shivaputhratravels.com/images/temples/temple_tour_1.webp</image:loc>
       <image:title>Tour Packages from Chennai</image:title>
     </image:image>
   </url>
 
   <!-- 2. Chennai to Tirupati Car Packages -->
   <url>
-    <loc>https://www.shivaputhratravels.com/chennai-to-tirupati-car-packages.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <loc>https://www.shivaputhratravels.com/pages/chennai-to-tirupati-car-packages.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.webp</image:loc>
+      <image:loc>https://www.shivaputhratravels.com/images/urbania/force_urbania.webp</image:loc>
       <image:title>Chennai to Tirupati Car Packages</image:title>
     </image:image>
   </url>
 
   <!-- 3. Temple Tour Packages from Chennai -->
   <url>
-    <loc>https://www.shivaputhratravels.com/temple-tour-packages-chennai.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <loc>https://www.shivaputhratravels.com/pages/temple-tour-packages-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- 4. Force Urbania Rental in Chennai -->
+  <!-- 4. Urbania Rental in Chennai -->
   <url>
-    <loc>https://www.shivaputhratravels.com/force-urbania-rental-chennai.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <loc>https://www.shivaputhratravels.com/pages/urbania-rental-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.shivaputhratravels.com/images/force_urbania.webp</image:loc>
-      <image:title>Force Urbania Rental in Chennai</image:title>
+      <image:loc>https://www.shivaputhratravels.com/images/urbania/force_urbania.webp</image:loc>
+      <image:title>Urbania Rental in Chennai</image:title>
     </image:image>
+  </url>
+
+  <!-- 5. Cab Rental & Airport Transfers in Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/pages/local-rental-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shivaputhratravels.com/images/fleet/honda_city.webp</image:loc>
+      <image:title>Local Rental &amp; 24/7 Airport Transfers in Chennai</image:title>
+    </image:image>
+  </url>
+
+  <!-- 6. Outstation Cab Packages from Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/pages/outstation-cab-packages-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.shivaputhratravels.com/images/fleet/innova_crysta.webp</image:loc>
+      <image:title>Outstation Cab Rental &amp; Packages from Chennai</image:title>
+    </image:image>
+  </url>
+
+  <!-- 7. Holiday Tour Packages from Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/pages/holiday-tour-packages-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.shivaputhratravels.com/images/holidays/holiday_tour_1.webp</image:loc>
+      <image:title>Holiday Tour Packages from Chennai</image:title>
+    </image:image>
+  </url>
+
+  <!-- 8. Corporate Car Rental Chennai -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/pages/corporate-car-rental-chennai.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 9. About Shivaputhra Travels -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/pages/about-us.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 10. Contact Shivaputhra Travels -->
+  <url>
+    <loc>https://www.shivaputhratravels.com/pages/contact-us.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

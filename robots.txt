@@ -1,9 +1,10 @@
 # robots.txt for Shivaputhra Travels
 User-agent: *
 Allow: /
-Allow: /style.css
-Allow: /script.js
+Allow: /css/
+Allow: /js/
 Allow: /images/
+Allow: /pages/
 
 # Sitemap Location
 Sitemap: https://www.shivaputhratravels.com/sitemap.xml

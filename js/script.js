@@ -1,55 +1,46 @@
 const SHIVAPUTRA_WHATSAPP = "917338939339";
 
-// 1. Page Switcher (Hides all .page containers and opens the selected one)
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(page => {
-    page.classList.remove('active-page');
-  });
+const IS_IN_PAGES = /\/pages\//i.test(window.location.pathname);
+const ROOT_PREFIX = IS_IN_PAGES ? '../' : '';
 
-  // Page Aliases for backwards compatibility & hash support
+const PAGE_ROUTES = {
+  'home': 'index.html',
+  'urbania': 'pages/urbania-rental-chennai.html',
+  'force-urbania': 'pages/urbania-rental-chennai.html',
+  'local-rental': 'pages/local-rental-chennai.html',
+  'local': 'pages/local-rental-chennai.html',
+  'cab-rental': 'pages/local-rental-chennai.html',
+  'car-rental': 'pages/local-rental-chennai.html',
+  'airport': 'pages/local-rental-chennai.html',
+  'outstation-packages': 'pages/outstation-cab-packages-chennai.html',
+  'holiday-packages': 'pages/holiday-tour-packages-chennai.html',
+  'tirupati-packages': 'pages/chennai-to-tirupati-car-packages.html',
+  'temple-packages': 'pages/temple-tour-packages-chennai.html',
+  'packages': 'pages/tour-packages-chennai.html',
+  'corporate': 'pages/corporate-car-rental-chennai.html',
+  'about': 'pages/about-us.html',
+  'contact': 'pages/contact-us.html',
+  'terms': 'pages/contact-us.html#terms-section',
+  'terms-section': 'pages/contact-us.html#terms-section'
+};
+
+// 1. Multi-Page Router (navigates to standalone page URLs or scrolls if already on page)
+function showPage(pageId) {
   let actualPageId = pageId;
   if (typeof actualPageId === 'string') {
     if (actualPageId.startsWith('#page-')) actualPageId = actualPageId.replace('#page-', '');
     else if (actualPageId.startsWith('page-')) actualPageId = actualPageId.replace('page-', '');
     else if (actualPageId.startsWith('#')) actualPageId = actualPageId.replace('#', '');
   }
-  if (actualPageId === 'packages') actualPageId = 'temple-packages';
-  if (actualPageId === 'airport') actualPageId = 'cab-rental';
-  if (actualPageId === 'car-rental') actualPageId = 'tariff';
 
-  const target = document.getElementById('page-' + actualPageId);
-  if (target) {
-    target.classList.add('active-page');
-  } else {
-    // Fallback to home if page ID not found
-    const homeTarget = document.getElementById('page-home');
-    if (homeTarget) homeTarget.classList.add('active-page');
-    actualPageId = 'home';
+  const targetEl = document.getElementById('page-' + actualPageId);
+  if (targetEl) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
   }
 
-  // Update Desktop Nav active indicator
-  document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
-  let activeNavId = 'nav-' + actualPageId;
-  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages' || actualPageId === 'tirupati-packages') {
-    activeNavId = 'nav-packages';
-  } else if (actualPageId === 'outstation-packages' || actualPageId === 'cab-rental') {
-    activeNavId = 'nav-cab-rental';
-  }
-  const activeNav = document.getElementById(activeNavId);
-  if (activeNav) activeNav.classList.add('active');
-
-  // Update Mobile Drawer Nav active indicator
-  document.querySelectorAll('.drawer-links a').forEach(link => link.classList.remove('active'));
-  let activeDrawerId = 'drawer-' + actualPageId;
-  if (actualPageId === 'temple-packages' || actualPageId === 'holiday-packages' || actualPageId === 'tirupati-packages') {
-    activeDrawerId = 'drawer-packages';
-  } else if (actualPageId === 'outstation-packages' || actualPageId === 'cab-rental') {
-    activeDrawerId = 'drawer-cab-rental';
-  }
-  const activeDrawerNav = document.getElementById(activeDrawerId);
-  if (activeDrawerNav) activeDrawerNav.classList.add('active');
-
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  const targetUrl = PAGE_ROUTES[actualPageId] || 'index.html';
+  window.location.href = ROOT_PREFIX + targetUrl;
 }
 
 // Package Category Switcher
@@ -61,11 +52,11 @@ function switchTourTab(category) {
   if (category === 'holiday') {
     showPage('holiday-packages');
   } else if (category === 'tirupati') {
-    window.location.href = 'chennai-to-tirupati-car-packages.html';
+    showPage('tirupati-packages');
   } else if (category === 'outstation') {
     showPage('outstation-packages');
   } else if (category === 'temple') {
-    window.location.href = 'temple-tour-packages-chennai.html';
+    showPage('temple-packages');
   } else {
     showPage(category);
   }
@@ -84,18 +75,18 @@ function sendToWhatsApp(message) {
 }
 
 function openDirectWhatsApp(context) {
-  sendToWhatsApp(`Hello Shivaputra Travels! I would like to inquire about: ${context}`);
+  sendToWhatsApp(`Hello Shivaputhra Travels! I would like to inquire about: ${context}`);
 }
 
 // 4. Package Pricing Query Trigger
 function enquirePackage(packageName) {
-  const msg = `Hello Shivaputra Travels! I am interested in booking the "${packageName}". Please share the pricing details, inclusions, and available vehicle options.`;
+  const msg = `Hello Shivaputhra Travels! I am interested in booking the "${packageName}". Please share the pricing details, inclusions, and available vehicle options.`;
   sendToWhatsApp(msg);
 }
 
 // 5. Vehicle Pricing Query Trigger
 function enquireVehicle(vehicleName) {
-  const msg = `Hello Shivaputra Travels! I would like to know the rental tariff and availability for your "${vehicleName}".`;
+  const msg = `Hello Shivaputhra Travels! I would like to know the rental pricing and availability for your "${vehicleName}".`;
   sendToWhatsApp(msg);
 }
 
@@ -190,11 +181,6 @@ function submitCorporateEnquiry() {
               `📋 *Requirement Scope:* ${req}\n` +
               `━━━━━━━━━━━━━━━━━━━━━━\n` +
               `Please share your official corporate rate card and GST monthly account credit terms.`;
-  sendToWhatsApp(msg);
-}
-
-function openDirectWhatsApp(topic) {
-  const msg = `Hello Shivaputhra Travels! I am inquiring about "${topic}" for our corporate fleet requirements. Please connect with our team.`;
   sendToWhatsApp(msg);
 }
 
@@ -305,7 +291,7 @@ function submitCarRentalEnquiry() {
   }
 
   msg += `━━━━━━━━━━━━━━━━━━━━━━\n` +
-         `Please share confirmation, vehicle availability, and total tariff quote.`;
+         `Please share confirmation, vehicle availability, and total rental quote.`;
 
   sendToWhatsApp(msg);
 }
@@ -329,7 +315,7 @@ function filterFleet(category, element) {
 
 // 9. Direct Booking Action for Specific Vehicle
 function bookFleetVehicle(vehicleName) {
-  const msg = `Hello Shivaputra Travels! I would like to book the "${vehicleName}" from your fleet tariff. Please verify availability and share next booking steps.`;
+  const msg = `Hello Shivaputhra Travels! I would like to book the "${vehicleName}" from your fleet. Please verify availability and share next booking steps.`;
   sendToWhatsApp(msg);
 }
 
@@ -408,11 +394,6 @@ function toggleMobileSubmenu(e) {
 function handleDrawerNav(pageId) {
   toggleMobileMenu(false);
   showPage(pageId);
-}
-
-function handleDrawerSubNav(category) {
-  toggleMobileMenu(false);
-  switchTourTab(category);
 }
 
 // Close drawer on Escape key press
@@ -651,24 +632,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateRevCarousel();
   startRevTimer();
 });
-
-// Car Rental Fleet Category Filter
-function filterCarRentalFleet(cat) {
-  const btns = document.querySelectorAll('.car-filter-btn');
-  btns.forEach(btn => btn.classList.remove('active'));
-
-  const activeBtn = document.getElementById('car-tab-' + cat);
-  if (activeBtn) activeBtn.classList.add('active');
-
-  const cards = document.querySelectorAll('.car-fleet-card-item');
-  cards.forEach(card => {
-    if (cat === 'all' || card.dataset.category === cat) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
 
 /* =========================================================
    MANDATORY ENTRY ENQUIRY MODAL CONTROLLER
@@ -1090,17 +1053,16 @@ function toggleFaq(btn) {
   }
 }
 
-// Initial route handler based on URL hash
+// Redirect legacy #page-* or #terms-section hashes to standalone pages
 function handleInitialHashRoute() {
   const hash = window.location.hash;
-  if (hash) {
-    let cleanId = hash.replace('#page-', '').replace('#', '');
-    if (cleanId === 'packages') cleanId = 'temple-packages';
-    if (cleanId === 'airport') cleanId = 'cab-rental';
-    if (cleanId === 'car-rental') cleanId = 'tariff';
-    if (document.getElementById('page-' + cleanId)) {
-      showPage(cleanId);
-    }
+  if (!hash) return;
+  const cleanId = hash.replace('#page-', '').replace('#', '');
+  if (!cleanId) return;
+  if (document.getElementById('page-' + cleanId) || document.getElementById(cleanId)) return;
+  const targetUrl = PAGE_ROUTES[cleanId];
+  if (targetUrl) {
+    window.location.replace(ROOT_PREFIX + targetUrl);
   }
 }
 
